@@ -1,9 +1,16 @@
 {
   "name": "penpad-workspace",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "examples/*"
+    ],
+    "nohoist": [
+      "**/sanitize.css",
+      "**/sanitize.css/**"
+    ]
+  },
   "repository": "https://github.com/rstacruz/penpad.git",
   "author": "Rico Sta. Cruz <rstacruz@users.noreply.github.com>",
   "license": "MIT"
