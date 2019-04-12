@@ -1,0 +1,17 @@
+{
+  "name": "penpad",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "clarity-icons-svg": "^0.2.0",
+    "react-svg-loader": "^2.1.0",
+    "jsx-to-string": "^1.4.0",
+    "classnames": "^2.2.6",
+    "react-frame-component": "^4.1.0",
+    "react-helmet": "^5.2.0"
+  },
+  "devDependencies": {
+      "@types/classnames": "^2.2.7"
+  }
+}
