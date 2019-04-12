@@ -4,7 +4,7 @@
   "workspaces": {
     "packages": [
       "packages/*",
-      "examples/*"
+      "demos/*"
     ],
     "nohoist": [
       "**/sanitize.css",

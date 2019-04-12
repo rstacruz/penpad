@@ -10,7 +10,6 @@
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-typescript": "^2.0.12",
     "gatsby-source-filesystem": "^2.0.29",
-    "penpad": "*",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",

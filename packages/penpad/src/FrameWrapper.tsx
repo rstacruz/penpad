@@ -11,9 +11,7 @@ import harvestHead from './utilities/harvestHead'
  */
 
 const FrameWrapper = ({ children, className, style }: Props) => {
-  const head = <>
-    {harvestHead()}
-  <>
+  const head = <> {harvestHead()} <>
 
   return (
     <Frame head={head} className={className} style={style || {}}>
