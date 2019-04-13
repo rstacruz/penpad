@@ -17,7 +17,7 @@ Design and document your web UI components
 <p align='center'>
 <a href='https://devhints-engine.netlify.com/styleguides'><strong>Demo</strong></a>
 ·
-<a href='./docs'><strong>Documentation</strong></a>
+<a href='./docs/index.md'><strong>Documentation</strong></a>
 </p>
 
 <p align='center'>
