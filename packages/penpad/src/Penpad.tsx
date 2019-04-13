@@ -3,12 +3,27 @@ import Helmet from 'react-helmet'
 import DocsBody from './DocsBody'
 import CSS from './Penpad.module.css'
 import SpecimensBody from './SpecimensBody'
-import { AppProvider, useAppState } from './state'
+import { AppProvider, useAppState, useAppContext } from './state'
 import TitleBar from './TitleBar'
 import { Config } from './types'
 
 const Penpad = (props: Config) => {
+  return <PenpadProvider {...props}>
+   <PenpadUI {...props} />
+ </PenpadProvider>
+}
+
+const PenpadProvider = (props: Config) => {
   const { state, actions } = useAppState(props)
+  return <AppProvider value={{ state, actions }}>
+    {props.children}
+  </AppProvider>
+}
+
+const PenpadUI = (props: Config) => {
+  const { state, actions } = useAppContext()
+  if (!state || ! actions) return <></>
+
   const { title } = props
   const { activeView, specimens } = state
 
@@ -23,7 +38,6 @@ const Penpad = (props: Config) => {
   const specimen = (specimenId && specimens && specimens[specimenId]) || null
 
   return (
-    <AppProvider value={{ state, actions }}>
       <div className={CSS.root}>
         <Helmet>
           <title>{title}</title>
@@ -42,11 +56,10 @@ const Penpad = (props: Config) => {
           {viewType === 'page' ? <DocsBody /> : null}
         </div>
       </div>
-    </AppProvider>
   )
 }
 
-Penpad.defaultProps = {
+PenpadProvider.defaultProps = {
   title: 'Penpad',
   pages: {},
   useFrame: true

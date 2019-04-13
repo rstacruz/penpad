@@ -20,6 +20,7 @@ export interface Config {
   pages: Pages
   /** Experimental: use iframe */
   useFrame: boolean
+  children?: React.ReactNode
 }
 
 export interface Specimen {
