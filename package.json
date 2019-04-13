@@ -17,6 +17,8 @@
   "author": "Rico Sta. Cruz <rstacruz@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "prepare": "yarn workspace penpad prepare"
+    "prepare": "yarn workspace @rstacruz/penpad prepare",
+    "watch": "yarn workspace @rstacruz/penpad watch",
+    "develop": "yarn workspace @penpad/gatsby-demo develop"
   }
 }

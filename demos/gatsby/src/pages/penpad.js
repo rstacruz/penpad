@@ -2,7 +2,7 @@ import React from 'react'
 import {
   Penpad,
   combineContext
-} from '../../../../packages/penpad/src/index.tsx'
+} from '../../../../packages/penpad/dist/penpad.esm.js'
 
 const specimens = combineContext(
   require.context('../', true, /\.specimens\.(jsx?|tsx?)$/)

@@ -36,6 +36,7 @@
     "typescript": "^3.4.3"
   },
   "scripts": {
-    "prepare": "rollup --config"
+    "prepare": "rollup --config",
+    "watch": "rollup --config --watch"
   }
 }

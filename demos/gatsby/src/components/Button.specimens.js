@@ -3,6 +3,7 @@ import React from 'react'
 export default {
   Button: {
     view: () => <button>Hello</button>,
-    width: 100
+    padding: 8,
+    description: `This is a button. It's very important, guard it with your life.`
   }
 }
