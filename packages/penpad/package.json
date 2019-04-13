@@ -1,6 +1,6 @@
 {
-  "name": "penpad",
-  "version": "1.0.0",
+  "name": "@rstacruz/penpad",
+  "version": "0.1.0-pre.1",
   "module": "src/index.tsx",
   "main": "dist/penpad.esm.js",
   "license": "MIT",
