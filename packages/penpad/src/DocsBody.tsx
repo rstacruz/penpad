@@ -9,7 +9,7 @@ const DocsBody = () => {
   const { state, actions } = useAppContext()
   if (!state || !actions) return <span />
 
-  const [pageId, page] = getActivePage(state) || [null, null]
+  const page = (getActivePage(state) || [])[1]
 
   return (
     <>

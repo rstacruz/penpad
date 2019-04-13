@@ -12,6 +12,8 @@
 
 .uiFontStyle {
   font-family: inter, system-ui;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .fontSizeMinus1 {

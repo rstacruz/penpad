@@ -1,0 +1,132 @@
+/*
+ * The following sections are based off of Eric Meyer's reset.
+ */
+
+.reset,
+.reset div,
+.reset span,
+.reset applet,
+.reset object,
+.reset iframe,
+.reset h1,
+.reset h2,
+.reset h3,
+.reset h4,
+.reset h5,
+.reset h6,
+.reset p,
+.reset blockquote,
+.reset pre,
+.reset a,
+.reset abbr,
+.reset acronym,
+.reset address,
+.reset big,
+.reset cite,
+.reset code,
+.reset del,
+.reset dfn,
+.reset em,
+.reset img,
+.reset ins,
+.reset kbd,
+.reset q,
+.reset s,
+.reset samp,
+.reset small,
+.reset strike,
+.reset strong,
+.reset sub,
+.reset sup,
+.reset tt,
+.reset var,
+.reset b,
+.reset u,
+.reset i,
+.reset center,
+.reset dl,
+.reset dt,
+.reset dd,
+.reset ol,
+.reset ul,
+.reset li,
+.reset fieldset,
+.reset form,
+.reset label,
+.reset legend,
+.reset table,
+.reset caption,
+.reset tbody,
+.reset tfoot,
+.reset thead,
+.reset tr,
+.reset th,
+.reset td,
+.reset article,
+.reset aside,
+.reset canvas,
+.reset details,
+.reset embed,
+.reset figure,
+.reset figcaption,
+.reset footer,
+.reset header,
+.reset hgroup,
+.reset menu,
+.reset nav,
+.reset output,
+.reset ruby,
+.reset section,
+.reset summary,
+.reset time,
+.reset mark,
+.reset audio,
+.reset video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  transition: none;
+  box-shadow: none;
+  border-radius: none;
+  background: transparent;
+}
+
+.reset article,
+.reset aside,
+.reset details,
+.reset figcaption,
+.reset figure,
+.reset footer,
+.reset header,
+.reset hgroup,
+.reset menu,
+.reset nav,
+.reset section {
+  display: block;
+}
+
+.reset ol,
+.reset ul {
+  list-style: none;
+}
+
+.reset blockquote,
+.reset q {
+  quotes: none;
+}
+
+.reset blockquote:before,
+.reset blockquote:after,
+.reset q:before,
+.reset q:after {
+  content: '';
+  content: none;
+}
+
+.reset table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

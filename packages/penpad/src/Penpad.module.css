@@ -16,6 +16,7 @@
 }
 
 .root {
+  composes: reset from './utilities/reset.module.css';
   composes: uiFontStyle from './utils.module.css';
   background: var(--bg-main);
   height: 100vh;
