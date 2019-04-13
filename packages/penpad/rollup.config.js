@@ -4,6 +4,10 @@ import resolve from 'rollup-plugin-node-resolve'
 import postcss from 'rollup-plugin-postcss-modules'
 import reactSvg from 'rollup-plugin-react-svg'
 import commonjs from 'rollup-plugin-commonjs'
+import postcssImport from 'postcss-import'
+import postcssApply from 'postcss-apply'
+import postcssColorMod from 'postcss-color-mod-function'
+import postcssPresetEnv from 'postcss-preset-env'
 
 const DEFAULTS = {
   input: 'src/index.tsx',
@@ -11,25 +15,46 @@ const DEFAULTS = {
     !id.startsWith('\0') &&
     !id.startsWith('.') &&
     !id.startsWith('/') &&
-    !id.startsWith('clarity-icons-svg'),
-  plugins: [
-    resolve({
-      browser: true,
-      extensions: ['.js', '.ts', '.tsx'],
-      dedupe: ['react', 'react-dom']
-    }),
-    commonjs(),
-    postcss({
-      plugins: [
-        /* TODO: postcss-load-config */
-      ]
-    }),
-    reactSvg(),
-    typescript({
-      exclude: ['node_modules/**', '../../node_modules/**']
-    })
-  ]
+    !id.startsWith('clarity-icons-svg')
 }
+
+const PLUGINS = [
+  resolve({
+    browser: true,
+    extensions: ['.js', '.ts', '.tsx'],
+    dedupe: ['react', 'react-dom']
+  }),
+
+  // Allow loading 3rd-party commonjs modules (eg, 'classnames')
+  commonjs(),
+
+  // Allow CSS modules
+  postcss({
+    plugins: [
+      postcssImport(),
+      postcssApply(),
+      postcssPresetEnv({
+        stage: 0,
+        preserve: false,
+        insertBefore: {
+          'all-property': postcssColorMod
+        }
+      })
+    ]
+  }),
+
+  // Convert SVG's into React components
+  reactSvg()
+]
+
+const TYPESCRIPT = typescript({
+  exclude: ['node_modules/**', '../../node_modules/**']
+})
+
+const TYPESCRIPT_LEGACY = typescript({
+  exclude: ['node_modules/**', '../../node_modules/**'],
+  target: 'es5'
+})
 
 const UMD = {
   format: 'umd',
@@ -48,18 +73,14 @@ export default [
   // ES Modules
   {
     ...DEFAULTS,
+    plugins: [...PLUGINS, TYPESCRIPT],
     output: { file: 'dist/penpad.esm.js', format: 'esm' }
-  },
-
-  // ES6
-  {
-    ...DEFAULTS,
-    output: { file: 'dist/penpad.es6.js', ...UMD }
   },
 
   // ES5
   {
     ...DEFAULTS,
+    plugins: [...PLUGINS, TYPESCRIPT_LEGACY],
     output: { file: 'dist/penpad.es5.js', ...UMD }
   }
 ]
