@@ -2,6 +2,7 @@
   "name": "penpad",
   "version": "1.0.0",
   "module": "src/index.tsx",
+  "main": "dist/penpad.esm.js",
   "license": "MIT",
   "dependencies": {
     "clarity-icons-svg": "^0.2.0",
@@ -23,6 +24,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "rollup": "^1.10.0",
+    "rollup-plugin-commonjs": "^9.3.4",
     "rollup-plugin-node-resolve": "^4.2.3",
     "rollup-plugin-postcss-modules": "^2.0.1",
     "rollup-plugin-react-svg": "^2.1.0",

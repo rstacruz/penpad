@@ -3,22 +3,30 @@ import typescript from 'rollup-plugin-typescript2'
 import resolve from 'rollup-plugin-node-resolve'
 import postcss from 'rollup-plugin-postcss-modules'
 import reactSvg from 'rollup-plugin-react-svg'
+import commonjs from 'rollup-plugin-commonjs'
 
 const DEFAULTS = {
   input: 'src/index.tsx',
-  external: ['react', 'react-dom'],
+  external: id =>
+    !id.startsWith('\0') &&
+    !id.startsWith('.') &&
+    !id.startsWith('/') &&
+    !id.startsWith('clarity-icons-svg'),
   plugins: [
     resolve({
       browser: true,
       extensions: ['.js', '.ts', '.tsx'],
       dedupe: ['react', 'react-dom']
     }),
+    commonjs(),
     postcss({
-      plugins: []
+      plugins: [
+        /* TODO: postcss-load-config */
+      ]
     }),
-    reactSvg({}),
+    reactSvg(),
     typescript({
-      exclude: 'node_modules/**'
+      exclude: ['node_modules/**', '../../node_modules/**']
     })
   ]
 }
@@ -26,14 +34,21 @@ const DEFAULTS = {
 const UMD = {
   format: 'umd',
   name: 'penpad',
-  globals: { react: 'React', 'react-dom': 'ReactDOM' }
+  globals: {
+    react: 'React',
+    'react-dom': 'ReactDOM',
+    classnames: 'classnames',
+    'jsx-to-string': 'jsxToString',
+    'react-frame-component': 'Frame',
+    'react-helmet': 'ReactHelmet'
+  }
 }
 
 export default [
   // ES Modules
   {
     ...DEFAULTS,
-    output: { file: 'dist/penpad.esm.mjs', format: 'esm' }
+    output: { file: 'dist/penpad.esm.js', format: 'esm' }
   },
 
   // ES6
