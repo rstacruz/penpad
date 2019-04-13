@@ -1,5 +1,4 @@
-// @ts-ignore
-import Icon from '-!react-svg-loader!clarity-icons-svg/essential/file-outline.svg'
+import { FileOutlineIcon as Icon } from './icons'
 import cn from 'classnames'
 import React from 'react'
 // TODO change this

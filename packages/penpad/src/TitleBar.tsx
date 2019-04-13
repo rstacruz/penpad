@@ -1,7 +1,7 @@
-// @ts-ignore
-import DocsIcon from '-!react-svg-loader!clarity-icons-svg/essential/file-outline.svg'
-// @ts-ignore
-import SpecimenIcon from '-!react-svg-loader!clarity-icons-svg/essential/library-outline.svg'
+import {
+  LibraryIcon as SpecimenIcon,
+  FileOutlineIcon as DocsIcon
+} from './icons'
 import cn from 'classnames'
 import React from 'react'
 import { useAppContext } from './state'

@@ -7,6 +7,8 @@
       "demos/*"
     ],
     "nohoist": [
+      "**/classnames",
+      "**/classnames/**",
       "**/sanitize.css",
       "**/sanitize.css/**"
     ]

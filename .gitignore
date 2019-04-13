@@ -4,3 +4,9 @@ yarn-error.log
 # Gatsby
 .cache
 public
+
+# Rollup
+.rpt2_cache
+
+# Misc
+dist

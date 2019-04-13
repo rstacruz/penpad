@@ -1,9 +1,9 @@
 // @ts-ignore
-import Icon from '-!react-svg-loader!clarity-icons-svg/technology/container-outline.svg'
+import { DocIcon as Icon } from './icons'
 import cn from 'classnames'
 import React from 'react'
 import CSS from './SpecimenNavigation.module.css'
-import { Actions, useAppContext } from './state'
+import { useAppContext } from './state'
 import { isActiveSpecimen } from './state/selectors'
 import { Specimens } from './types'
 

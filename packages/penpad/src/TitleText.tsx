@@ -1,5 +1,4 @@
-// @ts-ignore
-import Chevron from '-!react-svg-loader!clarity-icons-svg/core/angle-outline.svg'
+import { Chevron } from './icons'
 import React from 'react'
 import CSS from './TitleText.module.css'
 
