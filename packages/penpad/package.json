@@ -1,9 +1,13 @@
 {
   "name": "@rstacruz/penpad",
   "version": "0.1.0-pre.1",
-  "module": "src/index.tsx",
-  "main": "dist/penpad.esm.js",
+  "main": "dist/penpad.es5.js",
+  "module": "dist/penpad.esm.js",
   "license": "MIT",
+  "files": [
+    "src",
+    "dist"
+  ],
   "dependencies": {
     "clarity-icons-svg": "^0.2.0",
     "classnames": "^2.2.6",
