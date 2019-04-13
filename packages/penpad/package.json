@@ -1,6 +1,6 @@
 {
   "name": "@rstacruz/penpad",
-  "version": "0.1.0-pre.1",
+  "version": "0.1.0-pre.3",
   "main": "dist/penpad.es5.js",
   "module": "dist/penpad.esm.js",
   "license": "MIT",
