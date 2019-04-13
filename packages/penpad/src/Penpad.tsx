@@ -28,6 +28,7 @@ const Penpad = (props: Config) => {
         <Helmet>
           <title>{title}</title>
           <meta name='viewport' content='width=1200px' />
+          <meta name='robots' content='noindex' />
         </Helmet>
         <div className={CSS.topnav}>
           <div className={CSS.title}>
