@@ -19,7 +19,7 @@
   "scripts": {
     "prepare": "yarn workspace @rstacruz/penpad prepare",
     "penpad:watch": "yarn workspace @rstacruz/penpad watch",
-    "gatsby:develop": "yarn workspace @penpad/gatsby-demo develop",
+    "gatsby:develop": "yarn workspace @penpad/gatsby-demo gatsby develop --host ${HOST:-0.0.0.0} --port ${PORT:-23300}",
     "develop": "run-p -sl penpad:watch gatsby:develop"
   },
   "devDependencies": {
