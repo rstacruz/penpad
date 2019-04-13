@@ -3,14 +3,15 @@ import toString from 'jsx-to-string'
 import React from 'react'
 import CSS from './SourceCodePanel.module.css'
 import Util from './utils.module.css'
+import { Specimen } from './types'
 
 interface Props {
-  view: () => React.ReactNode
+  specimen: Pick<Specimen, 'render'>
 }
 
 const SourceCodePanel = (props: Props) => {
-  const { view } = props
-  const code = toString(view())
+  const { specimen } = props
+  const code = toString(specimen.render())
 
   return (
     <div className={CSS.root}>

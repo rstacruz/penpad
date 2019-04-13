@@ -24,7 +24,11 @@ export interface Config {
 }
 
 export interface Specimen {
-  view: () => React.ReactNode
+  /**
+   * The function, when called, will render the React component to be
+   * displayed. Can be a functional React component.
+   */
+  render: () => React.ReactNode
 
   /** The description to be shown */
   description?: React.ReactNode

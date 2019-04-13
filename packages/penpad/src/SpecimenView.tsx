@@ -22,7 +22,7 @@ const SpecimenView = ({ specimen }: Props) => {
       ? state.useFrame
       : false
 
-  const { view: Component } = specimen
+  const { render: Component } = specimen
 
   // @ts-ignore I don't know how to type this (TS2605)
   const componentNode = <Component />

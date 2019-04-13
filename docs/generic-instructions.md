@@ -10,12 +10,12 @@ Put the `Penpad` component anywhere in your website.
 <Penpad
   specimens={{
     'SpecimenOne': {
-      view: () => <button>I am a button!</button>,
+      render: () => <button>I am a button!</button>,
       width: 200
     },
 
     'SpecimenTwo': {
-      view: () => <button>I am a button!</button>
+      render: () => <button>I am a button!</button>
       width: 200
     }
   }}

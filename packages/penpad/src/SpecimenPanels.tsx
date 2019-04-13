@@ -18,7 +18,7 @@ const SpecimenPanels = (props: Props) => {
         <SpecimenDescriptionPanel {...{ specimen }} />
       ) : null}
       <ResponsiveResizePanel />
-      <SourceCodePanel view={specimen.view} key={id} />
+      <SourceCodePanel specimen={specimen} key={id} />
     </>
   )
 }
