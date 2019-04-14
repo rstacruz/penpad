@@ -33,6 +33,9 @@ tsc\:check: ## Runs the TypeScript compiler
 tsc\:watch: ## Runs the TypeScript compiler (watch mode) [alias: t]
 	$(run) yarn tsc --watch
 
+prettier\:check:
+	$(run) yarn prettier:check
+
 css_modules\:update: ## Update CSS modules [alias: c]
 	$(run) yarn css_modules:update
 
@@ -40,6 +43,10 @@ css_modules\:update: ## Update CSS modules [alias: c]
 i: yarn
 s: start
 sh: bash
-c: css_modules\:update
 ts: tsc\:watch
 tj: jest\:watch
+
+# Simular CI
+ci: yarn tsc\:check jest prettier\:check
+# Fix whatever can be fixed
+fix: css_modules\:update prettier\:fix

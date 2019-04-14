@@ -20,6 +20,7 @@
   "license": "MIT",
   "scripts": {
     "prepare": "yarn workspace @rstacruz/penpad prepare",
+    "prettier:check": "prettier --list-different 'packages/*/src/**/*.{js,jsx,ts,tsx}'",
     "prettier:fix": "prettier --write 'packages/*/src/**/*.{js,jsx,ts,tsx}'",
     "penpad:watch": "yarn workspace @rstacruz/penpad watch",
     "tsc:check": "tsc --noEmit",
