@@ -14,7 +14,7 @@ const Context = React.createContext<{
 const AppProvider = Context.Provider
 
 /** The main hook */
-const useAppState = (props: Config) => {
+const useAppState = (props: Partial<Config>) => {
   const [state, setState] = useState<State>(getInitialState(props))
 
   const actions = {

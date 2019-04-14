@@ -1,1 +1,1 @@
-console.log('hmm')
+require('jest-dom/extend-expect')
