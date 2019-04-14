@@ -7,20 +7,20 @@ import { AppProvider, useAppState, useAppContext } from './state'
 import TitleBar from './TitleBar'
 import { Config } from './types'
 
-const Penpad = (props: Config) => {
+const Penpad = (props: Partial<Config>) => {
   return (
     <PenpadProvider {...props}>
-      <PenpadUI {...props} />
+      <PenpadUI />
     </PenpadProvider>
   )
 }
 
-const PenpadProvider = (props: Config) => {
+const PenpadProvider = (props: Partial<Config>) => {
   const { state, actions } = useAppState(props)
   return <AppProvider value={{ state, actions }}>{props.children}</AppProvider>
 }
 
-const PenpadUI = (props: Config) => {
+const PenpadUI = () => {
   const { state, actions } = useAppContext()
   if (!state || !actions) return <></>
 
@@ -60,9 +60,9 @@ const PenpadUI = (props: Config) => {
 }
 
 PenpadProvider.defaultProps = {
-  title: 'Penpad',
+  ui: { title: 'Penpad' },
   pages: {},
-  useFrame: true
+  specimens: {}
 }
 
 /*

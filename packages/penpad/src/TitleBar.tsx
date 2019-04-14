@@ -14,10 +14,11 @@ const TitleBar = () => {
   if (!state || !actions) return <span />
 
   return (
-    <div className={CSS.root}>
+    <div className={CSS.root} data-testid='titlebar'>
       <div className={CSS.left}>
         {/* Docs */}
         <button
+          data-testid='docs-nav-button'
           className={cn(CSS.navButton, {
             [CSS.isActive]: state.activeView.type === 'page'
           })}
@@ -27,8 +28,9 @@ const TitleBar = () => {
           <span className={CSS.navLabel}>Docs</span>
         </button>
 
-        {/* Specimens */}
+        {/* Specimens/assets */}
         <button
+          data-testid='assets-nav-button'
           className={cn(CSS.navButton, {
             [CSS.isActive]: state.activeView.type === 'specimen'
           })}

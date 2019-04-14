@@ -21,11 +21,20 @@ down: ## Stops the server
 bash: ## Runs a shell inside a Docker container [alias: sh]
 	$(run) bash
 
+jest: ## Jest tests
+	$(run) yarn jest
+
+jest\:watch: ## Jest tests
+	$(run) yarn jest --watch
+
 tsc\:check: ## Runs the TypeScript compiler
 	$(run) yarn tsc
 
 tsc\:watch: ## Runs the TypeScript compiler (watch mode) [alias: t]
 	$(run) yarn tsc --watch
+
+prettier\:check:
+	$(run) yarn prettier:check
 
 css_modules\:update: ## Update CSS modules [alias: c]
 	$(run) yarn css_modules:update
@@ -34,5 +43,10 @@ css_modules\:update: ## Update CSS modules [alias: c]
 i: yarn
 s: start
 sh: bash
-c: css_modules\:update
-t: tsc\:watch
+ts: tsc\:watch
+tj: jest\:watch
+
+# Simular CI
+ci: yarn tsc\:check jest prettier\:check
+# Fix whatever can be fixed
+fix: css_modules\:update prettier\:fix

@@ -26,6 +26,7 @@ const Navigation = (props: Props) => {
           return (
             <li className={CSS.item} key={name}>
               <button
+                data-testid={`nav-specimen:${name}`}
                 className={cn(CSS.entry, {
                   [CSS.isActive]: isActiveSpecimen(state, name)
                 })}

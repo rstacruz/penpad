@@ -18,7 +18,12 @@ const FrameWrapper = ({ children, className, style }: Props) => {
     </>
   )
   return (
-    <Frame head={head} className={className} style={style || {}}>
+    <Frame
+      head={head}
+      className={className}
+      style={style || {}}
+      data-testid='framewrapper-iframe'
+    >
       {children}
     </Frame>
   )
