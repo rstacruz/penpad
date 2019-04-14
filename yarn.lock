@@ -10248,14 +10248,6 @@ react-svg-core@^2.1.0:
     lodash.isplainobject "^4.0.6"
     svgo "^0.7.2"
 
-react-svg-loader@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/react-svg-loader/-/react-svg-loader-2.1.0.tgz#ba15019413b9b11e2012e86580aea1eecc93677e"
-  integrity sha512-ojF2pJtqpyvxVejLZCFVBYno/8BPQ5mT6e0LPsR7RTk5gvap4wCYaGR7gW0iYObmWsZAJa/ljrG7ghkZ/2cX8Q==
-  dependencies:
-    loader-utils "^1.1.0"
-    react-svg-core "^2.1.0"
-
 react-testing-library@^6.0.3, react-testing-library@^6.1.2:
   version "6.1.2"
   resolved "https://registry.yarnpkg.com/react-testing-library/-/react-testing-library-6.1.2.tgz#f6bba6eeecedac736eb00b22b4c70bae04535a4f"
@@ -10826,14 +10818,6 @@ rollup-plugin-typescript2@^0.20.1:
     rollup-pluginutils "2.4.1"
     tslib "1.9.3"
 
-rollup-plugin-typescript@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-typescript/-/rollup-plugin-typescript-1.0.1.tgz#86565033b714c3d1f3aba510aad3dc519f7091e9"
-  integrity sha512-rwJDNn9jv/NsKZuyBb/h0jsclP4CJ58qbvZt2Q9zDIGILF2LtdtvCqMOL+Gq9IVq5MTrTlHZNrn8h7VjQgd8tw==
-  dependencies:
-    resolve "^1.10.0"
-    rollup-pluginutils "^2.5.0"
-
 rollup-pluginutils@2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/rollup-pluginutils/-/rollup-pluginutils-2.4.1.tgz#de43ab54965bbf47843599a7f3adceb723de38db"
@@ -10842,7 +10826,7 @@ rollup-pluginutils@2.4.1:
     estree-walker "^0.6.0"
     micromatch "^3.1.10"
 
-rollup-pluginutils@^2.0.1, rollup-pluginutils@^2.5.0, rollup-pluginutils@^2.6.0:
+rollup-pluginutils@^2.0.1, rollup-pluginutils@^2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/rollup-pluginutils/-/rollup-pluginutils-2.6.0.tgz#203706edd43dfafeaebc355d7351119402fc83ad"
   integrity sha512-aGQwspEF8oPKvg37u3p7h0cYNwmJR1sCBMZGZ5b9qy8HGtETknqjzcxrDRrcAnJNXN18lBH4Q9vZYth/p4n8jQ==

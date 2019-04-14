@@ -17,7 +17,7 @@
     "jsx": "react"
   },
   "include": [
-    "packages/penpad/src",
-    "packages/penpad/types"
+    "packages/*/src",
+    "types"
   ]
 }
