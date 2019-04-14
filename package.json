@@ -26,11 +26,11 @@
     "tsc:check": "tsc --noEmit",
     "tsc:watch": "tsc --noEmit --watch",
     "css_modules:update": "tcm 'packages/*/src/**/*.module.css' && prettier --write 'packages/*/src/**/*.module.css.d.ts'",
-    "gatsby:develop": "yarn workspace @penpad/gatsby-demo gatsby develop --host ${HOST:-0.0.0.0} --port ${PORT:-23300}",
-    "full-develop": "run-p -sl penpad:watch gatsby:develop",
+    "develop": "yarn workspace @penpad/gatsby-demo gatsby develop --host ${HOST:-0.0.0.0} --port ${PORT:-23300}",
+    "full-develop": "run-p -sl penpad:watch develop",
     "test:check": "jest",
     "test:watch": "jest --watch",
-    "watch": "run-p -sl '*:watch' gatsby:develop",
+    "watch": "run-p -sl '*:watch' develop",
     "test": "run-p -sl '*:check'"
   },
   "devDependencies": {
