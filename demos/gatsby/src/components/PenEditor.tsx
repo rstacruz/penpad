@@ -7,10 +7,12 @@ import { Controlled as CodeMirror } from 'react-codemirror2'
 // CodeMirror stuff
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/theme/material.css'
-// @ts-ignore
-import 'codemirror/mode/xml/xml'
-// @ts-ignore
-import 'codemirror/mode/jsx/jsx'
+
+// This will fail in server-side rendering.
+if (typeof navigator !== 'undefined') {
+  // @ts-ignore
+  require('codemirror/mode/jsx/jsx')
+}
 
 // This needs require(), doesn't work with import
 // @ts-ignore
