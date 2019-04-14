@@ -7,16 +7,12 @@ import { useAppContext } from './state'
 import { isActiveSpecimen } from './state/selectors'
 import { Specimens } from './types'
 
-interface Props {
-  specimens: Specimens
-}
-
-const Navigation = (props: Props) => {
+const SpecimenNavigation = () => {
   const { state, actions } = useAppContext()
-  if (!state || !actions) return <span />
+  console.log('specimennav state', state)
+  if (!state || !actions) return <></>
 
-  const { specimens } = props
-
+  const { specimens } = state
   const names = Object.keys(specimens).sort()
 
   return (
@@ -45,4 +41,4 @@ const Navigation = (props: Props) => {
   )
 }
 
-export default Navigation
+export default SpecimenNavigation

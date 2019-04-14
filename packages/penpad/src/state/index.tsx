@@ -1,6 +1,7 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useContext, useState, useEffect, useMemo } from 'react'
 import { Config, State } from '../types'
 import getInitialState from './getInitialState'
+import getActions from './actions'
 
 /**
  * The context to be used in useAppContext
@@ -18,61 +19,26 @@ const Context = React.createContext<{
 const AppProvider = Context.Provider
 
 /**
- * The main hook
+ * The main hook used to manage the state (`state`, `setState`).
  */
+
 const useAppState = (props: Partial<Config>) => {
-  const [state, setState] = useState<State>(getInitialState(props))
+  const [state, setState] = useState<State>(getInitialState())
 
-  const actions = {
-    /** Navigate to a given specimen */
-    setActiveSpecimen(specimenId: string) {
-      setState({
-        ...state,
-        activeView: {
-          type: 'specimen',
-          specimenId
-        }
-      })
-    },
-
-    /** Navigate to a given page */
-    setActivePage(pageId: string) {
-      setState({
-        ...state,
-        activeView: {
-          type: 'page',
-          pageId
-        }
-      })
-    },
-
-    /** Navigate to specimens area */
-    navToSpecimens() {
-      setState({ ...state, activeView: { type: 'specimen' } })
-    },
-
-    /** Navigate to docs area */
-    navToDocs() {
-      // First page
-      const pageId = Object.keys(state.pages || {})[0]
-      setState({ ...state, activeView: { type: 'page', pageId } })
-    },
-
-    /** Resize for responsive mode */
-    setFrameWidth(width: number | null) {
-      setState({
-        ...state,
-        specimenView: { ...state.specimenView, frameWidth: width }
-      })
-    }
-  }
+  // The actions
+  // (No need to rebuild the whole actions object except on first load)
+  const actions = useMemo(() => getActions(setState), [setState])
 
   useEffect(() => {
-    setState({ ...state, specimens: props.specimens })
+    actions.mergeUiConfig(props.ui)
+  }, [props.ui])
+
+  useEffect(() => {
+    actions.setSpecimens(props.specimens)
   }, [props.specimens])
 
   useEffect(() => {
-    setState({ ...state, pages: props.pages })
+    actions.setPages(props.pages)
   }, [props.pages])
 
   return { state, actions }

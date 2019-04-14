@@ -4,10 +4,10 @@ import { Config, State } from '../types'
  * Returns the initial state for the store based on props.
  */
 
-const getInitialState = (props: Partial<Config>): State => {
+const getInitialState = (): State => {
   return {
     uiConfig: {
-      title: (props.ui && props.ui.title) || 'Penpad'
+      title: 'Penpad'
     },
     activeView: { type: 'specimen' },
     specimens: {},

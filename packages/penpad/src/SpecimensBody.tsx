@@ -18,11 +18,10 @@ const SpecimensBody = ({
   specimenId: string | null
 }) => {
   const { state, actions } = useAppContext()
-  if (!state || !actions) {
-    return <span />
-  }
+  if (!state || !actions) return <></>
 
   const { specimens } = state
+  console.log('specimensbody', state)
 
   return (
     <>
@@ -33,9 +32,7 @@ const SpecimensBody = ({
 
       {/* Left */}
       <aside className={CSS.sidebar}>
-        {specimens ? (
-          <SpecimenNavigation {...{ specimens, state, actions }} />
-        ) : null}
+        {specimens ? <SpecimenNavigation /> : null}
       </aside>
 
       {/* Right */}

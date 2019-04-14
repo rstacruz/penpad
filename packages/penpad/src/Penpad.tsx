@@ -7,6 +7,10 @@ import { AppProvider, useAppState, useAppContext } from './state'
 import TitleBar from './TitleBar'
 import { Config } from './types'
 
+/**
+ * The main component
+ */
+
 const Penpad = (props: Partial<Config>) => {
   return (
     <PenpadProvider {...props}>
@@ -15,14 +19,24 @@ const Penpad = (props: Partial<Config>) => {
   )
 }
 
+/**
+ * Provider so that you can use Penpad's state
+ */
+
 const PenpadProvider = (props: Partial<Config>) => {
   const { state, actions } = useAppState(props)
   return <AppProvider value={{ state, actions }}>{props.children}</AppProvider>
 }
 
+/**
+ * The main UI. I'm a consumer of PenpadProvider
+ */
+
 const PenpadUI = () => {
   const { state, actions } = useAppContext()
-  if (!state || !actions) return <></>
+  if (!state || !actions) {
+    throw new Error('PenpadUI needs to be placed inside a PenpadProvider')
+  }
 
   const { title } = state.uiConfig
   const { activeView, specimens } = state
@@ -44,11 +58,15 @@ const PenpadUI = () => {
         <meta name='viewport' content='width=1200px' />
         <meta name='robots' content='noindex' />
       </Helmet>
+
+      {/* Navigation */}
       <div className={CSS.topnav}>
         <div className={CSS.title}>
           <TitleBar />
         </div>
       </div>
+
+      {/* Body */}
       <div className={CSS.body}>
         {viewType === 'specimen' ? (
           <SpecimensBody {...{ specimen, specimenId }} />
