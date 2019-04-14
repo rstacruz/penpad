@@ -21,6 +21,12 @@ down: ## Stops the server
 bash: ## Runs a shell inside a Docker container [alias: sh]
 	$(run) bash
 
+jest: ## Jest tests
+	$(run) yarn jest
+
+jest\:watch: ## Jest tests
+	$(run) yarn jest --watch
+
 tsc\:check: ## Runs the TypeScript compiler
 	$(run) yarn tsc
 
@@ -35,4 +41,5 @@ i: yarn
 s: start
 sh: bash
 c: css_modules\:update
-t: tsc\:watch
+ts: tsc\:watch
+tj: jest\:watch
