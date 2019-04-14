@@ -57,10 +57,10 @@ const DynamicTitleText = ({ state }: { state: State }) => {
   }
   if (activeView.type === 'page') {
     if (activeView.pageId) {
-      return <TitleText parts={[state.title, activeView.pageId]} />
+      return <TitleText parts={[state.uiConfig.title, activeView.pageId]} />
     }
   }
-  return <TitleText parts={[state.title]} />
+  return <TitleText parts={[state.uiConfig.title]} />
 }
 
 export default TitleBar

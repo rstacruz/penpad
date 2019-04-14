@@ -13,7 +13,7 @@ const SpecimenView = ({ specimen }: Props) => {
   const { state } = useAppContext()
 
   // If responsive mode
-  const frameWidth = state && state.frameWidth
+  const frameWidth = state && state.specimenView.frameWidth
 
   const { render: Component } = specimen
 

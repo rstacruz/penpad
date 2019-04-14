@@ -54,7 +54,10 @@ const useAppState = (props: Config) => {
 
     /** Resize for responsive mode */
     setFrameWidth(width: number | null) {
-      setState({ ...state, frameWidth: width })
+      setState({
+        ...state,
+        specimenView: { ...state.specimenView, frameWidth: width }
+      })
     }
   }
 

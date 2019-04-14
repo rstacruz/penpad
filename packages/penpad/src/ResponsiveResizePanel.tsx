@@ -7,7 +7,7 @@ import Util from './utils.module.css'
 
 const ResponsiveResizePanel = () => {
   const { state, actions } = useAppContext()
-  const currentWidth = state && state.frameWidth
+  const currentWidth = state && state.specimenView.frameWidth
 
   const widths = [null, 479, 767, 1199]
 

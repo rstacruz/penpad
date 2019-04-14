@@ -6,11 +6,15 @@ import { Config, State } from '../types'
 
 const getInitialState = (props: Config): State => {
   return {
-    title: props.title || 'Penpad',
+    uiConfig: {
+      title: (props.ui && props.ui.title) || 'Penpad'
+    },
     activeView: { type: 'specimen' },
     specimens: props.specimens || {},
     pages: props.pages || {},
-    frameWidth: null
+    specimenView: {
+      frameWidth: null
+    }
   }
 }
 

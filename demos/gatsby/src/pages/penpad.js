@@ -20,7 +20,9 @@ const pages = {
 }
 
 const Page = () => {
-  return <Penpad pages={pages} specimens={specimens} />
+  return (
+    <Penpad ui={{ title: 'Penpad demo' }} pages={pages} specimens={specimens} />
+  )
 }
 
 export default Page

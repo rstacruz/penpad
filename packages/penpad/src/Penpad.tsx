@@ -24,7 +24,7 @@ const PenpadUI = (props: Config) => {
   const { state, actions } = useAppContext()
   if (!state || !actions) return <></>
 
-  const { title } = props
+  const { title } = state.uiConfig
   const { activeView, specimens } = state
 
   // 'specimen' or 'page', depending on what's selected on top.
