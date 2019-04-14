@@ -10,7 +10,7 @@ yarn: ## Installs packages [alias: i]
 	$(run) yarn
 
 start: ## Starts the server [alias: s]
-	$(run) yarn start
+	$(run) yarn develop
 
 up: ## Starts the server in the background
 	docker-compose up -d

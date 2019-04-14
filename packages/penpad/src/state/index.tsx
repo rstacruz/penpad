@@ -1,19 +1,25 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { Config, State } from '../types'
 import getInitialState from './getInitialState'
 
-/** Only used in tests */
+/**
+ * The context to be used in useAppContext
+ */
 
-/** The context to be used in useAppContext */
 const Context = React.createContext<{
   state: State | null
   actions: Actions | null
 }>({ state: null, actions: null })
 
-/** Context provider */
+/**
+ * Context provider
+ */
+
 const AppProvider = Context.Provider
 
-/** The main hook */
+/**
+ * The main hook
+ */
 const useAppState = (props: Partial<Config>) => {
   const [state, setState] = useState<State>(getInitialState(props))
 
@@ -61,10 +67,21 @@ const useAppState = (props: Partial<Config>) => {
     }
   }
 
+  useEffect(() => {
+    setState({ ...state, specimens: props.specimens })
+  }, [props.specimens])
+
+  useEffect(() => {
+    setState({ ...state, pages: props.pages })
+  }, [props.pages])
+
   return { state, actions }
 }
 
-/** Pick up what's given in AppProvider */
+/**
+ * Pick up what's given in AppProvider
+ */
+
 const useAppContext = () => {
   return useContext(Context)
 }

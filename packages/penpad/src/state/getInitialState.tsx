@@ -10,8 +10,8 @@ const getInitialState = (props: Partial<Config>): State => {
       title: (props.ui && props.ui.title) || 'Penpad'
     },
     activeView: { type: 'specimen' },
-    specimens: props.specimens || {},
-    pages: props.pages || {},
+    specimens: {},
+    pages: {},
     specimenView: {
       frameWidth: null
     }

@@ -28,8 +28,10 @@
     "css_modules:update": "tcm 'packages/*/src/**/*.module.css' && prettier --write 'packages/*/src/**/*.module.css.d.ts'",
     "gatsby:develop": "yarn workspace @penpad/gatsby-demo gatsby develop --host ${HOST:-0.0.0.0} --port ${PORT:-23300}",
     "develop": "run-p -sl penpad:watch gatsby:develop",
-    "test:run": "jest",
-    "test:watch": "jest --watch"
+    "test:check": "jest",
+    "test:watch": "jest --watch",
+    "watch": "run-p -sl '*:watch' gatsby:develop",
+    "test": "run-p -sl '*:check'"
   },
   "devDependencies": {
     "@types/jest": "^24.0.11",
