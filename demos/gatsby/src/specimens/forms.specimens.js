@@ -2,6 +2,7 @@ import React from 'react'
 
 export default {
   Field: {
+    padding: 16,
     render: () => (
       <div class='field'>
         <label class='label'>Label</label>
@@ -49,6 +50,7 @@ export default {
   // },
 
   'Control/with icons': {
+    padding: 16,
     render: () => (
       <>
         <div class='field'>
@@ -80,6 +82,7 @@ export default {
   },
 
   'Form/horizontal form': {
+    padding: 16,
     render: () => (
       <>
         <div class='field is-horizontal'>
@@ -226,6 +229,7 @@ export default {
 
   'Notification/danger': {
     width: 300,
+    background: 'transparent',
     render: () => (
       <div class='notification is-danger'>
         <button class='delete' />
@@ -241,6 +245,7 @@ export default {
 
   'Notification/primary': {
     width: 300,
+    background: 'transparent',
     render: () => (
       <div class='notification is-primary'>
         <button class='delete' />
@@ -256,6 +261,7 @@ export default {
 
   'Notification/info': {
     width: 300,
+    background: 'transparent',
     render: () => (
       <div class='notification is-info'>
         <button class='delete' />

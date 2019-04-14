@@ -13,8 +13,8 @@ import harvestHead from './utilities/harvestHead'
 const FrameWrapper = ({ children, className, style }: Props) => {
   const head = (
     <>
-      <style>{`html, body { min-height: 100%; margin: 0; padding: 0; }`}</style>
       {harvestHead()}
+      <style>{`html, body { min-height: 100%; margin: 0; padding: 0; background: transparent; }`}</style>
     </>
   )
   return (
