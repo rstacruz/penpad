@@ -18,7 +18,9 @@ const DocsBody = () => {
           className={Markdown.body}
           style={{ width: '700px', margin: '1em auto' }}
         >
-          {typeof page === 'function' ? page() : null}
+          {typeof page === 'function'
+            ? React.createElement(page, {}, [])
+            : null}
         </div>
       </main>
 

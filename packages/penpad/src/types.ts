@@ -7,7 +7,7 @@ export interface Specimens {
 }
 
 export interface Pages {
-  [id: string]: () => React.ReactNode
+  [id: string]: Component
 }
 
 /**
@@ -28,7 +28,7 @@ export interface Specimen {
    * The function, when called, will render the React component to be
    * displayed. Can be a functional React component.
    */
-  render: () => React.ReactNode
+  render: Component
 
   /** The description to be shown */
   description?: React.ReactNode

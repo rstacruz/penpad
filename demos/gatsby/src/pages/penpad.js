@@ -1,4 +1,5 @@
 import React from 'react'
+import { mdx } from 'mdx.macro'
 import {
   Penpad,
   combineContext
@@ -8,8 +9,18 @@ const specimens = combineContext(
   require.context('../', true, /\.specimens\.(jsx?|tsx?)$/)
 )
 
+const PP = mdx`
+  # Hello
+
+  This is a page.
+`
+
+const pages = {
+  sup: () => <PP />
+}
+
 const Page = () => {
-  return <Penpad pages={{}} specimens={specimens} />
+  return <Penpad pages={pages} specimens={specimens} />
 }
 
 export default Page
