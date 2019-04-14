@@ -1,6 +1,6 @@
 import { Component } from './Component'
 
-export interface Specimen {
+export interface ReactSpecimen {
   /**
    * The function, when called, will render the React component to be
    * displayed. Can be a functional React component.
@@ -14,3 +14,5 @@ export interface Specimen {
   background?: string
   padding?: string | number
 }
+
+export type Specimen = ReactSpecimen

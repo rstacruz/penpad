@@ -19,5 +19,10 @@
   "include": [
     "packages/*/src",
     "types"
+  ],
+  "exclude": [
+    "packages/*/.rpt2_cache",
+    "demos/gatsby/.cache",
+    "dist"
   ]
 }
