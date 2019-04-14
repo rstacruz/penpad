@@ -12,11 +12,7 @@ import pkg from './package.json'
 
 const DEFAULTS = {
   input: 'src/index.tsx',
-  external: id =>
-    !id.startsWith('\0') &&
-    !id.startsWith('.') &&
-    !id.startsWith('/') &&
-    !id.startsWith('clarity-icons-svg')
+  external: id => !id.match(/^(\0|\.|\/|clarity-icons-svg)/)
 }
 
 const PLUGINS = [
@@ -79,9 +75,21 @@ export default [
   },
 
   // ES5
+  // (still produces `=>` and stuff, so it's not properly es5.)
   {
     ...DEFAULTS,
     plugins: [...PLUGINS, TYPESCRIPT_LEGACY],
     output: { file: pkg.main, ...UMD }
   }
+
+  // Portable build for jsbin, codepen, etc
+  // {
+  //   ...DEFAULTS,
+  //   external: id =>
+  //     !id.match(
+  //       /^(\0|\.|\/|clarity-icons-svg|classnames|jsx-to-string|react-frame-component|react-helmet)/
+  //     ),
+  //   plugins: [...PLUGINS, TYPESCRIPT_LEGACY],
+  //   output: { file: 'dist/penpad.portable.js', ...UMD }
+  // }
 ]
