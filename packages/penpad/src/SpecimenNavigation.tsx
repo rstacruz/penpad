@@ -9,7 +9,6 @@ import { Specimens } from './types'
 
 const SpecimenNavigation = () => {
   const { state, actions } = useAppContext()
-  console.log('specimennav state', state)
   if (!state || !actions) return <></>
 
   const { specimens } = state

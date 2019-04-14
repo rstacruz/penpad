@@ -37,6 +37,10 @@ export interface State {
    */
 
   uiConfig: {
+    /** Title shown in the titlebar */
     title: string
+
+    /** If true, doesn't take over the entire screen */
+    isEmbedded: boolean
   }
 }

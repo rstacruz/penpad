@@ -3,11 +3,15 @@
 ## Testing
 
 ```js
-# Install denpedencies
+# Install dependencies
 yarn
 
 # Start the Gatsby demo
 yarn develop
+
+# ...alternatively, you can use this to spawn a
+# test watcher and tsc watcher too
+yarn watch
 ```
 
 Check package.json's `scripts` for some other useful things for development.

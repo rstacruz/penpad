@@ -1,5 +1,5 @@
 import React from 'react'
-import CSS from './Penpad.module.css'
+import CSS from './PenpadUI.module.css'
 import SpecimenNavigation from './SpecimenNavigation'
 import SpecimenPanels from './SpecimenPanels'
 import SpecimenView from './SpecimenView'
@@ -21,7 +21,6 @@ const SpecimensBody = ({
   if (!state || !actions) return <></>
 
   const { specimens } = state
-  console.log('specimensbody', state)
 
   return (
     <>

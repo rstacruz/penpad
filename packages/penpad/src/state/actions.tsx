@@ -56,7 +56,7 @@ const getActions = (setState: SetState) => ({
   },
 
   mergeUiConfig(conf: Partial<State['uiConfig']>) {
-    setState(state => ({ ...state, uiConfig: { ...state.uiConfig, conf } }))
+    setState(state => ({ ...state, uiConfig: { ...state.uiConfig, ...conf } }))
   },
 
   /** Dangerous passthru for plugins to use */

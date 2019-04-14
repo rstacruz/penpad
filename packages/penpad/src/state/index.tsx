@@ -29,16 +29,22 @@ const useAppState = (props: Partial<Config>) => {
   // (No need to rebuild the whole actions object except on first load)
   const actions = useMemo(() => getActions(setState), [setState])
 
+  // Prevent flicker
+  // useEffect(() => {
+  //   setState({ loaded: true })
+  // }, [])
+
+  // Hooks to absorb prop updates into the state
   useEffect(() => {
-    actions.mergeUiConfig(props.ui)
+    if (props.ui) actions.mergeUiConfig(props.ui)
   }, [props.ui])
 
   useEffect(() => {
-    actions.setSpecimens(props.specimens)
+    if (props.specimens) actions.setSpecimens(props.specimens)
   }, [props.specimens])
 
   useEffect(() => {
-    actions.setPages(props.pages)
+    if (props.pages) actions.setPages(props.pages)
   }, [props.pages])
 
   return { state, actions }

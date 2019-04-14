@@ -7,7 +7,8 @@ import { Config, State } from '../types'
 const getInitialState = (): State => {
   return {
     uiConfig: {
-      title: 'Penpad'
+      title: 'Penpad',
+      isEmbedded: false
     },
     activeView: { type: 'specimen' },
     specimens: {},

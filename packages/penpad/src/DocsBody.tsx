@@ -1,6 +1,6 @@
 import React from 'react'
 import DocsNavigation from './DocsNavigation'
-import CSS from './Penpad.module.css'
+import CSS from './PenpadUI.module.css'
 import { useAppContext } from './state'
 import { getActivePage } from './state/selectors'
 import Markdown from './styles/github-markdown.module.css'

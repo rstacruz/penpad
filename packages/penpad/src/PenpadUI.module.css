@@ -20,6 +20,13 @@
   /* composes: reset from './styles/reset.module.css'; */
   composes: uiFontStyle from './utils.module.css';
   background: var(--bg-main);
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+/* Modifies .root. It's set by default, unless isEmbedded is set */
+.isFullscreen {
   height: 100vh;
   width: 100vw;
   position: fixed;
@@ -27,6 +34,10 @@
   bottom: 0;
   right: 0;
   left: 0;
+}
+
+.isEmbedded {
+  overflow: hidden;
 }
 
 .body {
