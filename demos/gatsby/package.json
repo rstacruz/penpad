@@ -5,6 +5,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@babel/standalone": "^7.4.3",
+    "bulma": "^0.7.4",
     "codemirror": "^5.45.0",
     "gatsby": "^2.0.19",
     "gatsby-plugin-manifest": "^2.0.29",

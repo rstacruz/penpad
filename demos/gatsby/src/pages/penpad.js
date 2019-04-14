@@ -5,6 +5,8 @@ import { Penpad, combineContext } from '../../../../packages/penpad/src/index'
 // If running with rollup watch:
 // } from '../../../../packages/penpad/dist/penpad.esm.js'
 
+import 'bulma/css/bulma.css'
+
 const specimens = combineContext(
   require.context('../', true, /\.specimens\.(jsx?|tsx?)$/)
 )

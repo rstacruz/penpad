@@ -12,7 +12,12 @@ interface Props {
 const SourceCodePanel = (props: Props) => {
   const { specimen } = props
   // const code = toString(React.createElement(specimen.render, {}, []))
-  const code = toString(specimen.render({}))
+  let code: string
+  try {
+    code = toString(specimen.render({}))
+  } catch (e) {
+    code = `/* Error: ${e.message} */`
+  }
 
   return (
     <div className={CSS.root}>

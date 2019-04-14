@@ -1,5 +1,6 @@
 import React from 'react'
 import CSS from './PenpadUI.module.css'
+import ErrorCatcher from './ErrorCatcher'
 import SpecimenNavigation from './SpecimenNavigation'
 import SpecimenPanels from './SpecimenPanels'
 import SpecimenView from './SpecimenView'
@@ -26,7 +27,11 @@ const SpecimensBody = ({
     <>
       {/* Main area */}
       <main className={CSS.main}>
-        {specimen ? <SpecimenView {...{ specimen }} /> : null}
+        {specimen ? (
+          <ErrorCatcher>
+            <SpecimenView {...{ specimen }} />
+          </ErrorCatcher>
+        ) : null}
       </main>
 
       {/* Left */}
@@ -43,4 +48,5 @@ const SpecimensBody = ({
     </>
   )
 }
+
 export default SpecimensBody
