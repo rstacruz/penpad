@@ -10,7 +10,6 @@ const getInitialState = (props: Config): State => {
     activeView: { type: 'specimen' },
     specimens: props.specimens || {},
     pages: props.pages || {},
-    useFrame: props.useFrame || false,
     frameWidth: null
   }
 }

@@ -15,13 +15,6 @@ const SpecimenView = ({ specimen }: Props) => {
   // If responsive mode
   const frameWidth = state && state.frameWidth
 
-  const useFrame =
-    typeof specimen.useFrame === 'boolean'
-      ? specimen.useFrame
-      : state && typeof state.useFrame === 'boolean'
-      ? state.useFrame
-      : false
-
   const { render: Component } = specimen
 
   // @ts-ignore I don't know how to type this (TS2605)
@@ -50,20 +43,16 @@ const SpecimenView = ({ specimen }: Props) => {
     </div>
   )
 
-  if (useFrame) {
-    return (
-      <FrameWrapper
-        className={cn(CSS.iframe, {
-          [CSS.isResponsive]: !!frameWidth
-        })}
-        style={frameWidth ? { width: frameWidth, minWidth: frameWidth } : {}}
-      >
-        <div className={CSS.iframeBody}>{body}</div>
-      </FrameWrapper>
-    )
-  } else {
-    return body
-  }
+  return (
+    <FrameWrapper
+      className={cn(CSS.iframe, {
+        [CSS.isResponsive]: !!frameWidth
+      })}
+      style={frameWidth ? { width: frameWidth, minWidth: frameWidth } : {}}
+    >
+      <div className={CSS.iframeBody}>{body}</div>
+    </FrameWrapper>
+  )
 }
 
 interface Props {

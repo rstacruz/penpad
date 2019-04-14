@@ -11,7 +11,7 @@ interface Props {
 
 const SourceCodePanel = (props: Props) => {
   const { specimen } = props
-  const code = toString(specimen.render())
+  const code = toString(React.createElement(specimen.render, {}, []))
 
   return (
     <div className={CSS.root}>

@@ -23,7 +23,6 @@
     "tsc:check": "tsc --noEmit",
     "tsc:watch": "tsc --noEmit --watch",
     "css_modules:update": "tcm 'packages/*/src/**/*.module.css' && prettier --write 'packages/*/src/**/*.module.css.d.ts'",
-    "c": "run-s -s css_modules:update",
     "gatsby:develop": "yarn workspace @penpad/gatsby-demo gatsby develop --host ${HOST:-0.0.0.0} --port ${PORT:-23300}",
     "develop": "run-p -sl penpad:watch gatsby:develop"
   },
