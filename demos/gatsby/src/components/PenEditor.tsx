@@ -28,7 +28,12 @@ const SRC = `const specimens = {
 }
 
 const Demo = () => {
-  return <Penpad ui={{ isEmbedded: true }} specimens={specimens} />
+  return (
+    <Penpad
+      ui={{ isEmbedded: true }}
+      specimens={specimens}
+    />
+  )
 }`
 
 const PenEditor = () => {
@@ -57,7 +62,10 @@ const PenEditor = () => {
         <CodeMirror
           value={source}
           className={CSS.codemirror}
-          options={{ mode: 'jsx', lineNumbers: true, viewportMargin: Infinity }}
+          options={{
+            mode: 'jsx'
+            // lineNumbers: true
+          }}
           onBeforeChange={(editor, data, value) => {
             setSource(value)
           }}

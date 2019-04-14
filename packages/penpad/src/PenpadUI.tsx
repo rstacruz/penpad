@@ -6,6 +6,7 @@ import CSS from './PenpadUI.module.css'
 import SpecimensBody from './SpecimensBody'
 import { useAppContext } from './state'
 import TitleBar from './TitleBar'
+import './styles/reset.module.css'
 
 /**
  * The main UI. I'm a consumer of PenpadProvider
@@ -32,33 +33,35 @@ const PenpadUI = () => {
   const specimen = (specimenId && specimens && specimens[specimenId]) || null
 
   return (
-    <div
-      className={cn(CSS.root, {
-        [CSS.isFullscreen]: !isEmbedded,
-        [CSS.isEmbedded]: isEmbedded
-      })}
-    >
-      <Helmet>
-        <title>{title}</title>
-        <meta name='viewport' content='width=1200px' />
-        <meta name='robots' content='noindex' />
-      </Helmet>
+    <x-penpad-ui>
+      <div
+        className={cn(CSS.root, {
+          [CSS.isFullscreen]: !isEmbedded,
+          [CSS.isEmbedded]: isEmbedded
+        })}
+      >
+        <Helmet>
+          <title>{title}</title>
+          <meta name='viewport' content='width=1200px' />
+          <meta name='robots' content='noindex' />
+        </Helmet>
 
-      {/* Navigation */}
-      <div className={CSS.topnav}>
-        <div className={CSS.title}>
-          <TitleBar />
+        {/* Navigation */}
+        <div className={CSS.topnav}>
+          <div className={CSS.title}>
+            <TitleBar />
+          </div>
+        </div>
+
+        {/* Body */}
+        <div className={CSS.body}>
+          {viewType === 'specimen' ? (
+            <SpecimensBody {...{ specimen, specimenId }} />
+          ) : null}
+          {viewType === 'page' ? <DocsBody /> : null}
         </div>
       </div>
-
-      {/* Body */}
-      <div className={CSS.body}>
-        {viewType === 'specimen' ? (
-          <SpecimensBody {...{ specimen, specimenId }} />
-        ) : null}
-        {viewType === 'page' ? <DocsBody /> : null}
-      </div>
-    </div>
+    </x-penpad-ui>
   )
 }
 

@@ -2,131 +2,155 @@
  * The following sections are based off of Eric Meyer's reset.
  */
 
-.reset,
-.reset div,
-.reset span,
-.reset applet,
-.reset object,
-.reset iframe,
-.reset h1,
-.reset h2,
-.reset h3,
-.reset h4,
-.reset h5,
-.reset h6,
-.reset p,
-.reset blockquote,
-.reset pre,
-.reset a,
-.reset abbr,
-.reset acronym,
-.reset address,
-.reset big,
-.reset cite,
-.reset code,
-.reset del,
-.reset dfn,
-.reset em,
-.reset img,
-.reset ins,
-.reset kbd,
-.reset q,
-.reset s,
-.reset samp,
-.reset small,
-.reset strike,
-.reset strong,
-.reset sub,
-.reset sup,
-.reset tt,
-.reset var,
-.reset b,
-.reset u,
-.reset i,
-.reset center,
-.reset dl,
-.reset dt,
-.reset dd,
-.reset ol,
-.reset ul,
-.reset li,
-.reset fieldset,
-.reset form,
-.reset label,
-.reset legend,
-.reset table,
-.reset caption,
-.reset tbody,
-.reset tfoot,
-.reset thead,
-.reset tr,
-.reset th,
-.reset td,
-.reset article,
-.reset aside,
-.reset canvas,
-.reset details,
-.reset embed,
-.reset figure,
-.reset figcaption,
-.reset footer,
-.reset header,
-.reset hgroup,
-.reset menu,
-.reset nav,
-.reset output,
-.reset ruby,
-.reset section,
-.reset summary,
-.reset time,
-.reset mark,
-.reset audio,
-.reset video {
+x-penpad-ui,
+x-penpad-ui div,
+x-penpad-ui span,
+x-penpad-ui applet,
+x-penpad-ui object,
+x-penpad-ui iframe,
+x-penpad-ui h1,
+x-penpad-ui h2,
+x-penpad-ui h3,
+x-penpad-ui h4,
+x-penpad-ui h5,
+x-penpad-ui h6,
+x-penpad-ui p,
+x-penpad-ui blockquote,
+x-penpad-ui pre,
+x-penpad-ui a,
+x-penpad-ui abbr,
+x-penpad-ui acronym,
+x-penpad-ui address,
+x-penpad-ui big,
+x-penpad-ui cite,
+x-penpad-ui code,
+x-penpad-ui del,
+x-penpad-ui dfn,
+x-penpad-ui em,
+x-penpad-ui img,
+x-penpad-ui ins,
+x-penpad-ui kbd,
+x-penpad-ui q,
+x-penpad-ui s,
+x-penpad-ui samp,
+x-penpad-ui small,
+x-penpad-ui strike,
+x-penpad-ui strong,
+x-penpad-ui sub,
+x-penpad-ui sup,
+x-penpad-ui tt,
+x-penpad-ui var,
+x-penpad-ui b,
+x-penpad-ui u,
+x-penpad-ui i,
+x-penpad-ui center,
+x-penpad-ui dl,
+x-penpad-ui dt,
+x-penpad-ui dd,
+x-penpad-ui ol,
+x-penpad-ui ul,
+x-penpad-ui li,
+x-penpad-ui fieldset,
+x-penpad-ui form,
+x-penpad-ui label,
+x-penpad-ui legend,
+x-penpad-ui table,
+x-penpad-ui caption,
+x-penpad-ui tbody,
+x-penpad-ui tfoot,
+x-penpad-ui thead,
+x-penpad-ui tr,
+x-penpad-ui th,
+x-penpad-ui td,
+x-penpad-ui article,
+x-penpad-ui aside,
+x-penpad-ui canvas,
+x-penpad-ui details,
+x-penpad-ui embed,
+x-penpad-ui figure,
+x-penpad-ui figcaption,
+x-penpad-ui footer,
+x-penpad-ui header,
+x-penpad-ui hgroup,
+x-penpad-ui menu,
+x-penpad-ui nav,
+x-penpad-ui output,
+x-penpad-ui ruby,
+x-penpad-ui section,
+x-penpad-ui summary,
+x-penpad-ui time,
+x-penpad-ui mark,
+x-penpad-ui audio,
+x-penpad-ui video {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  /* Extras: */
   transition: none;
   box-shadow: none;
   border-radius: none;
   background: transparent;
 }
 
-.reset article,
-.reset aside,
-.reset details,
-.reset figcaption,
-.reset figure,
-.reset footer,
-.reset header,
-.reset hgroup,
-.reset menu,
-.reset nav,
-.reset section {
+x-penpad-ui article,
+x-penpad-ui aside,
+x-penpad-ui details,
+x-penpad-ui figcaption,
+x-penpad-ui figure,
+x-penpad-ui footer,
+x-penpad-ui header,
+x-penpad-ui hgroup,
+x-penpad-ui menu,
+x-penpad-ui nav,
+x-penpad-ui section {
   display: block;
 }
 
-.reset ol,
-.reset ul {
+x-penpad-ui ol,
+x-penpad-ui ul {
   list-style: none;
 }
 
-.reset blockquote,
-.reset q {
+x-penpad-ui blockquote,
+x-penpad-ui q {
   quotes: none;
 }
 
-.reset blockquote:before,
-.reset blockquote:after,
-.reset q:before,
-.reset q:after {
+x-penpad-ui blockquote:before,
+x-penpad-ui blockquote:after,
+x-penpad-ui q:before,
+x-penpad-ui q:after {
   content: '';
   content: none;
 }
 
-.reset table {
+x-penpad-ui table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+/*
+ * Extra rules that are a bit opinionated
+ */
+
+x-penpad-ui button {
+  cursor: pointer;
+}
+
+x-penpad-ui a:focus,
+x-penpad-ui button:focus {
+  outline: 0;
+}
+
+x-penpad-ui {
+  box-sizing: border-box;
+}
+
+x-penpad-ui *,
+x-penpad-ui *:before,
+x-penpad-ui *:after {
+  box-sizing: inherit;
 }
