@@ -1,4 +1,4 @@
-@import './variables.css';
+@import '../variables.css';
 
 .root {
   user-select: none;
@@ -28,7 +28,7 @@
   cursor: pointer;
   border-radius: 0;
   color: var(--text-mute);
-  composes: fontSizeMinus1 from './utils.module.css';
+  composes: fontSizeMinus1 from '../utils.module.css';
 
   &:hover,
   &:focus {

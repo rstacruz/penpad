@@ -1,11 +1,11 @@
 import React from 'react'
-import CSS from './ui/PenpadUI.module.css'
-import ErrorCatcher from './ErrorCatcher'
-import SpecimenNavigation from './SpecimenNavigation'
-import SpecimenPanels from './SpecimenPanels'
-import ReactSpecimenView from './ReactSpecimenView'
-import { useAppContext } from './state'
-import { Specimen, State } from './types'
+import CSS from './PenpadUI.module.css'
+import ErrorCatcher from '../ErrorCatcher'
+import SpecimenNavigation from '../SpecimenNavigation'
+import SpecimenPanels from '../SpecimenPanels'
+import ReactSpecimenView from '../ReactSpecimenView'
+import { useAppContext } from '../state'
+import { Specimen, State } from '../types'
 
 /**
  * The body to be shown for specimens view
