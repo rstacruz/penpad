@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import 'sanitize.css'
 import 'typeface-inter'
+import 'typeface-work-sans'
 
 const Layout = ({ children }) => (
   <StaticQuery

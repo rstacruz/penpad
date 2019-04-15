@@ -1,7 +1,14 @@
-import toString from 'jsx-to-string'
+import toString from 'react-element-to-jsx-string'
 import React, { useEffect } from 'react'
 import ReactSpecimenView from './ReactSpecimenView'
 import { useAppContext } from './state'
+
+/*
+ * See:
+ * https://github.com/algolia/react-element-to-jsx-string#reactelementtojsxstringreactelement-options
+ */
+
+const TO_STRING_OPTIONS = {}
 
 /**
  * Defines a specimen
@@ -26,7 +33,7 @@ const Specimen = (props: Props) => {
       getCode: () => {
         let code: string
         try {
-          code = toString(children)
+          code = toString(children, TO_STRING_OPTIONS)
         } catch (e) {
           code = `/* Error: ${e.message} */`
         }

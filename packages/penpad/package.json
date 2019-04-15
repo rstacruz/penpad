@@ -13,6 +13,7 @@
     "clarity-icons-svg": "^0.2.0",
     "classnames": "^2.2.6",
     "jsx-to-string": "^1.4.0",
+    "react-element-to-jsx-string": "^14.0.2",
     "react-frame-component": "^4.1.0",
     "react-helmet": "^5.2.0"
   },
