@@ -13,8 +13,9 @@ interface Props {
 
 const MultiSpecimenViewer = (props: Props) => {
   const { specimen } = props
-  const { View } = specimen
-  return <View />
+  const { view } = specimen
+  const [View, viewProps] = view
+  return <View {...viewProps} />
 }
 
 export default MultiSpecimenViewer

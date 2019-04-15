@@ -21,9 +21,7 @@ const Specimen = (props: Props) => {
 
       ...('description' in props ? { description: props.description } : null),
 
-      View: () => {
-        return <ReactSpecimenView {...props} />
-      },
+      view: [ReactSpecimenView, props],
 
       getCode: () => {
         let code: string
