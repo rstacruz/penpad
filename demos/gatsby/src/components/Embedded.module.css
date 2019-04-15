@@ -6,7 +6,7 @@
 .demopane,
 .codepane {
   flex: 1 1 auto;
-  height: 600px;
+  height: 340px;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
   margin: 12px;
   overflow: hidden;

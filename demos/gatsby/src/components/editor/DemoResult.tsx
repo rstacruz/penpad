@@ -29,8 +29,10 @@ const DemoResult = ({ code }: { code: string | null }) => {
       `${code}; return Demo`
     )
     try {
-      const Component = fn(React, EmbeddedPenpad, Specimen, Page)
-      const newJsx = <Component />
+      const DemoComponent = fn(React, EmbeddedPenpad, Specimen, Page)
+
+      // We can use <DemoComponent> here, but this will reduce flickering
+      const newJsx = DemoComponent()
       setLastKnown(newJsx)
       return newJsx
     } catch (e) {
