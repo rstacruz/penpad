@@ -1,4 +1,4 @@
-import { Chevron } from './icons'
+import { Chevron } from '../icons'
 import React from 'react'
 import CSS from './TitleText.module.css'
 

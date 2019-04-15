@@ -1,6 +1,6 @@
 import React from 'react'
 import CSS from './PenpadUI.module.css'
-import ErrorCatcher from '../ErrorCatcher'
+import ErrorCatcher from '../utils/ErrorCatcher'
 import SpecimenNavigation from '../SpecimenNavigation'
 import SpecimenPanels from '../SpecimenPanels'
 import ReactSpecimenView from '../ReactSpecimenView'

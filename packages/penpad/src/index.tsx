@@ -1,2 +1,2 @@
 export { default as Penpad } from './Penpad'
-export { default as combineContext } from './utilities/combineContext'
+export { default as combineContext } from './helpers/combineContext'

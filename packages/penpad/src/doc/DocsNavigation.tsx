@@ -1,9 +1,9 @@
-import { FileOutlineIcon as Icon } from './icons'
+import { FileOutlineIcon as Icon } from '../icons'
 import cn from 'classnames'
 import React from 'react'
-import CSS from './SpecimenNavigation.module.css'
-import { useAppContext } from './state'
-import { isActivePage } from './state/selectors'
+import CSS from '../SpecimenNavigation.module.css'
+import { useAppContext } from '../state'
+import { isActivePage } from '../state/selectors'
 
 const DocsNavigation = () => {
   const { state, actions } = useAppContext()

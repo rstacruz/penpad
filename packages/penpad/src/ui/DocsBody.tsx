@@ -1,5 +1,5 @@
 import React from 'react'
-import DocsNavigation from '../DocsNavigation'
+import DocsNavigation from '../doc/DocsNavigation'
 import CSS from './PenpadUI.module.css'
 import { useAppContext } from '../state'
 import { getActivePage } from '../state/selectors'

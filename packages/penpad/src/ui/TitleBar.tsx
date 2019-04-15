@@ -6,7 +6,7 @@ import cn from 'classnames'
 import React from 'react'
 import { useAppContext } from '../state'
 import CSS from './TitleBar.module.css'
-import TitleText from '../TitleText'
+import TitleText from './TitleText'
 import { State } from '../types'
 
 const TitleBar = () => {

@@ -1,6 +1,6 @@
 import cn from 'classnames'
 import React from 'react'
-import FrameWrapper from './FrameWrapper'
+import FrameWrapper from './utils/FrameWrapper'
 import CSS from './SpecimenView.module.css'
 import { useAppContext } from './state'
 import { Specimen } from './types'
@@ -9,7 +9,7 @@ import { Specimen } from './types'
  * Displays the given React specimen in an iframe.
  */
 
-const SpecimenView = ({ specimen }: Props) => {
+const ReactSpecimenView = ({ specimen }: Props) => {
   const { state } = useAppContext()
 
   // If responsive mode
@@ -59,4 +59,4 @@ interface Props {
   specimen: Specimen
 }
 
-export default SpecimenView
+export default ReactSpecimenView
