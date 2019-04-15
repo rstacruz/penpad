@@ -17,6 +17,7 @@ export interface Pages {
 export interface Config {
   ui: {
     title?: string
+    isEmbedded?: boolean
   }
   specimens: Specimens
   pages: Pages

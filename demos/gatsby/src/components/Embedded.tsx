@@ -1,11 +1,11 @@
 import React from 'react'
-import PenEditor from './PenEditor'
+import Editor from './editor/Editor'
 
 const EmbeddedPage = () => {
   return (
     <div style={{ margin: '64px auto' }}>
       <p style={{ textAlign: 'center' }}>Anyway, here's Penpad</p>
-      <PenEditor />
+      <Editor />
     </div>
   )
 }

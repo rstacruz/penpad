@@ -8,6 +8,8 @@ services:
     volumes:
       - .:/app
       - node_modules:/app/node_modules
+      - penpad_node_modules:/app/packages/penpad/node_modules
+      - gatsby_node_modules:/app/demos/gatsby/node_modules
       - cache:/app/.cache
       - public:/app/public
       - yarn_cache:/usr/local/share/.cache/yarn/v4
@@ -21,6 +23,8 @@ services:
 
 volumes:
   node_modules:
+  penpad_node_modules:
+  gatsby_node_modules:
   cache:
   public:
   yarn_cache:
