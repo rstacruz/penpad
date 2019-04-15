@@ -1,11 +1,11 @@
 import cn from 'classnames'
 import React from 'react'
-import { FileOutlineIcon as Icon } from '../icons'
+import { FileOutlineIcon } from '../icons'
 import CSS from '../SpecimenNavigation.module.css'
 import { useAppContext } from '../state'
 import { isActivePage } from '../state/selectors'
 
-const icon = React.memo(() => <Icon className={CSS.icon} />)
+const Icon = React.memo(() => <FileOutlineIcon className={CSS.icon} />)
 
 const DocsNavigation = () => {
   const { state, actions } = useAppContext()
@@ -28,7 +28,7 @@ const DocsNavigation = () => {
                   actions.setActivePage(name)
                 }}
               >
-                {icon}
+                <Icon />
                 <span className={CSS.name}>{name}</span>
               </button>
             </li>

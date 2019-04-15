@@ -10,8 +10,8 @@ import CSS from './TitleBar.module.css'
 import TitleText from './TitleText'
 
 const Icons = {
-  docs: React.memo(() => <DocsIcon className={CSS.navIcon} />),
-  assets: React.memo(() => <SpecimenIcon className={CSS.navIcon} />)
+  DocsIcon: React.memo(() => <DocsIcon className={CSS.navIcon} />),
+  AssetsIcon: React.memo(() => <SpecimenIcon className={CSS.navIcon} />)
 }
 
 const TitleBar = () => {
@@ -29,7 +29,7 @@ const TitleBar = () => {
           })}
           onClick={actions.navToDocs}
         >
-          {Icons.docs}
+          <Icons.DocsIcon />
           <span className={CSS.navLabel}>Docs</span>
         </button>
 
@@ -41,7 +41,7 @@ const TitleBar = () => {
           })}
           onClick={actions.navToSpecimens}
         >
-          {Icons.assets}
+          <Icons.AssetsIcon />
           <span className={CSS.navLabel}>Specimens</span>
         </button>
       </div>
