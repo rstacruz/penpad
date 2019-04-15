@@ -9,15 +9,17 @@ import { Specimens } from './types'
 
 const SpecimenNavigation = () => {
   const { state, actions } = useAppContext()
-  if (!state || !actions) return <></>
+  if (!state || !actions) return null
 
   const { specimens } = state
+  if (!specimens) return null
+
   const names = Object.keys(specimens).sort()
 
   return (
     <div className={CSS.root}>
       <ul className={CSS.list}>
-        {names.map(name => {
+        {names.map((name: string) => {
           return (
             <li className={CSS.item} key={name}>
               <button

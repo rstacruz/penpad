@@ -1,4 +1,4 @@
-import { Pages, Specimens, State } from '../types'
+import { Pages, Specimen, Specimens, State } from '../types'
 
 type SetState = (callback: (state: State) => State) => any
 
@@ -59,12 +59,12 @@ const getActions = (setState: SetState) => ({
     setState(state => ({ ...state, uiConfig: { ...state.uiConfig, ...conf } }))
   },
 
-  addSpecimen({ id, ...otherProps }) {
+  addSpecimen(specimen: Specimen) {
     setState(state => ({
       ...state,
       specimens: {
         ...state.specimens,
-        [id]: otherProps
+        [specimen.id]: specimen
       }
     }))
   },
@@ -72,6 +72,8 @@ const getActions = (setState: SetState) => ({
   removeSpecimen(id: string) {
     setState(state => {
       const { specimens } = state
+      if (!specimens) return state
+
       const { [id]: _, ...otherSpecimens } = specimens
       return {
         ...state,
@@ -90,6 +92,8 @@ const getActions = (setState: SetState) => ({
   removePage(id: string) {
     setState(state => {
       const { pages } = state
+      if (!pages) return state
+
       const { [id]: _, ...others } = pages
       return { ...state, pages: others }
     })

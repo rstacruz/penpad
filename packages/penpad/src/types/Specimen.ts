@@ -1,6 +1,8 @@
 import { Component } from './Component'
 
 export interface Specimen {
+  id: string
+
   /**
    * The React component to be rendered in the view.
    *
@@ -11,7 +13,7 @@ export interface Specimen {
    * This makes the experience flicker-free.
    */
 
-  view: [React.FunctionComponent, any]
+  view: [React.FunctionComponent<any>, any]
 
   /** Source code for the source code panel */
   getCode?: () => string

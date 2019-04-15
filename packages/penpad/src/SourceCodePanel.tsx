@@ -16,7 +16,7 @@ interface VProps {
 const SourceCodePanel = (props: Props) => {
   const { specimen } = props
 
-  if ('getCode' in specimen) {
+  if (typeof specimen.getCode === 'function') {
     const code = specimen.getCode()
     return <SourceCodePanelView code={code} />
   } else {

@@ -15,7 +15,7 @@ interface WebpackContext extends WebpackContextFn {
  * Assumes that all files export React components.
  */
 
-const CombineWebpackContext = ({ context }) => {
+const CombineWebpackContext = ({ context }: { context: WebpackContext }) => {
   return context.keys().map(key => {
     const Component = context(key).default
     if (!Component) return null
