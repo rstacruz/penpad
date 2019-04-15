@@ -40,8 +40,16 @@ const PenpadPage = () => {
       </Specimen>
 
       <CombineWebpackContext context={specimens} />
+
+      <Specimen id='DontClickMe'>
+        <Oops />
+      </Specimen>
     </Penpad>
   )
+}
+
+const Oops = () => {
+  throw new Error('This error was raised deliberately as a test!')
 }
 
 export default PenpadPage

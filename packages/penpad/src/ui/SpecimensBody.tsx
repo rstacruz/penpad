@@ -29,7 +29,7 @@ const SpecimensBody = ({
       {/* Main area */}
       <main className={CSS.main}>
         {specimen ? (
-          <ErrorCatcher>
+          <ErrorCatcher resetKey={specimen && specimen.id}>
             <MultiSpecimenViewer {...{ specimen }} />
           </ErrorCatcher>
         ) : null}
