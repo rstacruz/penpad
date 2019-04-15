@@ -9,6 +9,11 @@ import { State } from '../types'
 import CSS from './TitleBar.module.css'
 import TitleText from './TitleText'
 
+const Icons = {
+  docs: React.memo(() => <DocsIcon className={CSS.navIcon} />),
+  assets: React.memo(() => <SpecimenIcon className={CSS.navIcon} />)
+}
+
 const TitleBar = () => {
   const { state, actions } = useAppContext()
   if (!state || !actions) return <span />
@@ -24,7 +29,7 @@ const TitleBar = () => {
           })}
           onClick={actions.navToDocs}
         >
-          <DocsIcon className={CSS.navIcon} />
+          {Icons.docs}
           <span className={CSS.navLabel}>Docs</span>
         </button>
 
@@ -36,7 +41,7 @@ const TitleBar = () => {
           })}
           onClick={actions.navToSpecimens}
         >
-          <SpecimenIcon className={CSS.navIcon} />
+          {Icons.assets}
           <span className={CSS.navLabel}>Specimens</span>
         </button>
       </div>

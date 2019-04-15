@@ -7,6 +7,8 @@ import { useAppContext } from './state'
 import { isActiveSpecimen } from './state/selectors'
 import { Specimens } from './types'
 
+const icon = <Icon className={CSS.icon} />
+
 const SpecimenNavigation = () => {
   const { state, actions } = useAppContext()
   if (!state || !actions) return null
@@ -14,7 +16,8 @@ const SpecimenNavigation = () => {
   const { specimens } = state
   if (!specimens) return null
 
-  const names = Object.keys(specimens).sort()
+  const names = Object.keys(specimens)
+  //.sort()
 
   return (
     <div className={CSS.root}>
@@ -31,7 +34,7 @@ const SpecimenNavigation = () => {
                   actions.setActiveSpecimen(name)
                 }}
               >
-                <Icon className={CSS.icon} />
+                {icon}
                 <span className={CSS.name}>{name}</span>
               </button>
             </li>

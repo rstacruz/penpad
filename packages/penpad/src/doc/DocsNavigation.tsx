@@ -5,6 +5,8 @@ import CSS from '../SpecimenNavigation.module.css'
 import { useAppContext } from '../state'
 import { isActivePage } from '../state/selectors'
 
+const icon = React.memo(() => <Icon className={CSS.icon} />)
+
 const DocsNavigation = () => {
   const { state, actions } = useAppContext()
   if (!state || !actions) return <span />
@@ -26,7 +28,7 @@ const DocsNavigation = () => {
                   actions.setActivePage(name)
                 }}
               >
-                <Icon className={CSS.icon} />
+                {icon}
                 <span className={CSS.name}>{name}</span>
               </button>
             </li>

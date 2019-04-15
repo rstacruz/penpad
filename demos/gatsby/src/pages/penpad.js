@@ -7,25 +7,34 @@ import {
   CombineWebpackContext
 } from '../../../../packages/penpad/src/index'
 
-// If running with 'rollup watch', use:
-// '../../../../packages/penpad/dist/penpad.esm.js'
-
 import 'bulma/css/bulma.css'
 
-const specimens = require.context('../', true, /\.specimens\.(jsx?|tsx?)$/)
-
-const PP = mdx`
+const Pages = {
+  Home: mdx`
   # Hello
 
-  This is a page.
-`
+  This is a demo of Penpad.
+  `,
+  About: mdx`
+  # About
+
+  Again, This is a demo of Penpad.
+  `
+}
+
+const specimens = require.context('../', true, /\.specimens\.(jsx?|tsx?)$/)
 
 const PenpadPage = () => {
   return (
     <Penpad ui={{ title: 'Penpad demo' }}>
       <Page id='Home'>
-        <PP />
+        <Pages.Home />
       </Page>
+
+      <Page id='About'>
+        <Pages.About />
+      </Page>
+
       <Specimen id='MyButton'>
         <button>hey there</button>
       </Specimen>

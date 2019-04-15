@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import Frame from 'react-frame-component'
 import harvestHead from '../helpers/harvestHead'
 
@@ -11,12 +11,16 @@ import harvestHead from '../helpers/harvestHead'
  */
 
 const FrameWrapper = ({ children, className, style }: Props) => {
-  const head = (
-    <>
-      {harvestHead()}
-      <style>{`html, body { min-height: 100%; margin: 0; padding: 0; background: transparent; }`}</style>
-    </>
+  const head = useMemo(
+    () => (
+      <>
+        {harvestHead()}
+        <style>{`html, body { min-height: 100%; margin: 0; padding: 0; background: transparent; }`}</style>
+      </>
+    ),
+    []
   )
+
   return (
     <Frame
       head={head}

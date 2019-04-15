@@ -1,5 +1,6 @@
 import React from 'react'
 import DocsNavigation from '../doc/DocsNavigation'
+import ErrorCatcher from '../utils/ErrorCatcher'
 import { useAppContext } from '../state'
 import { getActivePage } from '../state/selectors'
 import CSS from './PenpadUI.module.css'
@@ -16,7 +17,9 @@ const DocsBody = () => {
   return (
     <>
       <main className={CSS.main} style={{ background: 'white' }}>
-        {page && PageComponent ? <PageComponent {...pageProps} /> : null}
+        <ErrorCatcher>
+          {page && PageComponent ? <PageComponent {...pageProps} /> : null}
+        </ErrorCatcher>
       </main>
 
       <aside className={CSS.sidebar}>
