@@ -1,18 +1,19 @@
 import React from 'react'
+import { Specimen } from '../../../../packages/penpad/src/index'
 
-export default {
-  'Brand palette': {
-    type: 'color',
-    colors: {
-      '$brand-a': '#8ef',
-      '$brand-b': '#138',
-      '$brand-c': '#dea'
-    }
-  },
+// export default {
+//   'Brand palette': {
+//     type: 'color',
+//     colors: {
+//       '$brand-a': '#8ef',
+//       '$brand-b': '#138',
+//       '$brand-c': '#dea'
+//     }
+//   },
 
-  Field: {
-    padding: 16,
-    render: () => (
+export default () => (
+  <>
+    <Specimen id='Field' padding={16}>
       <div class='field'>
         <label class='label'>Label</label>
         <div class='control'>
@@ -20,19 +21,15 @@ export default {
         </div>
         <p class='help'>This is a help text</p>
       </div>
-    )
-  },
+    </Specimen>
 
-  'Control/input': {
-    render: () => (
+    <Specimen id='Control/input'>
       <div class='control'>
         <input class='input' type='text' placeholder='Text input' />
       </div>
-    )
-  },
+    </Specimen>
 
-  'Control/dropdown': {
-    render: () => (
+    <Specimen id='Control/dropdown'>
       <div class='control'>
         <div class='select'>
           <select>
@@ -41,26 +38,15 @@ export default {
           </select>
         </div>
       </div>
-    )
-  },
+    </Specimen>
 
-  'Control/button': {
-    render: () => (
+    <Specimen id='Control/button'>
       <div class='control'>
         <button class='button is-primary'>Submit</button>
       </div>
-    )
-  },
+    </Specimen>
 
-  // 'Misc/error': {
-  //   render: () => {
-  //     throw new Error('oops')
-  //   }
-  // },
-
-  'Control/with icons': {
-    padding: 16,
-    render: () => (
+    <Specimen id='Control/with icons' padding={16}>
       <>
         <div class='field'>
           <p class='control has-icons-left has-icons-right'>
@@ -87,12 +73,9 @@ export default {
           </p>
         </div>
       </>
-    )
-  },
+    </Specimen>
 
-  'Form/horizontal form': {
-    padding: 16,
-    render: () => (
+    <Specimen id='Form/horizontal form' padding={16}>
       <>
         <div class='field is-horizontal'>
           <div class='field-label is-normal'>
@@ -233,13 +216,9 @@ export default {
           </div>
         </div>
       </>
-    )
-  },
+    </Specimen>
 
-  'Notification/danger': {
-    width: 300,
-    background: 'transparent',
-    render: () => (
+    <Specimen id='Notification/danger' width={300} background='transparent'>
       <div class='notification is-danger'>
         <button class='delete' />
         Primar lorem ipsum dolor sit amet, consectetur adipiscing elit lorem
@@ -249,13 +228,9 @@ export default {
         <a href='/'>felis venenatis</a> efficitur. Sit amet, consectetur
         adipiscing elit
       </div>
-    )
-  },
+    </Specimen>
 
-  'Notification/primary': {
-    width: 300,
-    background: 'transparent',
-    render: () => (
+    <Specimen id='Notification/primary' width={300} background='transparent'>
       <div class='notification is-primary'>
         <button class='delete' />
         Primar lorem ipsum dolor sit amet, consectetur adipiscing elit lorem
@@ -265,13 +240,9 @@ export default {
         <a href='/'>felis venenatis</a> efficitur. Sit amet, consectetur
         adipiscing elit
       </div>
-    )
-  },
+    </Specimen>
 
-  'Notification/info': {
-    width: 300,
-    background: 'transparent',
-    render: () => (
+    <Specimen id='Notification/info' width={300} background='transparent'>
       <div class='notification is-info'>
         <button class='delete' />
         Primar lorem ipsum dolor sit amet, consectetur adipiscing elit lorem
@@ -281,6 +252,6 @@ export default {
         <a href='/'>felis venenatis</a> efficitur. Sit amet, consectetur
         adipiscing elit
       </div>
-    )
-  }
-}
+    </Specimen>
+  </>
+)

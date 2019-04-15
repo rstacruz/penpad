@@ -39,9 +39,9 @@ const useAppState = (props: Partial<Config>) => {
     if (props.ui) actions.mergeUiConfig(props.ui)
   }, [props.ui])
 
-  useEffect(() => {
-    if (props.specimens) actions.setSpecimens(props.specimens)
-  }, [props.specimens])
+  // useEffect(() => {
+  //   if (props.specimens) actions.setSpecimens(props.specimens)
+  // }, [props.specimens])
 
   useEffect(() => {
     if (props.pages) actions.setPages(props.pages)

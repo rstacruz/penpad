@@ -1,15 +1,22 @@
 import React from 'react'
+import { Specimen } from '../../../../packages/penpad/src/index'
 
-export default {
-  Button: {
-    render: () => <button>Hello</button>,
-    padding: 8,
-    description: `This is a button. It's very important, guard it with your life.`
-  },
+export default () => (
+  <>
+    <Specimen
+      id='Button'
+      padding={8}
+      description={`This is a button. It's very important, guard it with your life.`}
+    >
+      <button>Hello</button>
+    </Specimen>
 
-  'Button/disabled': {
-    render: () => <button disabled>Hello</button>,
-    padding: 8,
-    description: `Oops, can't touch this.`
-  }
-}
+    <Specimen
+      id='Button/disabled'
+      padding={8}
+      description={`This is a button. It's very important, guard it with your life.`}
+    >
+      <button disabled>Hello</button>
+    </Specimen>
+  </>
+)

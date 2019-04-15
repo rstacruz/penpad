@@ -59,6 +59,42 @@ const getActions = (setState: SetState) => ({
     setState(state => ({ ...state, uiConfig: { ...state.uiConfig, ...conf } }))
   },
 
+  addSpecimen({ id, ...otherProps }) {
+    setState(state => ({
+      ...state,
+      specimens: {
+        ...state.specimens,
+        [id]: otherProps
+      }
+    }))
+  },
+
+  removeSpecimen(id: string) {
+    setState(state => {
+      const { specimens } = state
+      const { [id]: _, ...otherSpecimens } = specimens
+      return {
+        ...state,
+        specimens: otherSpecimens
+      }
+    })
+  },
+
+  addPage({ id, render }: { id: string; render: React.FunctionComponent }) {
+    setState(state => ({
+      ...state,
+      pages: { ...state.pages, [id]: render }
+    }))
+  },
+
+  removePage(id: string) {
+    setState(state => {
+      const { pages } = state
+      const { [id]: _, ...others } = pages
+      return { ...state, pages: others }
+    })
+  },
+
   /** Dangerous passthru for plugins to use */
   __setState__: setState
 })

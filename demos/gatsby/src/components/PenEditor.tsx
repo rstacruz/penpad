@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react'
-import { Penpad } from '../../../../packages/penpad/src/index'
+import { Penpad, Specimen } from '../../../../packages/penpad/src/index'
 import CSS from './Embedded.module.css'
 import useDebounce from '../utilities/useDebounce'
 import { Controlled as CodeMirror } from 'react-codemirror2'
@@ -18,23 +18,16 @@ if (typeof navigator !== 'undefined') {
 // @ts-ignore
 const Babel = require('@babel/standalone')
 
-const SRC = `const specimens = {
-  Button: {
-    render: () => <button>Hello!</button>,
-    description: 'This is a very important button'
-  },
-  'Button/disabled': {
-    render: () => <button disabled>Boo</button>,
-    description: "Can't touch this"
-  }
-}
-
-const Demo = () => {
+const SRC = `const Demo = () => {
   return (
-    <Penpad
-      ui={{ isEmbedded: true }}
-      specimens={specimens}
-    />
+    <Penpad ui={{ isEmbedded: true }}>
+      <Specimen id='Button' description='A very important button'>
+        <button>Hello!</button>
+      </Specimen>
+      <Specimen id='Button/disabled'>
+        <button disabled>Oof</button>
+      </Specimen>
+    </Penpad>
   )
 }`
 
@@ -89,9 +82,14 @@ const DemoResult = ({ code }) => {
   // re-evaluate it if ti hasn't changed.
   const jsx = useMemo(() => {
     /* eslint-disable no-new-func */
-    const fn = new Function('React', 'Penpad', `${code}; return Demo`)
+    const fn = new Function(
+      'React',
+      'Penpad',
+      'Specimen',
+      `${code}; return Demo`
+    )
     try {
-      const Component = fn(React, Penpad)
+      const Component = fn(React, Penpad, Specimen)
       const jsx = <Component />
       setLastKnown(jsx)
       return jsx

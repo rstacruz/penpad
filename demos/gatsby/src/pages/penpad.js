@@ -1,15 +1,18 @@
 import React from 'react'
 import { mdx } from 'mdx.macro'
-import { Penpad, combineContext } from '../../../../packages/penpad/src/index'
+import {
+  Penpad,
+  Specimen,
+  Page,
+  CombineWebpackContext
+} from '../../../../packages/penpad/src/index'
 
-// If running with rollup watch:
-// } from '../../../../packages/penpad/dist/penpad.esm.js'
+// If running with 'rollup watch', use:
+// '../../../../packages/penpad/dist/penpad.esm.js'
 
 import 'bulma/css/bulma.css'
 
-const specimens = combineContext(
-  require.context('../', true, /\.specimens\.(jsx?|tsx?)$/)
-)
+const specimens = require.context('../', true, /\.specimens\.(jsx?|tsx?)$/)
 
 const PP = mdx`
   # Hello
@@ -17,14 +20,19 @@ const PP = mdx`
   This is a page.
 `
 
-const pages = {
-  sup: () => <PP />
-}
-
-const Page = () => {
+const PenpadPage = () => {
   return (
-    <Penpad ui={{ title: 'Penpad demo' }} pages={pages} specimens={specimens} />
+    <Penpad ui={{ title: 'Penpad demo' }}>
+      <Page id='Home'>
+        <PP />
+      </Page>
+      <Specimen id='MyButton'>
+        <button>hey there</button>
+      </Specimen>
+
+      <CombineWebpackContext context={specimens} />
+    </Penpad>
   )
 }
 
-export default Page
+export default PenpadPage

@@ -10,6 +10,7 @@ import PenpadUI from './ui/PenpadUI'
 const Penpad = (props: Partial<Config>) => {
   return (
     <PenpadProvider {...props}>
+      {props.children}
       <PenpadUI />
     </PenpadProvider>
   )
