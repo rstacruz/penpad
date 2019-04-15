@@ -32,6 +32,7 @@ const SourceCodePanelActual = (props: AProps) => {
     code = toString(specimen.render({}))
   } catch (e) {
     code = `/* Error: ${e.message} */`
+    console.log('Code error:', e)
   }
 
   return (

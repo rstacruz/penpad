@@ -14,24 +14,24 @@ import { Specimen } from '../../../../packages/penpad/src/index'
 export default () => (
   <>
     <Specimen id='Field' padding={16}>
-      <div class='field'>
-        <label class='label'>Label</label>
-        <div class='control'>
-          <input class='input' type='text' placeholder='Text input' />
+      <div className='field'>
+        <label className='label'>Label</label>
+        <div className='control'>
+          <input className='input' type='text' placeholder='Text input' />
         </div>
-        <p class='help'>This is a help text</p>
+        <p className='help'>This is a help text</p>
       </div>
     </Specimen>
 
     <Specimen id='Control/input'>
-      <div class='control'>
-        <input class='input' type='text' placeholder='Text input' />
+      <div className='control'>
+        <input className='input' type='text' placeholder='Text input' />
       </div>
     </Specimen>
 
     <Specimen id='Control/dropdown'>
-      <div class='control'>
-        <div class='select'>
+      <div className='control'>
+        <div className='select'>
           <select>
             <option>Select dropdown</option>
             <option>With options</option>
@@ -41,35 +41,35 @@ export default () => (
     </Specimen>
 
     <Specimen id='Control/button'>
-      <div class='control'>
-        <button class='button is-primary'>Submit</button>
+      <div className='control'>
+        <button className='button is-primary'>Submit</button>
       </div>
     </Specimen>
 
     <Specimen id='Control/with icons' padding={16}>
       <>
-        <div class='field'>
-          <p class='control has-icons-left has-icons-right'>
-            <input class='input' type='email' placeholder='Email' />
-            <span class='icon is-small is-left'>
-              <i class='fas fa-envelope' />
+        <div className='field'>
+          <p className='control has-icons-left has-icons-right'>
+            <input className='input' type='email' placeholder='Email' />
+            <span className='icon is-small is-left'>
+              <i className='fas fa-envelope' />
             </span>
-            <span class='icon is-small is-right'>
-              <i class='fas fa-check' />
-            </span>
-          </p>
-        </div>
-        <div class='field'>
-          <p class='control has-icons-left'>
-            <input class='input' type='password' placeholder='Password' />
-            <span class='icon is-small is-left'>
-              <i class='fas fa-lock' />
+            <span className='icon is-small is-right'>
+              <i className='fas fa-check' />
             </span>
           </p>
         </div>
-        <div class='field'>
-          <p class='control'>
-            <button class='button is-success'>Login</button>
+        <div className='field'>
+          <p className='control has-icons-left'>
+            <input className='input' type='password' placeholder='Password' />
+            <span className='icon is-small is-left'>
+              <i className='fas fa-lock' />
+            </span>
+          </p>
+        </div>
+        <div className='field'>
+          <p className='control'>
+            <button className='button is-success'>Login</button>
           </p>
         </div>
       </>
@@ -77,69 +77,69 @@ export default () => (
 
     <Specimen id='Form/horizontal form' padding={16}>
       <>
-        <div class='field is-horizontal'>
-          <div class='field-label is-normal'>
-            <label class='label'>From</label>
+        <div className='field is-horizontal'>
+          <div className='field-label is-normal'>
+            <label className='label'>From</label>
           </div>
-          <div class='field-body'>
-            <div class='field'>
-              <p class='control is-expanded has-icons-left'>
-                <input class='input' type='text' placeholder='Name' />
-                <span class='icon is-small is-left'>
-                  <i class='fas fa-user' />
+          <div className='field-body'>
+            <div className='field'>
+              <p className='control is-expanded has-icons-left'>
+                <input className='input' type='text' placeholder='Name' />
+                <span className='icon is-small is-left'>
+                  <i className='fas fa-user' />
                 </span>
               </p>
             </div>
-            <div class='field'>
-              <p class='control is-expanded has-icons-left has-icons-right'>
+            <div className='field'>
+              <p className='control is-expanded has-icons-left has-icons-right'>
                 <input
-                  class='input is-success'
+                  className='input is-success'
                   type='email'
                   placeholder='Email'
                   value='alex@smith.com'
                 />
-                <span class='icon is-small is-left'>
-                  <i class='fas fa-envelope' />
+                <span className='icon is-small is-left'>
+                  <i className='fas fa-envelope' />
                 </span>
-                <span class='icon is-small is-right'>
-                  <i class='fas fa-check' />
+                <span className='icon is-small is-right'>
+                  <i className='fas fa-check' />
                 </span>
               </p>
             </div>
           </div>
         </div>
 
-        <div class='field is-horizontal'>
-          <div class='field-label' />
-          <div class='field-body'>
-            <div class='field is-expanded'>
-              <div class='field has-addons'>
-                <p class='control'>
-                  <a class='button is-static' href='/'>
+        <div className='field is-horizontal'>
+          <div className='field-label' />
+          <div className='field-body'>
+            <div className='field is-expanded'>
+              <div className='field has-addons'>
+                <p className='control'>
+                  <a className='button is-static' href='/'>
                     +44
                   </a>
                 </p>
-                <p class='control is-expanded'>
+                <p className='control is-expanded'>
                   <input
-                    class='input'
+                    className='input'
                     type='tel'
                     placeholder='Your phone number'
                   />
                 </p>
               </div>
-              <p class='help'>Do not enter the first zero</p>
+              <p className='help'>Do not enter the first zero</p>
             </div>
           </div>
         </div>
 
-        <div class='field is-horizontal'>
-          <div class='field-label is-normal'>
-            <label class='label'>Department</label>
+        <div className='field is-horizontal'>
+          <div className='field-label is-normal'>
+            <label className='label'>Department</label>
           </div>
-          <div class='field-body'>
-            <div class='field is-narrow'>
-              <div class='control'>
-                <div class='select is-fullwidth'>
+          <div className='field-body'>
+            <div className='field is-narrow'>
+              <div className='control'>
+                <div className='select is-fullwidth'>
                   <select>
                     <option>Business development</option>
                     <option>Marketing</option>
@@ -151,18 +151,18 @@ export default () => (
           </div>
         </div>
 
-        <div class='field is-horizontal'>
-          <div class='field-label'>
-            <label class='label'>Already a member?</label>
+        <div className='field is-horizontal'>
+          <div className='field-label'>
+            <label className='label'>Already a member?</label>
           </div>
-          <div class='field-body'>
-            <div class='field is-narrow'>
-              <div class='control'>
-                <label class='radio'>
+          <div className='field-body'>
+            <div className='field is-narrow'>
+              <div className='control'>
+                <label className='radio'>
                   <input type='radio' name='member' />
                   Yes
                 </label>
-                <label class='radio'>
+                <label className='radio'>
                   <input type='radio' name='member' />
                   No
                 </label>
@@ -171,33 +171,33 @@ export default () => (
           </div>
         </div>
 
-        <div class='field is-horizontal'>
-          <div class='field-label is-normal'>
-            <label class='label'>Subject</label>
+        <div className='field is-horizontal'>
+          <div className='field-label is-normal'>
+            <label className='label'>Subject</label>
           </div>
-          <div class='field-body'>
-            <div class='field'>
-              <div class='control'>
+          <div className='field-body'>
+            <div className='field'>
+              <div className='control'>
                 <input
-                  class='input is-danger'
+                  className='input is-danger'
                   type='text'
                   placeholder='e.g. Partnership opportunity'
                 />
               </div>
-              <p class='help is-danger'>This field is required</p>
+              <p className='help is-danger'>This field is required</p>
             </div>
           </div>
         </div>
 
-        <div class='field is-horizontal'>
-          <div class='field-label is-normal'>
-            <label class='label'>Question</label>
+        <div className='field is-horizontal'>
+          <div className='field-label is-normal'>
+            <label className='label'>Question</label>
           </div>
-          <div class='field-body'>
-            <div class='field'>
-              <div class='control'>
+          <div className='field-body'>
+            <div className='field'>
+              <div className='control'>
                 <textarea
-                  class='textarea'
+                  className='textarea'
                   placeholder='Explain how we can help you'
                 />
               </div>
@@ -205,12 +205,12 @@ export default () => (
           </div>
         </div>
 
-        <div class='field is-horizontal'>
-          <div class='field-label' />
-          <div class='field-body'>
-            <div class='field'>
-              <div class='control'>
-                <button class='button is-primary'>Send message</button>
+        <div className='field is-horizontal'>
+          <div className='field-label' />
+          <div className='field-body'>
+            <div className='field'>
+              <div className='control'>
+                <button className='button is-primary'>Send message</button>
               </div>
             </div>
           </div>
@@ -219,8 +219,8 @@ export default () => (
     </Specimen>
 
     <Specimen id='Notification/danger' width={300} background='transparent'>
-      <div class='notification is-danger'>
-        <button class='delete' />
+      <div className='notification is-danger'>
+        <button className='delete' />
         Primar lorem ipsum dolor sit amet, consectetur adipiscing elit lorem
         ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis
         placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet
@@ -231,8 +231,8 @@ export default () => (
     </Specimen>
 
     <Specimen id='Notification/primary' width={300} background='transparent'>
-      <div class='notification is-primary'>
-        <button class='delete' />
+      <div className='notification is-primary'>
+        <button className='delete' />
         Primar lorem ipsum dolor sit amet, consectetur adipiscing elit lorem
         ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis
         placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet
@@ -243,8 +243,8 @@ export default () => (
     </Specimen>
 
     <Specimen id='Notification/info' width={300} background='transparent'>
-      <div class='notification is-info'>
-        <button class='delete' />
+      <div className='notification is-info'>
+        <button className='delete' />
         Primar lorem ipsum dolor sit amet, consectetur adipiscing elit lorem
         ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis
         placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet

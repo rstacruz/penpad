@@ -31,6 +31,7 @@ const Specimen = (props: Props) => {
     const cleanup = () => {
       actions.removeSpecimen(id)
     }
+
     return cleanup
   }, [id, children])
 

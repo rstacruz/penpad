@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react'
-import { Penpad, Specimen } from '../../../../packages/penpad/src/index'
+import { Penpad, Specimen, Page } from '../../../../packages/penpad/src/index'
 import CSS from './Embedded.module.css'
 import useDebounce from '../utilities/useDebounce'
 import { Controlled as CodeMirror } from 'react-codemirror2'
@@ -24,9 +24,15 @@ const SRC = `const Demo = () => {
       <Specimen id='Button' description='A very important button'>
         <button>Hello!</button>
       </Specimen>
+
       <Specimen id='Button/disabled'>
         <button disabled>Oof</button>
       </Specimen>
+
+      <Page id='home'>
+        <h1>Welcome to Penpad!</h1>
+        <p>This is a live demo of Penpad.</p>
+      </Page>
     </Penpad>
   )
 }`
@@ -86,10 +92,11 @@ const DemoResult = ({ code }) => {
       'React',
       'Penpad',
       'Specimen',
+      'Page',
       `${code}; return Demo`
     )
     try {
-      const Component = fn(React, Penpad, Specimen)
+      const Component = fn(React, Penpad, Specimen, Page)
       const jsx = <Component />
       setLastKnown(jsx)
       return jsx
