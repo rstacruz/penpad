@@ -10,27 +10,22 @@ import CodeMirror from './CodeMirror'
 import DemoResult from './DemoResult'
 import useBabel from './useBabel'
 
-const SRC = `const Demo = () => {
-  return (
-    <Penpad>
-      <Specimen id='Button' description='A very important button'>
-        <button>Hello!</button>
-      </Specimen>
+/**
+ * Properties
+ */
 
-      <Specimen id='Button/disabled'>
-        <button disabled>Oof</button>
-      </Specimen>
+export interface Props {
+  code: string
+  codeTitle?: string
+  height?: number
+}
 
-      <Page id='home'>
-        <h1>Welcome to Penpad!</h1>
-        <p>This is a live demo of Penpad.</p>
-      </Page>
-    </Penpad>
-  )
-}`
+/**
+ * Editor and demo
+ */
 
-const PenEditor = () => {
-  const [source, setSource] = useState(SRC)
+const Editor = (props: Props) => {
+  const [source, setSource] = useState(props.code)
 
   // Don't compile until 500ms of no changes
   const debouncedSource = useDebounce(source, 500)
@@ -41,15 +36,12 @@ const PenEditor = () => {
   return (
     <div className={CSS.root}>
       <div className={CSS.codepane}>
-        <div className={CSS.titlebar}>Demo.js</div>
+        <div className={CSS.titlebar}>{props.codeTitle}</div>
         {error ? <div className={CSS.error}>Error: {error.message}</div> : null}
         <CodeMirror
           value={source}
           className={CSS.codemirror}
-          options={{
-            mode: 'jsx'
-            // lineNumbers: true
-          }}
+          options={{ mode: 'jsx' }}
           onBeforeChange={(editor: any, data: any, value: string) => {
             setSource(value)
           }}
@@ -63,4 +55,9 @@ const PenEditor = () => {
   )
 }
 
-export default PenEditor
+Editor.defaultProps = {
+  height: 400,
+  codeTitle: 'Demo.js'
+}
+
+export default Editor
