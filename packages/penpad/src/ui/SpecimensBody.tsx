@@ -11,7 +11,7 @@ import { Specimen, State } from '../types'
  * The body to be shown for specimens view
  */
 
-const gpecimensBody = ({
+const SpecimensBody = ({
   specimen,
   specimenId
 }: {
