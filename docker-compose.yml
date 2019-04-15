@@ -12,11 +12,11 @@ services:
       - public:/app/public
       - yarn_cache:/usr/local/share/.cache/yarn/v4
     ports:
-      - '25800:25800'
+      - '23300:23300'
     environment:
       CHOKIDAR_USEPOLLING: 'true'
       HOST: '0.0.0.0'
-      port: '25800'
+      PORT: '23300'
     command: 'yarn develop'
 
 volumes:
