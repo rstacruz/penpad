@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
-import { useAppContext } from './state'
+import { useAppContext } from '../state'
 
-interface Props {
+export interface Props {
   children: React.ReactNode
   id: string
 }
 
-const Page = (props: Props) => {
+const BasePage = (props: Props) => {
   const { state, actions } = useAppContext()
   if (!state || !actions) {
     throw new Error('<Page> needs to be placed inside a PenpadContext')
@@ -15,13 +15,14 @@ const Page = (props: Props) => {
   const { children, id } = props
 
   useEffect(() => {
-    actions.addPage({ id, render: () => <>{children}</> })
+    actions.addPage({ id, view: [React.Fragment, { children }] })
     return () => {
       actions.removePage(id)
     }
   }, [id, children])
 
-  return <span />
+  // Render nothing
+  return null
 }
 
-export default Page
+export default BasePage

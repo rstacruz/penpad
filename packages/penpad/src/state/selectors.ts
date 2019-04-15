@@ -15,7 +15,7 @@ export const getActivePage = (state: State) => {
   const page = state.pages[pageId]
   if (!page) return
 
-  return [pageId, page]
+  return page
 }
 
 /**

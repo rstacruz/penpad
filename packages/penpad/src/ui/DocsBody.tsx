@@ -2,26 +2,21 @@ import React from 'react'
 import DocsNavigation from '../doc/DocsNavigation'
 import { useAppContext } from '../state'
 import { getActivePage } from '../state/selectors'
-import Markdown from '../styles/github-markdown.module.css'
 import CSS from './PenpadUI.module.css'
 
 const DocsBody = () => {
   const { state, actions } = useAppContext()
   if (!state || !actions) return <span />
 
-  const page = (getActivePage(state) || [])[1]
+  const page = getActivePage(state)
+  const view = page && page.view
+  const PageComponent = view && view[0]
+  const pageProps = view && view[1]
 
   return (
     <>
       <main className={CSS.main} style={{ background: 'white' }}>
-        <div
-          className={Markdown.body}
-          style={{ width: '700px', margin: '1em auto' }}
-        >
-          {typeof page === 'function'
-            ? React.createElement(page, {}, [])
-            : null}
-        </div>
+        {page && PageComponent ? <PageComponent {...pageProps} /> : null}
       </main>
 
       <aside className={CSS.sidebar}>

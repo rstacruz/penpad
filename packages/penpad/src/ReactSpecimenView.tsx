@@ -22,6 +22,7 @@ const ReactSpecimenView = (props: Props) => {
     ? props.width
     : null
 
+  // Body placed inside the frame wrapper.
   const body = (
     <div
       className={CSS.frame}
@@ -38,14 +39,23 @@ const ReactSpecimenView = (props: Props) => {
   )
 
   return (
-    <FrameWrapper
-      className={cn(CSS.iframe, {
-        [CSS.isResponsive]: !!frameWidth
-      })}
-      style={frameWidth ? { width: frameWidth, minWidth: frameWidth } : {}}
+    <div
+      style={{
+        padding: '16px',
+        display: 'flex',
+        width: '100%',
+        height: '100%'
+      }}
     >
-      <div className={CSS.iframeBody}>{body}</div>
-    </FrameWrapper>
+      <FrameWrapper
+        className={cn(CSS.iframe, {
+          [CSS.isResponsive]: !!frameWidth
+        })}
+        style={frameWidth ? { width: frameWidth, minWidth: frameWidth } : {}}
+      >
+        <div className={CSS.iframeBody}>{body}</div>
+      </FrameWrapper>
+    </div>
   )
 }
 

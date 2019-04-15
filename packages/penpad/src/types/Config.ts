@@ -1,4 +1,5 @@
 import { Component } from './Component'
+import { Page } from './Page'
 import { Specimen } from './Specimen'
 
 export interface Specimens {
@@ -6,7 +7,7 @@ export interface Specimens {
 }
 
 export interface Pages {
-  [id: string]: Component
+  [id: string]: Page
 }
 
 /**

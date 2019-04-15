@@ -82,10 +82,16 @@ const getActions = (setState: SetState) => ({
     })
   },
 
-  addPage({ id, render }: { id: string; render: React.FunctionComponent }) {
+  addPage({
+    id,
+    view
+  }: {
+    id: string
+    view: [React.FunctionComponent<any>, any]
+  }) {
     setState(state => ({
       ...state,
-      pages: { ...state.pages, [id]: render }
+      pages: { ...state.pages, [id]: { id, view } }
     }))
   },
 

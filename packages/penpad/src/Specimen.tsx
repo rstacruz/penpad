@@ -41,7 +41,8 @@ const Specimen = (props: Props) => {
     return cleanup
   }, [id, children])
 
-  return <span />
+  // Render nothing
+  return null
 }
 
 interface Props {
