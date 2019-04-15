@@ -22,6 +22,8 @@
     "prettier:check": "prettier --list-different 'packages/*/src/**/*.{js,jsx,ts,tsx}'",
     "prettier:fix": "prettier --write 'packages/*/src/**/*.{js,jsx,ts,tsx}'",
     "penpad:watch": "yarn workspace @rstacruz/penpad watch",
+    "tslint:check": "tslint --project .",
+    "tslint:fix": "tslint --project . --fix",
     "tsc:check": "tsc --noEmit",
     "tsc:watch": "tsc --noEmit --watch",
     "css_modules:update": "tcm '{packages,demos}/*/src' && prettier --write '{packages,demos}/*/src/**/*.module.css.d.ts'",
@@ -59,7 +61,10 @@
     "rollup-plugin-react-svg": "^2.1.0",
     "rollup-plugin-typescript2": "^0.20.1",
     "ts-jest": "^24.0.2",
+    "tslint": "^5.15.0",
+    "tslint-config-prettier": "^1.18.0",
     "typed-css-modules": "^0.4.2",
-    "typescript": "^3.4.3"
+    "typescript": "^3.4.3",
+    "typescript-tslint-plugin": "^0.3.1"
   }
 }

@@ -1,7 +1,7 @@
-import React, { useContext, useState, useEffect, useMemo } from 'react'
+import React, { useContext, useEffect, useMemo, useState } from 'react'
 import { Config, State } from '../types'
-import getInitialState from './getInitialState'
 import getActions from './actions'
+import getInitialState from './getInitialState'
 
 /**
  * The context to be used in useAppContext

@@ -1,5 +1,5 @@
-import { Specimen } from './Specimen'
 import { Component } from './Component'
+import { Specimen } from './Specimen'
 
 export interface Specimens {
   [id: string]: Specimen

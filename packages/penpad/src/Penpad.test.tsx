@@ -1,7 +1,7 @@
-import React from 'react'
-import { Penpad, Specimen } from './index'
-import { render, fireEvent, cleanup, act } from 'react-testing-library'
 import 'jest-dom/extend-expect'
+import React from 'react'
+import { act, cleanup, fireEvent, render } from 'react-testing-library'
+import { Penpad, Specimen } from './index'
 
 afterEach(cleanup)
 

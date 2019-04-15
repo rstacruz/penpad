@@ -1,7 +1,7 @@
 // @ts-ignore
-import { DocIcon as Icon } from './icons'
 import cn from 'classnames'
 import React from 'react'
+import { DocIcon as Icon } from './icons'
 import CSS from './SpecimenNavigation.module.css'
 import { useAppContext } from './state'
 import { isActiveSpecimen } from './state/selectors'

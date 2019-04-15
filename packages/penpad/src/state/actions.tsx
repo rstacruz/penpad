@@ -1,4 +1,4 @@
-import { State, Pages, Specimens } from '../types'
+import { Pages, Specimens, State } from '../types'
 
 type SetState = (callback: (state: State) => State) => any
 

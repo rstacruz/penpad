@@ -2,8 +2,8 @@ import cn from 'classnames'
 import toString from 'jsx-to-string'
 import React from 'react'
 import CSS from './SourceCodePanel.module.css'
-import Util from './utils.module.css'
 import { Specimen } from './types'
+import Util from './utils.module.css'
 
 interface Props {
   specimen: Specimen

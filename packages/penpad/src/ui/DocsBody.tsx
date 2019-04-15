@@ -1,9 +1,9 @@
 import React from 'react'
 import DocsNavigation from '../doc/DocsNavigation'
-import CSS from './PenpadUI.module.css'
 import { useAppContext } from '../state'
 import { getActivePage } from '../state/selectors'
 import Markdown from '../styles/github-markdown.module.css'
+import CSS from './PenpadUI.module.css'
 
 const DocsBody = () => {
   const { state, actions } = useAppContext()

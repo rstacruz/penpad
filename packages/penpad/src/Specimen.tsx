@@ -1,7 +1,7 @@
+import toString from 'jsx-to-string'
 import React, { useEffect } from 'react'
 import ReactSpecimenView from './ReactSpecimenView'
 import { useAppContext } from './state'
-import toString from 'jsx-to-string'
 
 /**
  * Defines a specimen
@@ -29,7 +29,6 @@ const Specimen = (props: Props) => {
           code = toString(children)
         } catch (e) {
           code = `/* Error: ${e.message} */`
-          console.log('Code error:', e)
         }
         return code
       }

@@ -1,13 +1,13 @@
-import {
-  LibraryIcon as SpecimenIcon,
-  FileOutlineIcon as DocsIcon
-} from '../icons'
 import cn from 'classnames'
 import React from 'react'
+import {
+  FileOutlineIcon as DocsIcon,
+  LibraryIcon as SpecimenIcon
+} from '../icons'
 import { useAppContext } from '../state'
+import { State } from '../types'
 import CSS from './TitleBar.module.css'
 import TitleText from './TitleText'
-import { State } from '../types'
 
 const TitleBar = () => {
   const { state, actions } = useAppContext()

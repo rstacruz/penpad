@@ -1,8 +1,8 @@
 import cn from 'classnames'
 import React from 'react'
-import FrameWrapper from './utils/FrameWrapper'
 import CSS from './SpecimenView.module.css'
 import { useAppContext } from './state'
+import FrameWrapper from './utils/FrameWrapper'
 
 /**
  * Displays the given React specimen in an iframe.

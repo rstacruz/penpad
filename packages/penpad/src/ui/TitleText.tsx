@@ -1,5 +1,5 @@
-import { Chevron } from '../icons'
 import React from 'react'
+import { Chevron } from '../icons'
 import CSS from './TitleText.module.css'
 
 interface Props {
