@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 import 'sanitize.css'
+import 'typeface-inter'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -21,10 +22,10 @@ const Layout = ({ children }) => (
           title={data.site.siteMetadata.title}
           meta={[
             { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            { name: 'keywords', content: 'sample, something' }
           ]}
         >
-          <html lang="en" />
+          <html lang='en' />
         </Helmet>
         {/*<h1>{data.site.siteMetadata.title}</h1>*/}
         <div>{children}</div>

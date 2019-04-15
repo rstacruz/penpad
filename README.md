@@ -15,7 +15,7 @@ Design and document your web UI components
 </p>
 
 <p align='center'>
-<a href='https://devhints-engine.netlify.com/styleguides'><strong>Demo</strong></a>
+<a href='https://penpad-demo.netlify.com/penpad'><strong>Demo</strong></a>
 ·
 <a href='./docs/index.md'><strong>Documentation</strong></a>
 </p>

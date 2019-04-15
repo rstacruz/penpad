@@ -1,0 +1,49 @@
+body {
+  font-family: 'Inter', system-ui;
+}
+
+.section {
+  max-width: 600px;
+  margin: 20vh auto;
+  padding: 32px;
+  text-align: center;
+}
+
+.section h1 {
+  font-size: 2.8em;
+  margin: 16px auto;
+}
+
+.section p {
+  font-size: 1.2em;
+}
+
+.actions {
+  margin: 32px auto;
+}
+
+.button {
+  text-transform: uppercase;
+  font-family: 'Work Sans', system-ui;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+  font-size: 0.86em;
+  margin: 0 8px;
+  display: inline-block;
+  background: #fafafa;
+  color: #111;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.button:hover,
+.button:focus {
+  background: dodgerblue;
+  color: white;
+}
+
+.lowButton {
+  composes: button;
+  background: transparent;
+  color: #333;
+}
