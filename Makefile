@@ -5,12 +5,13 @@ default:
 	@echo
 
 run ?= docker-compose run --rm web
+run_s ?= docker-compose run --rm --service-ports web
 
 yarn: ## Installs packages [alias: i]
 	$(run) yarn
 
 start: ## Starts the server [alias: s]
-	$(run) yarn develop
+	$(run_s) yarn develop
 
 up: ## Starts the server in the background
 	docker-compose up -d
