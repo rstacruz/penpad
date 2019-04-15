@@ -1,6 +1,15 @@
 import React from 'react'
 
 export default {
+  'Brand palette': {
+    type: 'color',
+    colors: {
+      '$brand-a': '#8ef',
+      '$brand-b': '#138',
+      '$brand-c': '#dea'
+    }
+  },
+
   Field: {
     padding: 16,
     render: () => (

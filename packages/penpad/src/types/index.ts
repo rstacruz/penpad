@@ -1,4 +1,4 @@
 export { State } from './State'
-export { Specimen } from './Specimen'
+export { Specimen, ReactSpecimen, ColorSpecimen } from './Specimen'
 export { Component } from './Component'
 export { Pages, Specimens, Config } from './Config'

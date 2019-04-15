@@ -15,4 +15,14 @@ export interface ReactSpecimen {
   padding?: string | number
 }
 
-export type Specimen = ReactSpecimen
+export interface ColorList {
+  [key: string]: string
+}
+
+export interface ColorSpecimen {
+  type: 'color'
+  colors: ColorList
+  description?: React.ReactNode
+}
+
+export type Specimen = ReactSpecimen | ColorSpecimen

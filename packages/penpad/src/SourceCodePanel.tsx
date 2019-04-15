@@ -3,15 +3,30 @@ import toString from 'jsx-to-string'
 import React from 'react'
 import CSS from './SourceCodePanel.module.css'
 import Util from './utils.module.css'
-import { Specimen } from './types'
+import { Specimen, ReactSpecimen } from './types'
+import isReactSpecimen from './helpers/isReactSpecimen'
 
 interface Props {
-  specimen: Pick<Specimen, 'render'>
+  specimen: Specimen
+}
+
+interface AProps {
+  specimen: Pick<ReactSpecimen, 'render'>
 }
 
 const SourceCodePanel = (props: Props) => {
   const { specimen } = props
-  // const code = toString(React.createElement(specimen.render, {}, []))
+
+  if (isReactSpecimen(specimen)) {
+    return <SourceCodePanelActual specimen={specimen} />
+  } else {
+    return null
+  }
+}
+
+const SourceCodePanelActual = (props: AProps) => {
+  const { specimen } = props
+
   let code: string
   try {
     code = toString(specimen.render({}))

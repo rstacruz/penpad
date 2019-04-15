@@ -3,7 +3,7 @@ import React from 'react'
 import FrameWrapper from './utils/FrameWrapper'
 import CSS from './SpecimenView.module.css'
 import { useAppContext } from './state'
-import { Specimen } from './types'
+import { ReactSpecimen } from './types'
 
 /**
  * Displays the given React specimen in an iframe.
@@ -56,7 +56,7 @@ const ReactSpecimenView = ({ specimen }: Props) => {
 }
 
 interface Props {
-  specimen: Specimen
+  specimen: ReactSpecimen
 }
 
 export default ReactSpecimenView

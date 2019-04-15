@@ -6,6 +6,7 @@ import SpecimenPanels from '../SpecimenPanels'
 import ReactSpecimenView from '../ReactSpecimenView'
 import { useAppContext } from '../state'
 import { Specimen, State } from '../types'
+import MultiSpecimenViewer from './MultiSpecimenViewer'
 
 /**
  * The body to be shown for specimens view
@@ -23,16 +24,13 @@ const SpecimensBody = ({
 
   const { specimens } = state
 
-  // Dependending on the specimen type
-  const SpecimenViewer = ReactSpecimenView
-
   return (
     <>
       {/* Main area */}
       <main className={CSS.main}>
         {specimen ? (
           <ErrorCatcher>
-            <SpecimenViewer {...{ specimen }} />
+            <MultiSpecimenViewer {...{ specimen }} />
           </ErrorCatcher>
         ) : null}
       </main>
