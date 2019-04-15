@@ -1,13 +1,7 @@
 import React, { useEffect } from 'react'
+import ReactSpecimenView from './ReactSpecimenView'
 import { useAppContext } from './state'
-
-interface Props {
-  children: React.ReactNode
-  id: string
-  background?: string
-  width?: string
-  description?: string
-}
+import toString from 'jsx-to-string'
 
 /**
  * Defines a specimen
@@ -24,8 +18,23 @@ const Specimen = (props: Props) => {
   useEffect(() => {
     actions.addSpecimen({
       id,
-      render: () => <>{children}</>,
-      ...otherProps
+
+      ...('description' in props ? { description: props.description } : null),
+
+      View: () => {
+        return <ReactSpecimenView {...props} />
+      },
+
+      getCode: () => {
+        let code: string
+        try {
+          code = toString(children)
+        } catch (e) {
+          code = `/* Error: ${e.message} */`
+          console.log('Code error:', e)
+        }
+        return code
+      }
     })
 
     const cleanup = () => {
@@ -36,6 +45,24 @@ const Specimen = (props: Props) => {
   }, [id, children])
 
   return <span />
+}
+
+interface Props {
+  /** The React nodes to be rendered */
+  children: React.ReactNode
+
+  /** The name of the specimen */
+  id: string
+
+  /** Background color */
+  background?: string
+
+  /** Width */
+  width?: string | number
+
+  /** Description */
+  description?: string
+  padding?: number
 }
 
 export default Specimen

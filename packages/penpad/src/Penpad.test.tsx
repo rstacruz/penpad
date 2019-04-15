@@ -1,5 +1,5 @@
 import React from 'react'
-import Penpad from './Penpad'
+import { Penpad, Specimen } from './index'
 import { render, fireEvent, cleanup, act } from 'react-testing-library'
 import 'jest-dom/extend-expect'
 
@@ -25,17 +25,14 @@ it('can have different title', () => {
 
 it('works with more stuff', () => {
   const co = render(
-    <Penpad
-      ui={{ title: 'Jupiter' }}
-      pages={{}}
-      specimens={{
-        abc: {
-          render: () => <button>hello</button>,
-          description: 'This is some description'
-        },
-        def: { render: () => <button>greetings</button> }
-      }}
-    />
+    <Penpad ui={{ title: 'Jupiter' }}>
+      <Specimen id='abc' description='This is some description'>
+        <button>hello</button>
+      </Specimen>
+      <Specimen id='def'>
+        <button>greetings</button>
+      </Specimen>
+    </Penpad>
   )
 
   const button = co.getByTestId('nav-specimen:abc')

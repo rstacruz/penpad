@@ -3,37 +3,29 @@ import toString from 'jsx-to-string'
 import React from 'react'
 import CSS from './SourceCodePanel.module.css'
 import Util from './utils.module.css'
-import { Specimen, ReactSpecimen } from './types'
-import isReactSpecimen from './helpers/isReactSpecimen'
+import { Specimen } from './types'
 
 interface Props {
   specimen: Specimen
 }
 
-interface AProps {
-  specimen: Pick<ReactSpecimen, 'render'>
+interface VProps {
+  code: string
 }
 
 const SourceCodePanel = (props: Props) => {
   const { specimen } = props
 
-  if (isReactSpecimen(specimen)) {
-    return <SourceCodePanelActual specimen={specimen} />
+  if ('getCode' in specimen) {
+    const code = specimen.getCode()
+    return <SourceCodePanelView code={code} />
   } else {
     return null
   }
 }
 
-const SourceCodePanelActual = (props: AProps) => {
-  const { specimen } = props
-
-  let code: string
-  try {
-    code = toString(specimen.render({}))
-  } catch (e) {
-    code = `/* Error: ${e.message} */`
-    console.log('Code error:', e)
-  }
+const SourceCodePanelView = (props: VProps) => {
+  const { code } = props
 
   return (
     <div className={CSS.root}>

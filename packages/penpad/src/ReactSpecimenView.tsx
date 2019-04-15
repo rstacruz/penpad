@@ -3,29 +3,23 @@ import React from 'react'
 import FrameWrapper from './utils/FrameWrapper'
 import CSS from './SpecimenView.module.css'
 import { useAppContext } from './state'
-import { ReactSpecimen } from './types'
 
 /**
  * Displays the given React specimen in an iframe.
  */
 
-const ReactSpecimenView = ({ specimen }: Props) => {
+const ReactSpecimenView = (props: Props) => {
   const { state } = useAppContext()
 
   // If responsive mode
   const frameWidth = state && state.specimenView.frameWidth
 
-  const { render: Component } = specimen
-
-  // @ts-ignore I don't know how to type this (TS2605)
-  const componentNode = <Component />
-
   // If it's in responsive mode, don't allow fixed sizes (ie, numbers),
   // but allow fluid sizes (eg, '100%')
   const bodyWidth = !frameWidth
-    ? specimen.width
-    : typeof specimen.width === 'string'
-    ? specimen.width
+    ? props.width
+    : typeof props.width === 'string'
+    ? props.width
     : null
 
   const body = (
@@ -35,11 +29,11 @@ const ReactSpecimenView = ({ specimen }: Props) => {
         width: bodyWidth || 'auto',
         margin: 'auto',
         flex: '0 0 auto',
-        background: specimen.background || 'white',
-        padding: specimen.padding || 0
+        background: props.background || 'white',
+        padding: props.padding || 0
       }}
     >
-      {componentNode}
+      {props.children}
     </div>
   )
 
@@ -56,7 +50,12 @@ const ReactSpecimenView = ({ specimen }: Props) => {
 }
 
 interface Props {
-  specimen: ReactSpecimen
+  children: React.ReactNode
+  id: string
+  background?: string
+  width?: string | number
+  description?: string
+  padding?: number
 }
 
 export default ReactSpecimenView
