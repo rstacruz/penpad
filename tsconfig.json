@@ -8,6 +8,7 @@
     "strict": true,
     // "isolatedModules": true,
     "esModuleInterop": true,
+    "declaration": true,
     "jsx": "react",
     "plugins": [
       { "name": "typescript-tslint-plugin" }
