@@ -1,12 +1,12 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import cn from 'classnames'
-import DocsBody from './DocsBody'
+import DocsBody from '../DocsBody'
 import CSS from './PenpadUI.module.css'
-import SpecimensBody from './SpecimensBody'
-import { useAppContext } from './state'
-import TitleBar from './TitleBar'
-import './styles/reset.module.css'
+import SpecimensBody from '../SpecimensBody'
+import { useAppContext } from '../state'
+import TitleBar from '../TitleBar'
+import '../styles/reset.module.css'
 
 /**
  * The main UI. I'm a consumer of PenpadProvider

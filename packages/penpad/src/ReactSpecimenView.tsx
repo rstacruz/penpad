@@ -6,7 +6,7 @@ import { useAppContext } from './state'
 import { Specimen } from './types'
 
 /**
- * Displays the specimen in an iframe.
+ * Displays the given React specimen in an iframe.
  */
 
 const SpecimenView = ({ specimen }: Props) => {

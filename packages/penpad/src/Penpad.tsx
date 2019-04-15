@@ -1,7 +1,7 @@
 import React from 'react'
 import { AppProvider, useAppState } from './state'
 import { Config } from './types'
-import PenpadUI from './PenpadUI'
+import PenpadUI from './ui/PenpadUI'
 
 /**
  * The main component

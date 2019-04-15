@@ -1,4 +1,4 @@
-@import './variables.css';
+@import '../variables.css';
 
 :root {
   --topnav-height: 40px;
@@ -18,7 +18,7 @@
 .root {
   /* Maybe later! This ruins a lot of things */
   /* composes: reset from './styles/reset.module.css'; */
-  composes: uiFontStyle from './utils.module.css';
+  composes: uiFontStyle from '../utils.module.css';
   background: var(--bg-main);
   height: 100%;
   width: 100%;
@@ -76,7 +76,7 @@
 }
 
 .title {
-  composes: fontSize0 from './utils.module.css';
+  composes: fontSize0 from '../utils.module.css';
   margin: 0;
   padding: 0;
   font-size: 14px;
