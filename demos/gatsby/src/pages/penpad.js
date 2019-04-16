@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import { mdx } from 'mdx.macro'
 import {
   Penpad,
@@ -26,25 +27,31 @@ const specimens = require.context('../', true, /\.specimens\.(jsx?|tsx?)$/)
 
 const PenpadPage = () => {
   return (
-    <Penpad ui={{ title: 'Penpad demo' }}>
-      <Page id='Home'>
-        <Pages.Home />
-      </Page>
+    <>
+      <Helmet>
+        <meta name='robots' content='noindex' />
+      </Helmet>
 
-      <Page id='About'>
-        <Pages.About />
-      </Page>
+      <Penpad ui={{ title: 'Penpad demo' }}>
+        <Page id='Home'>
+          <Pages.Home />
+        </Page>
 
-      <Specimen id='MyButton'>
-        <button>hey there</button>
-      </Specimen>
+        <Page id='About'>
+          <Pages.About />
+        </Page>
 
-      <CombineWebpackContext context={specimens} />
+        <Specimen id='MyButton'>
+          <button>hey there</button>
+        </Specimen>
 
-      <Specimen id='DontClickMe'>
-        <Oops />
-      </Specimen>
-    </Penpad>
+        <CombineWebpackContext context={specimens} />
+
+        <Specimen id='DontClickMe'>
+          <Oops />
+        </Specimen>
+      </Penpad>
+    </>
   )
 }
 
