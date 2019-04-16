@@ -1,5 +1,5 @@
 export { default as Penpad } from './Penpad'
-export { useAppState, AppContext } from './state'
+export { useAppContext, AppContext } from './state'
 export { default as Specimen } from './Specimen'
 export { default as Page } from './page/Page'
 export { default as CombineWebpackContext } from './utils/CombineWebpackContext'

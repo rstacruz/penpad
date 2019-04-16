@@ -6,7 +6,7 @@ import {
   Specimen,
   Page,
   CombineWebpackContext
-} from '../../../../packages/penpad/src/index'
+} from 'penpad'
 
 import 'bulma/css/bulma.css'
 
