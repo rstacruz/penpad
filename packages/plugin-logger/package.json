@@ -1,0 +1,10 @@
+{
+  "name": "@penpad/plugin-logger",
+  "version": "0.1.0-pre.5",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "rollup --config"
+  }
+}
