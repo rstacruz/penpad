@@ -60,4 +60,4 @@ const useAppContext = () => {
 
 /* Actions type */
 export type Actions = ReturnType<typeof useAppState>['actions']
-export { useAppState, useAppContext, AppProvider, Context }
+export { useAppState, useAppContext, AppProvider, Context as AppContext }
