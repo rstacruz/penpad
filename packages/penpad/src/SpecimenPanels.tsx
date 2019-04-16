@@ -3,6 +3,8 @@ import ResponsiveResizePanel from './ResponsiveResizePanel'
 import SourceCodePanel from './SourceCodePanel'
 import SpecimenDescriptionPanel from './SpecimenDescriptionPanel'
 import { Specimen } from './types'
+import RenderBlocks from './ui/RenderBlocks'
+import { useAppContext } from './state'
 
 interface Props {
   specimen: Specimen
@@ -10,6 +12,7 @@ interface Props {
 }
 
 const SpecimenPanels = (props: Props) => {
+  const { state, actions } = useAppContext()
   const { specimen, id } = props
 
   return (
@@ -19,6 +22,11 @@ const SpecimenPanels = (props: Props) => {
       ) : null}
       <ResponsiveResizePanel />
       <SourceCodePanel specimen={specimen} key={id} />
+
+      {/* Render custom panels */}
+      {state && state.blocks && state.blocks.panels ? (
+        <RenderBlocks blocks={state.blocks.panels} />
+      ) : null}
     </>
   )
 }

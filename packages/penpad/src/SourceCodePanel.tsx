@@ -1,16 +1,11 @@
 import cn from 'classnames'
-import toString from 'jsx-to-string'
 import React from 'react'
-import CSS from './SourceCodePanel.module.css'
 import { Specimen } from './types'
 import Util from './utils.module.css'
+import BasePanel from './BasePanel'
 
 interface Props {
   specimen: Specimen
-}
-
-interface VProps {
-  code: string
 }
 
 const SourceCodePanel = (props: Props) => {
@@ -24,24 +19,19 @@ const SourceCodePanel = (props: Props) => {
   }
 }
 
-const SourceCodePanelView = (props: VProps) => {
+const SourceCodePanelView = (props: { code: string }) => {
   const { code } = props
 
   return (
-    <div className={CSS.root}>
-      <div className={CSS.header}>
-        <h3 className={CSS.title}>Source code</h3>
-      </div>
-      <div className={CSS.body}>
-        <textarea
-          spellCheck={false}
-          className={cn(Util.textarea)}
-          rows={10}
-          value={code}
-          readOnly
-        />
-      </div>
-    </div>
+    <BasePanel title='Source code'>
+      <textarea
+        spellCheck={false}
+        className={cn(Util.textarea)}
+        rows={10}
+        value={code}
+        readOnly
+      />
+    </BasePanel>
   )
 }
 

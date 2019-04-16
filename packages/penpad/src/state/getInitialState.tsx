@@ -15,7 +15,11 @@ const getInitialState = (): State => {
     pages: {},
     specimenView: {
       frameWidth: null
-    }
+    },
+    blocks: {
+      panels: {}
+    },
+    data: {}
   }
 }
 

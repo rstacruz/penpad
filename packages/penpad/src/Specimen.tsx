@@ -8,7 +8,9 @@ import { useAppContext } from './state'
  * https://github.com/algolia/react-element-to-jsx-string#reactelementtojsxstringreactelement-options
  */
 
-const TO_STRING_OPTIONS = {}
+const TO_STRING_OPTIONS = {
+  showFunctions: true
+}
 
 /**
  * Defines a specimen

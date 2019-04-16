@@ -12,7 +12,7 @@
     "jsx": "react",
     "baseUrl": "./",
     "paths": {
-      "@penpad": ["packages/penpad/src/index.tsx"]
+      "penpad": ["packages/penpad/src"]
     },
     "plugins": [
       { "name": "typescript-tslint-plugin" }

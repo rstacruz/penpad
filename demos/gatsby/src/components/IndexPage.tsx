@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import { Link } from 'gatsby'
 import CSS from './IndexPage.module.css'
 
+// @ts-ignore
 import Layout from './Layout'
 
 const IndexPage = () => {

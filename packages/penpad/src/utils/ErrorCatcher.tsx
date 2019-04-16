@@ -2,7 +2,9 @@ import React from 'react'
 
 interface Props {
   children: React.ReactNode
-  resetKey: any
+  /** If true, no message will be shown on error */
+  silent?: boolean
+  resetKey?: any
 }
 
 interface State {
@@ -21,7 +23,7 @@ class ErrorCatcher extends React.Component<Props, State> {
     error: null
   }
 
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error: Error) {
     return { error }
   }
 
@@ -38,6 +40,7 @@ class ErrorCatcher extends React.Component<Props, State> {
 
   render() {
     if (this.state && this.state.error) {
+      if (this.props.silent) return null
       return (
         <Centerize>
           <ErrorMessage error={this.state.error} onDismiss={this.clearError} />
@@ -53,7 +56,15 @@ class ErrorCatcher extends React.Component<Props, State> {
   }
 }
 
-const ErrorMessage = ({ onDismiss, error }: { onDismiss: () => any }) => {
+const ErrorMessage = ({
+  onDismiss,
+  error
+}: {
+  onDismiss: () => any
+  error: Error | null
+}) => {
+  if (!error) return null
+
   return (
     <div>
       <p style={{ textAlign: 'center' }}>Oops, specimen threw an error.</p>

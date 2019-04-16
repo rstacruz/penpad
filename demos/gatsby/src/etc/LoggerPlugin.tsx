@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
-import { useAppContext } from 'penpad'
+import { useAppContext, BasePanel } from 'penpad'
+import { Actions } from '../../../../packages/penpad/src/types'
 
 /**
  * Logger plugin to be attached to <Penpad />
@@ -9,10 +10,36 @@ export const LoggerPlugin = () => {
   const { state, actions } = useAppContext()
 
   useEffect(() => {
-    // actions.addPanel(LoggerPanel)
+    if (!state || !actions) return
+    return actions.addBlock({
+      domain: 'panels',
+      priority: 30,
+      id: 'logger',
+      view: [LoggerPanel, {}]
+    })
   }, [])
 
+  // Clear logs when navigating
+  useEffect(() => {
+    clearLogEntries(actions)
+  }, [state && state.activeView])
+
   return null
+}
+
+function clearLogEntries(actions: Actions | null) {
+  if (!actions || !actions.setData) return
+  actions.setData('logger', (state: LoggerState) => {
+    return { ...state, logs: [] }
+  })
+}
+
+function pushLogEntry(actions: Actions | null, message: Message) {
+  if (!actions || !actions.setData) return
+  actions.setData('logger', (state: LoggerState) => {
+    const logs = (state && state.logs) || []
+    return { ...state, logs: [...logs, message] }
+  })
 }
 
 /**
@@ -20,7 +47,19 @@ export const LoggerPlugin = () => {
  */
 
 const LoggerPanel = () => {
-  return <div>I'm the logger pannel</div>
+  const { state } = useAppContext()
+  if (!state) return null
+
+  const data: LoggerState = (state && state.data && state.data.logger) || {}
+  const logs = data.logs || []
+
+  return (
+    <BasePanel title='Logs'>
+      {logs.map((line: string, index: number) => (
+        <div key={index}>{line}</div>
+      ))}
+    </BasePanel>
+  )
 }
 
 /**
@@ -28,10 +67,11 @@ const LoggerPanel = () => {
  */
 
 export const useLogger = () => {
-  const { state, actions } = useAppContext()
+  const { actions } = useAppContext()
+  if (!actions) return () => {}
 
-  return () => {
-    console.log('logger')
+  return (message: string) => {
+    pushLogEntry(actions, message)
   }
 }
 
@@ -39,9 +79,17 @@ export const useLogger = () => {
  * Use logger render props
  */
 
-export const UseLogger = ({ children }: any) => {
+export const UseLogger = ({ children }: { children: Renderer }) => {
   const log = useLogger()
-  return children({ log })
+  return <>{children({ log })}</>
+}
+
+export type LoggerFunction = (...props: any[]) => any
+export type Renderer = (props: { log: LoggerFunction }) => React.ReactNode
+export type Message = string
+
+interface LoggerState {
+  logs?: Array<string>
 }
 
 export default LoggerPlugin
