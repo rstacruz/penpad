@@ -60,7 +60,7 @@ const UMD = {
     react: 'React',
     'react-dom': 'ReactDOM',
     classnames: 'classnames',
-    'jsx-to-string': 'jsxToString',
+    'react-element-to-jsx-string': 'ReactElementToJsxString',
     'react-frame-component': 'Frame',
     'react-helmet': 'ReactHelmet'
   }
