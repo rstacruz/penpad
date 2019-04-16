@@ -34,6 +34,8 @@ const IndexPage = () => {
           <Link to='/penpad-embedded' className={CSS.lowButton}>
             Try it in your browser
           </Link>
+
+          <a href='https://github.com/rstacruz/penpad'>GitHub</a>
         </div>
       </section>
     </Layout>
