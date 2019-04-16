@@ -29,3 +29,16 @@ The [Makefile](./Makefile) is just a tool to conveniently run a dev setup in Doc
 ## Package management
 
 Managed using [Lerna](https://github.com/lerna/lerna).
+
+```js
+# List packages with changes
+# (ie, that need to be published)
+lerna changed
+
+# Bump versions without publishing
+# (Interactive prompt)
+lerna version
+
+# Bump versions, then publish
+lerna publish
+```
