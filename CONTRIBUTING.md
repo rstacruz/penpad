@@ -25,3 +25,7 @@ Everything is managed in a Yarn workspace.
 ### Makefile?
 
 The [Makefile](./Makefile) is just a tool to conveniently run a dev setup in Docker.
+
+## Package management
+
+Managed using [Lerna](https://github.com/lerna/lerna).

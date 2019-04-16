@@ -1,8 +1,9 @@
 {
   "name": "@penpad/gatsby-demo",
+  "private": true,
   "description": "Gatsby default starter",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Rico Sta. Cruz <rstacruz@users.noreply.github.com>",
   "dependencies": {
     "@babel/standalone": "^7.4.3",
     "@mdx-js/tag": "^0.20.3",
