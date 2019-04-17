@@ -12,7 +12,8 @@
     "jsx": "react",
     "baseUrl": "./",
     "paths": {
-      "penpad": ["packages/penpad/src"]
+      "penpad": ["packages/penpad/src"],
+      "@rstacruz/penpad": ["packages/penpad/src"]
     },
     "plugins": [
       { "name": "typescript-tslint-plugin" }
@@ -25,6 +26,7 @@
   ],
   "exclude": [
     "packages/*/.rpt2_cache",
+    "packages/*/dist",
     "demos/gatsby/.cache",
     "dist"
   ]

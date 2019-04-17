@@ -69,7 +69,7 @@ const ReactSpecimenView = (props: Props) => {
  *     isNonNumericString('100px') // => true
  */
 
-const isNonNumericString = (width: number | string) => {
+const isNonNumericString = (width: any) => {
   return typeof width === 'string' && isNaN(+width)
 }
 
