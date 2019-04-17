@@ -1,12 +1,7 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import { mdx } from 'mdx.macro'
-import {
-  Penpad,
-  Specimen,
-  Page,
-  CombineWebpackContext
-} from 'penpad'
+import { Penpad, Specimen, Page, CombineWebpackContext } from 'penpad'
 
 import 'bulma/css/bulma.css'
 

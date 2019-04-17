@@ -1,6 +1,6 @@
 import cn from 'classnames'
 import React from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import { useAppContext } from '../state'
 import '../styles/reset.module.css'
 import DocsBody from './DocsBody'
