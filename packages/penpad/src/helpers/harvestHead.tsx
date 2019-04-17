@@ -7,6 +7,7 @@ import React from 'react'
 export const harvestHead = () => {
   const styleEls = document.querySelectorAll<HTMLStyleElement>('style')
 
+  // TODO: refactor so that it'd be impossible to have the same key
   const styles = Array.from(styleEls).map(element => {
     const props = toProps(element.attributes)
     const key = JSON.stringify([props, element.innerText])

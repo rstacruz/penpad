@@ -18,7 +18,7 @@ const ReactSpecimenView = (props: Props) => {
   // but allow fluid sizes (eg, '100%')
   const bodyWidth = !frameWidth
     ? props.width
-    : typeof props.width === 'string'
+    : isNonNumericString(props.width)
     ? props.width
     : null
 
@@ -57,6 +57,20 @@ const ReactSpecimenView = (props: Props) => {
       </FrameWrapper>
     </div>
   )
+}
+
+/**
+ * Checks if a given string or number is a non-numeric string.
+ * String representations of numbers aren't counted as non-numeric strings.
+ *
+ * @example
+ *     isNonNumericString('100')   // => false
+ *     isNonNumericString('100%')  // => true
+ *     isNonNumericString('100px') // => true
+ */
+
+const isNonNumericString = (width: number | string) => {
+  return typeof width === 'string' && isNaN(+width)
 }
 
 interface Props {
