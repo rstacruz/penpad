@@ -33,12 +33,23 @@ Managed using [Lerna](https://github.com/lerna/lerna).
 ```js
 # List packages with changes
 # (ie, that need to be published)
-lerna changed
+yarn lerna changed
 
 # Bump versions without publishing
 # (Interactive prompt)
-lerna version
+yarn lerna version
 
 # Bump versions, then publish
-lerna publish
+yarn lerna publish
+```
+
+Some other useful commands:
+
+```js
+# Run all Rollup configs
+# (careful, bumping up concurrency may thrash your CPU)
+yarn lerna exec --stream --concurrency 1 yarn prepare
+
+# Publish things even without changes (caution!)
+yarn lerna publish --force-publish="*"
 ```
