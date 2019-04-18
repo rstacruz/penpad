@@ -1,9 +1,5 @@
-// @ts-ignore
-import typescript from 'rollup-plugin-typescript2'
-import resolve from 'rollup-plugin-node-resolve'
-import reactSvg from 'rollup-plugin-react-svg'
-import commonjs from 'rollup-plugin-commonjs'
-import postcssModules from './postcss'
+const plugins = require('./plugins')
+const typescript = require('./typescript')
 
 /**
  * Builds Rollup configuration.
@@ -28,7 +24,7 @@ const buildConfig = options => {
 
   if (!options.pkg && !options.quiet) {
     console.warn(
-      `@penpad/plugin-tools: Warning: 'pkg' option not set, assuming default outputs to dist/.`
+      `@penpad/rollup-config: Warning: 'pkg' option not set, assuming default outputs to dist/.`
     )
   }
 
@@ -41,14 +37,14 @@ const buildConfig = options => {
   const skipES5 = pkg.module === pkg.main
   if (skipES5 && !options.quiet) {
     console.warn(
-      `@penpad/plugin-tools: 'pkg.module' and 'pkg.main' are the same, skipping es5 build.`
+      `@penpad/rollup-config: 'pkg.module' and 'pkg.main' are the same, skipping es5 build.`
     )
   }
 
   const umdName = options.umdName
   if (!umdName && !skipES5)
     throw new Error(
-      `@penpad/plugin-tools: Option 'umdName' is required in es5 mode`
+      `@penpad/rollup-config: Option 'umdName' is required in es5 mode`
     )
 
   // Return `true` if it should be external
@@ -63,7 +59,7 @@ const buildConfig = options => {
   const output = {
     input,
     external,
-    plugins: [...Plugins.defaults(), Plugins.typescript()],
+    plugins: [...plugins(), typescript()],
     output: { file: pkg.module, format: 'esm' }
   }
 
@@ -76,7 +72,7 @@ const buildConfig = options => {
     {
       input,
       external,
-      plugins: [...Plugins.defaults(), Plugins.typescript({ target: 'es5' })],
+      plugins: [...plugins(), typescript({ target: 'es5' })],
       output: {
         file: pkg.main,
         format: 'umd',
@@ -88,40 +84,11 @@ const buildConfig = options => {
   ]
 }
 
-/**
- * Rollup plugin presets
- */
-
-const Plugins = {
-  defaults: () => [
-    resolve({
-      browser: true,
-      extensions: ['.js', '.ts', '.tsx'],
-      dedupe: ['react', 'react-dom']
-    }),
-
-    // Allow loading 3rd-party commonjs modules (eg, 'classnames')
-    commonjs(),
-
-    // CSS modules with PostCSS support
-    postcssModules(),
-
-    // Convert SVG's into React components
-    reactSvg()
-  ],
-
-
-  typescript: (options = {}) =>
-    typescript({
-      exclude: ['node_modules/**', '../../node_modules/**'],
-      ...options
-    })
-}
-
 const UMD_GLOBALS = {
   react: 'React',
   'react-dom': 'ReactDOM',
   '@rstacruz/penpad': 'Penpad',
+
   // These are mostly just to appease Rollup, we'll bundle them so they
   // shouldn't be accessed globally
   classnames: 'classnames',
@@ -134,5 +101,4 @@ const UMD_GLOBALS = {
  * Export
  */
 
-export default buildConfig
-export { Plugins }
+module.exports = buildConfig

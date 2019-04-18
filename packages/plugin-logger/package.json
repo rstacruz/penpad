@@ -1,13 +1,17 @@
 {
   "name": "@penpad/plugin-logger",
   "version": "0.2.0-alpha.5",
-  "main": "dist/main.js",
-  "module": "dist/module.js",
+  "main": "dist/index.es5.js",
+  "module": "dist/index.js",
   "license": "MIT",
   "scripts": {
     "prepare": "rollup --config"
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "files": [
+    "src",
+    "dist"
+  ]
 }

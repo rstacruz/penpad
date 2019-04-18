@@ -1,8 +1,8 @@
-import postcssModules from 'rollup-plugin-postcss-modules'
-import postcssImport from 'postcss-import'
-import postcssApply from 'postcss-apply'
-import postcssColorMod from 'postcss-color-mod-function'
-import postcssPresetEnv from 'postcss-preset-env'
+const postcssModules = require('rollup-plugin-postcss-modules').default
+const postcssImport = require('postcss-import')
+const postcssApply = require('postcss-apply')
+const postcssColorMod = require('postcss-color-mod-function')
+const postcssPresetEnv = require('postcss-preset-env')
 
 const postcss = (options = {}) => {
   return postcssModules({
@@ -22,4 +22,4 @@ const postcss = (options = {}) => {
   })
 }
 
-export default postcss
+module.exports = postcss
