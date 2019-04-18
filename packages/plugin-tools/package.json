@@ -1,0 +1,13 @@
+{
+  "name": "@penpad/plugin-tools",
+  "version": "0.2.0-alpha.5",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "rollup --config"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
