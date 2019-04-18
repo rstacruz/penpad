@@ -21,5 +21,8 @@
     "prepare": "rollup --config",
     "postprepare": "bash -c 'mv dist/packages/penpad/src/* ./dist; rm -rf dist/packages'",
     "watch": "rollup --config --watch"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

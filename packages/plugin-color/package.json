@@ -6,5 +6,8 @@
   "license": "MIT",
   "scripts": {
     "prepare": "rollup --config"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
