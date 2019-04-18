@@ -79,7 +79,7 @@ export default [
   {
     ...DEFAULTS,
     plugins: [...PLUGINS, TYPESCRIPT_LEGACY],
-    output: { file: pkg.main, ...UMD }
+    output: { file: pkg.main, ...UMD, exports: 'named' }
   }
 
   // Portable build for jsbin, codepen, etc
