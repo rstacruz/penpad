@@ -1,6 +1,6 @@
 {
   "name": "@rstacruz/penpad",
-  "version": "0.2.0-alpha.4",
+  "version": "0.2.0-alpha.5",
   "main": "dist/index.es5.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
