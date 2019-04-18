@@ -9,5 +9,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {}
+  "dependencies": {
+    "rollup-plugin-size-snapshot": "^0.8.0",
+    "rollup-plugin-sizes": "^0.5.1"
+  }
 }

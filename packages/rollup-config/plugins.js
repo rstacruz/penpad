@@ -1,6 +1,7 @@
 const resolve = require('rollup-plugin-node-resolve')
 const reactSvg = require('rollup-plugin-react-svg')
 const commonjs = require('rollup-plugin-commonjs')
+const sizeSnapshot = require('rollup-plugin-size-snapshot').sizeSnapshot
 const postcss = require('./postcss')
 /**
  * Rollup plugin presets
@@ -20,7 +21,10 @@ const getPlugins = () => [
   postcss(),
 
   // Convert SVG's into React components
-  reactSvg()
+  reactSvg(),
+
+  // Show bundle sizes
+  sizeSnapshot()
 ]
 
 module.exports = getPlugins
