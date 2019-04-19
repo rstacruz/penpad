@@ -3,7 +3,7 @@ import {
   Page,
   Penpad,
   Specimen
-} from '../../../../../packages/penpad/src/index'
+} from '@rstacruz/penpad'
 
 /**
  * A shim for Penpad that forces it to be embedded.

@@ -1,6 +1,6 @@
-import { Penpad, Specimen } from 'penpad'
-import React from 'react'
 import { LoggerPlugin, UseLogger } from '@penpad/plugin-logger'
+import { Penpad, Specimen } from '@rstacruz/penpad'
+import React from 'react'
 
 const PenpadPage = () => {
   return (
