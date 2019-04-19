@@ -28,7 +28,9 @@ Design and document your web UI components
 
 Penpad (coming soon) is a tool to design and document your web UI components. Supports React, and everywhere that you can use React&mdash;whether that be Webpack, create-react-app, Gatsby, Next, or anything, really!
 
-|                                                                                                                                                                                      |                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------- |
-| <h3>Write styleguides</h3> Write your styleguides as Markdown                                                                                                                        | <img src='docs/screencasts/2019-04-12-specimens.gif' alt='Screencast' width='100%' /> |
-| <h3>Design components</h3> Use Penpad as an isolated scratchpad for writing your React components. Penpad offers a jsbin-like experience by live-reloading your component specimens. | <img src='docs/screencasts/2019-04-12-specimens.gif' alt='Screencast' width='100%' /> |
+<p align='center'>
+<img src='docs/screencasts/2019-04-12-specimens.gif' alt='Screencast' />
+</p>
+
+- <h3>Write styleguides</h3> Write your styleguides as Markdown
+- <h3>Design components</h3> Use Penpad as an isolated scratchpad for writing your React components. Penpad offers a jsbin-like experience by live-reloading your component specimens.

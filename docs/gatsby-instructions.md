@@ -1,4 +1,4 @@
-# Generic installation instructions
+# Installing in Gatsby
 
 ```js
 import { Penpad, Specimen } from 'penpad'
@@ -17,3 +17,7 @@ Put the `Penpad` component anywhere in your website.
   </Specimen>
 </Penpad>
 ```
+
+Check out the Gatsby demo site source.
+
+https://github.com/rstacruz/penpad/tree/master/demos/gatsby
