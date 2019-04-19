@@ -1,6 +1,6 @@
 import { Penpad, Specimen } from 'penpad'
 import React from 'react'
-import { LoggerPlugin, UseLogger } from '../../etc/LoggerPlugin'
+import { LoggerPlugin, UseLogger } from '@penpad/plugin-logger'
 
 const PenpadPage = () => {
   return (

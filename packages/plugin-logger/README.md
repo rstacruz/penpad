@@ -43,3 +43,23 @@ const YourComponent = () => {
 ### Logging entries in class components
 
 There is also a `<UseLogger>` render prop component.
+
+```js
+import { UseLogger } from '@penpad/plugin-logger'
+```
+
+```jsx
+<UseLogger>
+  {({ log }) => (
+    <Specimen id='Another specimen'>
+      <button
+        onClick={() => {
+          log('Hello, I was clicked on ' + new Date().toString())
+        }}
+      >
+        Click me
+      </button>
+    </Specimen>
+  )}
+</UseLogger>
+```
