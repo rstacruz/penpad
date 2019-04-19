@@ -1,5 +1,5 @@
-import { Pages, Specimens } from './Config'
 import { BlockList } from './BlockList'
+import { Pages, Specimens } from './Config'
 
 type ActiveView =
   | {

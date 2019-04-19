@@ -1,6 +1,6 @@
 import React from 'react'
-import ErrorCatcher from '../utils/ErrorCatcher'
 import { BlockList } from '../types/BlockList'
+import ErrorCatcher from '../utils/ErrorCatcher'
 
 /**
  * Renders blocks from `state.blocks`. Used to, say, render custom panels in the right sidebar.

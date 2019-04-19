@@ -1,6 +1,6 @@
+import { Link } from 'gatsby'
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { Link } from 'gatsby'
 import CSS from './IndexPage.module.css'
 
 // @ts-ignore

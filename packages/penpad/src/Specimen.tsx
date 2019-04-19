@@ -1,5 +1,5 @@
-import toString from 'react-element-to-jsx-string'
 import React, { useEffect } from 'react'
+import toString from 'react-element-to-jsx-string'
 import ReactSpecimenView from './ReactSpecimenView'
 import { useAppContext } from './state'
 

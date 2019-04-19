@@ -2,9 +2,9 @@ import React from 'react'
 import ResponsiveResizePanel from './ResponsiveResizePanel'
 import SourceCodePanel from './SourceCodePanel'
 import SpecimenDescriptionPanel from './SpecimenDescriptionPanel'
+import { useAppContext } from './state'
 import { Specimen } from './types'
 import RenderBlocks from './ui/RenderBlocks'
-import { useAppContext } from './state'
 
 interface Props {
   specimen: Specimen

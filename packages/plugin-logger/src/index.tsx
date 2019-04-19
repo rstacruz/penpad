@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
-import { useAppContext, BasePanel } from '@rstacruz/penpad'
+import { BasePanel, useAppContext } from '@rstacruz/penpad'
 import { Actions } from '@rstacruz/penpad/src/types'
+import React, { useEffect } from 'react'
 
 /**
  * Logger plugin to be attached to <Penpad />
@@ -89,7 +89,7 @@ export type Renderer = (props: { log: LoggerFunction }) => React.ReactNode
 export type Message = string
 
 interface LoggerState {
-  logs?: Array<string>
+  logs?: string[]
 }
 
 export default LoggerPlugin

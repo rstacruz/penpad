@@ -1,8 +1,8 @@
 import cn from 'classnames'
 import React from 'react'
+import BasePanel from './BasePanel'
 import { Specimen } from './types'
 import Util from './utils.module.css'
-import BasePanel from './BasePanel'
 
 interface Props {
   specimen: Specimen

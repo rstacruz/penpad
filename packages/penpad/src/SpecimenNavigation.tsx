@@ -17,7 +17,7 @@ const SpecimenNavigation = () => {
   if (!specimens) return null
 
   const names = Object.keys(specimens)
-  //.sort()
+  // .sort()
 
   return (
     <div className={CSS.root}>

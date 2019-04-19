@@ -19,12 +19,12 @@ interface State {
  */
 
 class ErrorCatcher extends React.Component<Props, State> {
-  state = {
-    error: null
-  }
 
   static getDerivedStateFromError(error: Error) {
     return { error }
+  }
+  state = {
+    error: null
   }
 
   clearError = () => {

@@ -1,8 +1,8 @@
 import React from 'react'
 import DocsNavigation from '../doc/DocsNavigation'
-import ErrorCatcher from '../utils/ErrorCatcher'
 import { useAppContext } from '../state'
 import { getActivePage } from '../state/selectors'
+import ErrorCatcher from '../utils/ErrorCatcher'
 import CSS from './PenpadUI.module.css'
 
 const DocsBody = () => {
