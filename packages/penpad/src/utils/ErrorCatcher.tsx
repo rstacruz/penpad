@@ -19,7 +19,6 @@ interface State {
  */
 
 class ErrorCatcher extends React.Component<Props, State> {
-
   static getDerivedStateFromError(error: Error) {
     return { error }
   }
