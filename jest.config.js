@@ -6,9 +6,9 @@ module.exports = {
   },
   moduleNameMapper: {
     '.+\\.(css|styl|less|sass|scss)$': 'identity-obj-proxy',
-    '.+\\.(svg)$': '<rootDir>/__mocks__/icon-mock.js',
+    '.+\\.(svg)$': '<rootDir>/__mocks__/icon-mock.tsx',
     '.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-      '<rootDir>/__mocks__/file-mock.js'
+      '<rootDir>/__mocks__/file-mock.tsx'
   },
   testPathIgnorePatterns: ['node_modules', '.cache'],
   transformIgnorePatterns: ['node_modules/(?!(gatsby)/)'],

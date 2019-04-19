@@ -2,5 +2,6 @@
 declare namespace JSX {
   interface IntrinsicElements {
     'x-penpad-ui': any
+    'x-mock-icon': any
   }
 }
