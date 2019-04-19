@@ -21,7 +21,9 @@ Design and document your web UI components
 </p>
 
 <p align='center'>
-<img src='https://img.shields.io/badge/build-pending-lightgrey.svg'>
+<a href='https://travis-ci.org/rstacruz/penpad'>
+<img src='https://travis-ci.org/rstacruz/penpad.svg?branch=master' alt='Travis status'>
+</a>
 </p>
 
 <br>
