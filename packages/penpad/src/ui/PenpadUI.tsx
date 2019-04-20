@@ -1,6 +1,6 @@
 import cn from 'classnames'
 import React from 'react'
-import { Helmet } from 'react-helmet'
+import { Meta, Title } from 'react-simple-head'
 import { useAppContext } from '../state'
 import '../styles/reset.module.css'
 import DocsBody from './DocsBody'
@@ -40,11 +40,10 @@ const PenpadUI = () => {
           [CSS.isEmbedded]: isEmbedded
         })}
       >
-        <Helmet>
-          <title>{title}</title>
-          <meta name='viewport' content='width=1200px' />
-          <meta name='robots' content='noindex' />
-        </Helmet>
+        {/* Meta tags */}
+        <Title title={title} />
+        <Meta name='viewport' content='width=1200px' />
+        <Meta name='robots' content='noindex' />
 
         {/* Navigation */}
         <div className={CSS.topnav}>

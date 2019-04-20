@@ -14,8 +14,7 @@
     "classnames": "^2.2.6",
     "jsx-to-string": "^1.4.0",
     "react-element-to-jsx-string": "^14.0.2",
-    "react-frame-component": "^4.1.0",
-    "react-helmet": "^6.0.0-beta"
+    "react-frame-component": "^4.1.0"
   },
   "scripts": {
     "preprepare": "rm -rf dist",
