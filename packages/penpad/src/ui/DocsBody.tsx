@@ -1,4 +1,5 @@
 import React from 'react'
+import { Title } from 'react-simple-head'
 import DocsNavigation from '../doc/DocsNavigation'
 import { useAppContext } from '../state'
 import { getActivePage } from '../state/selectors'
@@ -16,6 +17,10 @@ const DocsBody = () => {
 
   return (
     <>
+      {page && page.id && !state.ui.isEmbedded ? (
+        <Title title={page.id} />
+      ) : null}
+
       <main className={CSS.main} style={{ background: 'white' }}>
         <ErrorCatcher>
           {page && PageComponent ? <PageComponent {...pageProps} /> : null}
