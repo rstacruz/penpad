@@ -3,12 +3,13 @@
   "description": "Manage title and meta tags in React",
   "author": "Rico Sta. Cruz <rstacruz@users.noreply.github.com>",
   "version": "0.0.1",
-  "main": "src/index.js",
-  "module": "src/index.js",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
   "private": true,
   "license": "MIT",
   "scripts": {
-    "prepare": "tsc --project ."
+    "prepare": "tsc"
   },
   "peerDependencies": {
     "react": ">=16.8.0"

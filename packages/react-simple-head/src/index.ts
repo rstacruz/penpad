@@ -1,5 +1,14 @@
 import { useEffect, useState } from 'react'
-import { MetaProps, TitleProps } from './types'
+
+export interface TitleProps {
+  title: string
+}
+
+export interface MetaProps {
+  name?: string | undefined
+  property?: string | undefined
+  content: string
+}
 
 /**
  * React hook to set the document title.
