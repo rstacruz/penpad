@@ -1,14 +1,11 @@
 import { useEffect, useState } from 'react'
-
-/** @typedef MetaProps {import('./types').MetaProps} */
-/** @typedef TitleProps {import('./types').TitleProps} */
+import { MetaProps, TitleProps } from './types'
 
 /**
  * React hook to set the document title.
- * @param {string} title
  */
 
-const useTitle = title => {
+const useTitle = (title: string) => {
   useEffect(() => {
     const oldTitle = document.title
     document.title = title
@@ -20,16 +17,14 @@ const useTitle = title => {
 
 /**
  * React hook to insert a meta tag.
- * @param {MetaProps} props
  */
 
-const useMeta = props => {
+const useMeta = (props: MetaProps) => {
   const { property, name, content } = props
-  const [element, setElement] = useState(/* <HTMLMetaElement | null> */ null)
+  const [element, setElement] = useState<HTMLElement | null>(null)
 
   useEffect(() => {
-    /** @type HTMLMetaElement */
-    let el
+    let el: HTMLElement
 
     if (!element) {
       el = spawnMetaElement()
@@ -51,13 +46,14 @@ const useMeta = props => {
 
 /**
  * If `value` is given, sets an attribute. If it's null'ish, the attribute is removed.
- * @type {HTMLElement} el
- * @type {string} name
- * @type {string | null | undefined} value
  * @private
  */
 
-const setOrRemoveAttribute = (el, name, value) => {
+const setOrRemoveAttribute = (
+  el: HTMLElement,
+  name: string,
+  value: string | null | undefined
+) => {
   if (value) {
     el.setAttribute(name, value)
   } else {
@@ -84,20 +80,18 @@ const spawnMetaElement = () => {
 
 /**
  * Component version of useTitle.
- * @param {TitleProps} props
  */
 
-const Title = props => {
+const Title = (props: TitleProps) => {
   useTitle(props.title)
   return null
 }
 
 /**
  * Component version of useMeta.
- * @param {MetaProps} props
  */
 
-const Meta = props => {
+const Meta = (props: MetaProps) => {
   useMeta(props)
   return null
 }

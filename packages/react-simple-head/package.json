@@ -7,6 +7,9 @@
   "module": "src/index.js",
   "private": true,
   "license": "MIT",
+  "scripts": {
+    "prepare": "tsc --project ."
+  },
   "peerDependencies": {
     "react": ">=16.8.0"
   }
