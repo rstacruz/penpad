@@ -1,4 +1,4 @@
-import { Page, Penpad as TruePenpad, Specimen } from 'penpad'
+import { Page, Penpad as TruePenpad, Specimen } from '@rstacruz/penpad'
 import React, { useMemo, useState } from 'react'
 import useDebounce from '../../utilities/useDebounce'
 import CSS from '../Embedded.module.css'

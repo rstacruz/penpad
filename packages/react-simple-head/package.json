@@ -1,0 +1,17 @@
+{
+  "name": "react-simple-head",
+  "description": "Manage title and meta tags in React",
+  "author": "Rico Sta. Cruz <rstacruz@users.noreply.github.com>",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "prepare": "tsc"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  }
+}

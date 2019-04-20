@@ -33,7 +33,7 @@ const umd = () => ({
     classnames: 'classnames',
     'react-element-to-jsx-string': 'ReactElementToJsxString',
     'react-frame-component': 'Frame',
-    'react-helmet': 'ReactHelmet'
+    'react-simple-head': 'ReactSimpleHead'
   }
 })
 

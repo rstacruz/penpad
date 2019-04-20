@@ -11,6 +11,7 @@ export const LoggerPlugin = () => {
 
   useEffect(() => {
     if (!state || !actions) return
+
     return actions.addBlock({
       domain: 'panels',
       priority: 30,
