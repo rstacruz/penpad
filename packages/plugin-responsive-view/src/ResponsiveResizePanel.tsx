@@ -1,4 +1,3 @@
-import cn from 'classnames'
 import React from 'react'
 import { useAppContext } from '@rstacruz/penpad'
 import CSS from './ResponsiveResizePanel.module.css'
@@ -23,7 +22,7 @@ const ResponsiveResizePanel = () => {
 
           return (
             <button
-              className={cn(CSS.button, { [CSS.isActive]: isActive })}
+              className={`${CSS.button} ${isActive ? CSS.isActive : ''}`}
               key={width || index}
               onClick={() => actions && actions.setFrameWidth(width)}
             >
