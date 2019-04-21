@@ -9,6 +9,7 @@ const postcss = require('./postcss')
 
 const getPlugins = () => [
   resolve({
+    mainFields: ['__typescript', 'module', 'main'],
     browser: true,
     extensions: ['.js', '.ts', '.tsx'],
     dedupe: ['react', 'react-dom']
