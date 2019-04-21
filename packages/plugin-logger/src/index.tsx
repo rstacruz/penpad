@@ -1,5 +1,5 @@
-import { AddBlockPlugin, BasePanel, useAppContext } from '@rstacruz/penpad'
-import { Actions } from '@rstacruz/penpad/src/types'
+import { AddBlockPlugin, BasePanel, useAppContext } from '@penpad/core'
+import { Actions } from '@penpad/core/src/types'
 import React from 'react'
 
 /**

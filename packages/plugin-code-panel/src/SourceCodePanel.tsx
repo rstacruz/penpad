@@ -1,6 +1,6 @@
-import { BasePanel, useAppContext } from '@rstacruz/penpad'
-import { Specimen, State } from '@rstacruz/penpad/src/types'
-import Util from '@rstacruz/penpad/src/utils.module.css'
+import { BasePanel, useAppContext } from '@penpad/core'
+import { Specimen, State } from '@penpad/core/src/types'
+import Util from '@penpad/core/src/utils.module.css'
 import React from 'react'
 
 const SourceCodePanel = () => {

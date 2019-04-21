@@ -21,7 +21,7 @@
   "scripts": {
     "prettier:check": "prettier --list-different 'packages/*/src/**/*.{js,jsx,ts,tsx}'",
     "prettier:fix": "prettier --write 'packages/*/src/**/*.{js,jsx,ts,tsx}'",
-    "penpad:watch": "yarn workspace @rstacruz/penpad watch",
+    "penpad:watch": "yarn workspace @penpad/core watch",
     "tslint:check": "tslint --project .",
     "tslint:fix": "tslint --project . --fix",
     "tsc:check": "tsc --noEmit",

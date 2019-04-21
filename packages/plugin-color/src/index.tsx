@@ -1,4 +1,4 @@
-import { BasePanel, useAppContext } from '@rstacruz/penpad'
+import { BasePanel, useAppContext } from '@penpad/core'
 import React, { useEffect } from 'react'
 
 interface SpecimenProps {

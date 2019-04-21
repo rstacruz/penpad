@@ -1,4 +1,4 @@
-import { Page, Penpad as TruePenpad, Specimen } from '@rstacruz/penpad'
+import { Page, Penpad as TruePenpad, Specimen } from '@penpad/core'
 import React, { useMemo, useState } from 'react'
 import useDebounce from '../../utilities/useDebounce'
 import CodeMirror from './CodeMirror'
