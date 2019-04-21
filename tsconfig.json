@@ -20,7 +20,6 @@
       "@penpad/plugin-color": ["packages/plugin-color/src"],
       "@penpad/plugin-code-panel": ["packages/plugin-code-panel/src"],
       "@penpad/plugin-responsive-view": ["packages/plugin-responsive-view/src"],
-      "react-simple-head": ["packages/react-simple-head"]
     },
     "plugins": [
       { "name": "typescript-tslint-plugin" }
