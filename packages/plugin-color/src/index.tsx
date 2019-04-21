@@ -3,6 +3,7 @@ import { BasePanel, useAppContext } from '@rstacruz/penpad'
 
 interface SpecimenProps {
   id: string
+  colors: { [key: string]: string }
 }
 
 const ColorPlugin = () => {

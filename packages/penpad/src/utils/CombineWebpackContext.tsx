@@ -16,11 +16,13 @@ interface WebpackContext extends WebpackContextFn {
  */
 
 const CombineWebpackContext = ({ context }: { context: WebpackContext }) => {
-  return context.keys().map(key => {
+  const list = context.keys().map((key: string) => {
     const Component = context(key).default
     if (!Component) return null
     return <Component key={key} />
   })
+
+  return <>{list}</>
 }
 
 export default CombineWebpackContext
