@@ -31,7 +31,7 @@
     "full-develop": "run-p -sl penpad:watch develop",
     "test:check": "jest",
     "test:watch": "jest --watch",
-    "clean": "rm -rf packages/*/dist demos/*/.cache",
+    "clean": "rm -rf packages/*/dist demos/*/{public,.cache}",
     "build": "lerna exec --stream --concurrency 1 yarn prepare",
     "watch": "run-p -sl '*:watch' develop",
     "test": "run-p -sl '*:check'",
