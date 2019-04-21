@@ -7,6 +7,9 @@ exports.onCreateWebpackConfig = ({ getConfig, stage }) => {
   config.resolve.alias = {
     ...config.resolve.alias,
     '@rstacruz/penpad$': require.resolve('../../packages/penpad/src/index.tsx'),
+    '@penpad/preset-recommended$': require.resolve(
+      '../../packages/preset-recommended/src/index.tsx'
+    ),
     '@penpad/plugin-logger$': require.resolve(
       '../../packages/plugin-logger/src/index.tsx'
     ),

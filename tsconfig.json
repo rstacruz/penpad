@@ -15,6 +15,7 @@
       "penpad": ["packages/penpad/src"],
       "@rstacruz/penpad": ["packages/penpad/src"],
       "@rstacruz/penpad/src": ["packages/penpad/src"],
+      "@penpad/preset-recommended": ["packages/preset-recommended/src"],
       "@penpad/plugin-logger": ["packages/plugin-logger/src"],
       "@penpad/plugin-color": ["packages/plugin-color/src"],
       "@penpad/plugin-code-panel": ["packages/plugin-code-panel/src"],
