@@ -1,6 +1,6 @@
 import React from 'react'
 import Frame from 'react-frame-component'
-import HarvestHeadStyles from '../helpers/HarvestHeadStyles'
+import HarvestHeadStyles from '../utils/HarvestHeadStyles'
 
 /**
  * Wraps the `children` in an iframe.

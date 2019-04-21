@@ -1,3 +1,5 @@
+import { CodePanelPlugin } from '@penpad/plugin-code-panel'
+import { ResponsiveViewPlugin } from '@penpad/plugin-responsive-view'
 import { CombineWebpackContext, Page, Penpad, Specimen } from '@rstacruz/penpad'
 import { mdx } from 'mdx.macro'
 import React from 'react'
@@ -23,6 +25,9 @@ const specimens = require.context('../../', true, /\.specimens\.(jsx?|tsx?)$/)
 const PenpadPage = () => {
   return (
     <Penpad ui={{ title: 'Penpad demo' }}>
+      <ResponsiveViewPlugin />
+      <CodePanelPlugin />
+
       <Page id='Home'>
         <Pages.Home />
       </Page>

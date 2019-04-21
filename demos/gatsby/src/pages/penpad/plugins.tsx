@@ -1,15 +1,23 @@
+import { CodePanelPlugin } from '@penpad/plugin-code-panel'
 import { ColorPlugin, ColorSpecimen } from '@penpad/plugin-color'
 import { LoggerPlugin, UseLogger } from '@penpad/plugin-logger'
 import { ResponsiveViewPlugin } from '@penpad/plugin-responsive-view'
 import { Penpad, Specimen } from '@rstacruz/penpad'
 import React from 'react'
 
+const RecommendedPlugins = () => (
+  <>
+    <LoggerPlugin />
+    <ColorPlugin />
+    <ResponsiveViewPlugin />
+    <CodePanelPlugin />
+  </>
+)
+
 const PenpadPage = () => {
   return (
     <Penpad>
-      <LoggerPlugin />
-      <ColorPlugin />
-      <ResponsiveViewPlugin />
+      <RecommendedPlugins />
 
       <ColorSpecimen
         id='Color/example'

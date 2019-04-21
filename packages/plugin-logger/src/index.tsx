@@ -1,31 +1,22 @@
-import { BasePanel, useAppContext } from '@rstacruz/penpad'
+import { AddBlockPlugin, BasePanel, useAppContext } from '@rstacruz/penpad'
 import { Actions } from '@rstacruz/penpad/src/types'
-import React, { useEffect } from 'react'
+import React from 'react'
 
 /**
  * Logger plugin to be attached to <Penpad />
  */
 
 export const LoggerPlugin = () => {
-  const { state, actions } = useAppContext()
-
-  useEffect(() => {
-    if (!state || !actions) return
-
-    return actions.addBlock({
-      domain: 'panels',
-      priority: 30,
-      id: 'logger',
-      view: [LoggerPanel, {}]
-    })
-  }, [])
-
-  // Clear logs when navigating
-  useEffect(() => {
-    clearLogEntries(actions)
-  }, [state && state.activeView])
-
-  return null
+  return (
+    <AddBlockPlugin
+      block={() => ({
+        domain: 'panels',
+        priority: 80,
+        id: 'logger',
+        view: [LoggerPanel, {}]
+      })}
+    />
+  )
 }
 
 function clearLogEntries(actions: Actions | null) {

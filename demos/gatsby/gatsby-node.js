@@ -15,6 +15,9 @@ exports.onCreateWebpackConfig = ({ getConfig, stage }) => {
     ),
     '@penpad/plugin-responsive-view$': require.resolve(
       '../../packages/plugin-responsive-view/src/index.tsx'
+    ),
+    '@penpad/plugin-code-panel': require.resolve(
+      '../../packages/plugin-code-panel/src/index.tsx'
     )
   }
   if (stage.startsWith('develop') && config.resolve) {

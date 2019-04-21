@@ -1,4 +1,11 @@
-import { ComponentTuple, Pages, Specimen, Specimens, State } from '../types'
+import {
+  Block,
+  ComponentTuple,
+  Pages,
+  Specimen,
+  Specimens,
+  State
+} from '../types'
 
 type SetState = (callback: (state: State) => State) => any
 
@@ -121,17 +128,7 @@ const getActions = (setState: SetState) => {
      * Returns an undo function (useful for useEffect).
      */
 
-    addBlock({
-      domain,
-      id,
-      priority,
-      view
-    }: {
-      domain: 'panels'
-      id: string
-      priority: number
-      view: ComponentTuple | null
-    }) {
+    addBlock({ domain, id, priority, view }: Block) {
       setState(state => {
         const blocksObj = state.blocks || {}
         const domainObj = blocksObj[domain] || {}
