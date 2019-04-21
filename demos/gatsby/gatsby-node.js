@@ -19,8 +19,11 @@ exports.onCreateWebpackConfig = ({ getConfig, stage }) => {
     '@penpad/plugin-responsive-view$': require.resolve(
       '../../packages/plugin-responsive-view/src/index.tsx'
     ),
-    '@penpad/plugin-code-panel': require.resolve(
+    '@penpad/plugin-code-panel$': require.resolve(
       '../../packages/plugin-code-panel/src/index.tsx'
+    ),
+    'react-simple-head$': require.resolve(
+      '../../packages/react-simple-head/src/index.ts'
     )
   }
 

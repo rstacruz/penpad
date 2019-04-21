@@ -6,7 +6,6 @@
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
-  "__typescript": "src/index.ts",
   "private": true,
   "license": "MIT",
   "scripts": {
