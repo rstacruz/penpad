@@ -23,6 +23,7 @@ exports.onCreateWebpackConfig = ({ getConfig, stage }) => {
       '../../packages/plugin-code-panel/src/index.tsx'
     )
   }
+
   if (stage.startsWith('develop') && config.resolve) {
     config.resolve.alias = {
       ...config.resolve.alias,

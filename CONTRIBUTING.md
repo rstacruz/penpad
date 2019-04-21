@@ -58,5 +58,13 @@ yarn lerna publish --force-publish="*"
 
 When creating packages, these need to be updated:
 
-- `/tsconfig.json` (compilerOptions.paths)
-- `/demos/gatsby/gatsby-node.js` (onCreateWebpackConfig, config.resolve.alias)
+| What                                                                              | What for                                                                                                                                                           |
+| --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `/demos/gatsby/gatsby-node.js` <br> (onCreateWebpackConfig, config.resolve.alias) | Makes `gatsby` look for source files ('src') instead of built ('dist') files. This makes compilation faster, because it doesn't need to run rollup to build files. |
+| `/tsconfig.json` <br> (compilerOptions.paths)                                     | Makes `tsc` look for source files ('src') instead of built files ('dist'). Ditto above.                                                                            |
+
+## Internal voodoo
+
+Most everything in this setup are 'standard issue' things, with a few exceptions.
+
+- **Jest module resolution** &mdash; `jest.config.js` has a `moduleNameMapper` that maps `@penpad/xxx` to `packages/xxx/src/index.tsx`. This allows Jest to work without having to compile things with Rollup.
