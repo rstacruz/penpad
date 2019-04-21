@@ -1,5 +1,5 @@
-import Recommended from '@penpad/preset-recommended'
 import { CombineWebpackContext, Page, Penpad, Specimen } from '@penpad/core'
+import Recommended from '@penpad/preset-recommended'
 import { mdx } from 'mdx.macro'
 import React from 'react'
 

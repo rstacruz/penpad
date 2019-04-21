@@ -1,8 +1,8 @@
+import { Penpad, Specimen } from '@penpad/core'
 import { CodePanelPlugin } from '@penpad/plugin-code-panel'
 import { ColorPlugin, ColorSpecimen } from '@penpad/plugin-color'
 import { LoggerPlugin, UseLogger } from '@penpad/plugin-logger'
 import { ResponsiveViewPlugin } from '@penpad/plugin-responsive-view'
-import { Penpad, Specimen } from '@penpad/core'
 import React from 'react'
 
 const RecommendedPlugins = () => (
