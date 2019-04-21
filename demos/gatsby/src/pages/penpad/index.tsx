@@ -1,6 +1,6 @@
-import React from 'react'
+import { CombineWebpackContext, Page, Penpad, Specimen } from '@rstacruz/penpad'
 import { mdx } from 'mdx.macro'
-import { Penpad, Specimen, Page, CombineWebpackContext } from '@rstacruz/penpad'
+import React from 'react'
 
 import 'bulma/css/bulma.css'
 

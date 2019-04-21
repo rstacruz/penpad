@@ -1,9 +1,9 @@
 import { Page, Penpad as TruePenpad, Specimen } from '@rstacruz/penpad'
 import React, { useMemo, useState } from 'react'
 import useDebounce from '../../utilities/useDebounce'
-import CSS from './Editor.module.css'
 import CodeMirror from './CodeMirror'
 import DemoResult from './DemoResult'
+import CSS from './Editor.module.css'
 import useBabel from './useBabel'
 
 /**

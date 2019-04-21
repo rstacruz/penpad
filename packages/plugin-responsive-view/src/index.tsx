@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
 import { BasePanel, useAppContext } from '@rstacruz/penpad'
+import React, { useEffect } from 'react'
 import ResponsiveResizePanel from './ResponsiveResizePanel'
 
 const ResponsiveViewPlugin = () => {

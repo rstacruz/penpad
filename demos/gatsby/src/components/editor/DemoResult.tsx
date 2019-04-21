@@ -1,9 +1,9 @@
-import React, { useMemo, useState } from 'react'
 import {
   Page,
   Penpad,
   Specimen
 } from '@rstacruz/penpad'
+import React, { useMemo, useState } from 'react'
 
 /**
  * A shim for Penpad that forces it to be embedded.

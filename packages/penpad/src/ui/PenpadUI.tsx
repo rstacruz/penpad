@@ -1,5 +1,5 @@
 import cn from 'classnames'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Meta, Title } from 'react-simple-head'
 import { useAppContext } from '../state'
 import '../styles/reset.module.css'
@@ -31,6 +31,17 @@ const PenpadUI = () => {
 
   // The specimen object
   const specimen = (specimenId && specimens && specimens[specimenId]) || null
+
+  if (!isEmbedded) {
+    useEffect(() => {
+      const className = CSS.hasPenpadUI
+      const { classList } = document.documentElement
+      classList.add(className)
+      return () => {
+        classList.remove(className)
+      }
+    }, [])
+  }
 
   return (
     <x-penpad-ui>

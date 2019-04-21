@@ -34,7 +34,7 @@
     "build": "lerna exec --stream --concurrency 1 yarn prepare",
     "watch": "run-p -sl '*:watch' develop",
     "test": "run-p -sl '*:check'",
-    "fix": "run-p -sl '*:fix'"
+    "fix": "run-p -sl css_modules:update '*:fix'"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.7",

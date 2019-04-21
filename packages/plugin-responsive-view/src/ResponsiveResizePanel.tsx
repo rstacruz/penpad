@@ -1,7 +1,7 @@
-import React from 'react'
 import { useAppContext } from '@rstacruz/penpad'
-import CSS from './ResponsiveResizePanel.module.css'
 import Panel from '@rstacruz/penpad/src/styles/panels.module.css'
+import React from 'react'
+import CSS from './ResponsiveResizePanel.module.css'
 
 const ResponsiveResizePanel = () => {
   const { state, actions } = useAppContext()

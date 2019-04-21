@@ -14,7 +14,15 @@ const FrameWrapper = ({ children, className, style }: Props) => {
   const head = (
     <>
       {harvestHead()}
-      <style>{`html, body { min-height: 100%; margin: 0; padding: 0; background: transparent; }`}</style>
+      <style>{`
+        html, body {
+          min-height: 100%;
+          margin: 0;
+          padding: 0;
+          background: transparent;
+          overflow: auto;
+        }
+      `}</style>
     </>
   )
 

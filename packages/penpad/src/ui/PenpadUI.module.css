@@ -4,6 +4,15 @@
   --topnav-height: 40px;
 }
 
+html.hasPenpadUI,
+html.hasPenpadUI body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 .topnav {
   height: var(--topnav-height);
   background: var(--bg-panel);
