@@ -21,7 +21,7 @@ const SpecimensBody = ({ specimen }: { specimen: Specimen | null }) => {
 
   return (
     <>
-      {specimen && specimen.id && !state.ui.isEmbedded ? (
+      {specimen && specimen.id && !state.uiConfig.isEmbedded ? (
         <Title title={specimen.id} />
       ) : null}
 
