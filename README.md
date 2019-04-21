@@ -1,4 +1,6 @@
-:warning: **NB:** Under heavy development, here be dragons for now :)
+:warning: **NB:** Penpad is under heavy development, expect many things to change as the core functionality is laid out. See [Penpad 1.0 roadmap][#2] for what's coming!
+
+[#2]: https://github.com/rstacruz/penpad/issues/2
 
 ---
 
