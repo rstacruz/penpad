@@ -17,7 +17,7 @@ const DocsBody = () => {
 
   return (
     <>
-      {page && page.id && !state.ui.isEmbedded ? (
+      {page && page.id && !state.uiConfig.isEmbedded ? (
         <Title title={page.id} />
       ) : null}
 

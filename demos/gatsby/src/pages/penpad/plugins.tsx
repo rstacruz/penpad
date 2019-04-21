@@ -1,12 +1,34 @@
+import { CodePanelPlugin } from '@penpad/plugin-code-panel'
+import { ColorPlugin, ColorSpecimen } from '@penpad/plugin-color'
 import { LoggerPlugin, UseLogger } from '@penpad/plugin-logger'
+import { ResponsiveViewPlugin } from '@penpad/plugin-responsive-view'
 import { Penpad, Specimen } from '@rstacruz/penpad'
 import React from 'react'
+
+const RecommendedPlugins = () => (
+  <>
+    <LoggerPlugin />
+    <ColorPlugin />
+    <ResponsiveViewPlugin />
+    <CodePanelPlugin />
+  </>
+)
 
 const PenpadPage = () => {
   return (
     <Penpad>
-      <LoggerPlugin />
-      <Specimen id='My specimen'>
+      <RecommendedPlugins />
+
+      <ColorSpecimen
+        id='Color/example'
+        colors={{
+          $red: '#ff0000',
+          $green: '#00ff00',
+          $blue: '#0000ff'
+        }}
+      />
+
+      <Specimen id='Log/My specimen'>
         <UseLogger>
           {({ log }) => (
             <div>
@@ -25,7 +47,7 @@ const PenpadPage = () => {
 
       <UseLogger>
         {({ log }) => (
-          <Specimen id='Another specimen'>
+          <Specimen id='Log/Another specimen'>
             <div>
               <p>Hello again!</p>
               <button

@@ -1,0 +1,18 @@
+{
+  "name": "@penpad/preset-recommended",
+  "version": "0.2.0-alpha.5",
+  "main": "dist/index.es5.js",
+  "module": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "preprepare": "rm -rf dist",
+    "prepare": "rollup --config"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "src",
+    "dist"
+  ]
+}

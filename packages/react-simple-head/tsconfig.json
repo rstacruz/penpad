@@ -8,7 +8,7 @@
     "esModuleInterop": true,
     "declaration": true,
     "baseUrl": "./",
-    "outDir": "lib/"
+    "outDir": "dist/"
   },
   "includes": [
     "src/"

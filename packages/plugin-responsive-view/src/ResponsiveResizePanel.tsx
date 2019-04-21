@@ -1,9 +1,7 @@
-import cn from 'classnames'
+import { useAppContext } from '@rstacruz/penpad'
+import Panel from '@rstacruz/penpad/src/styles/panels.module.css'
 import React from 'react'
 import CSS from './ResponsiveResizePanel.module.css'
-import { useAppContext } from './state'
-import Panel from './styles/panels.module.css'
-import Util from './utils.module.css'
 
 const ResponsiveResizePanel = () => {
   const { state, actions } = useAppContext()
@@ -24,7 +22,7 @@ const ResponsiveResizePanel = () => {
 
           return (
             <button
-              className={cn(CSS.button, { [CSS.isActive]: isActive })}
+              className={`${CSS.button} ${isActive ? CSS.isActive : ''}`}
               key={width || index}
               onClick={() => actions && actions.setFrameWidth(width)}
             >

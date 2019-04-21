@@ -12,10 +12,14 @@
     "jsx": "react",
     "baseUrl": "./",
     "paths": {
-      "penpad": ["packages/penpad/src"],
+      "react-simple-head": ["packages/react-simple-head/src"],
       "@rstacruz/penpad": ["packages/penpad/src"],
+      "@rstacruz/penpad/src": ["packages/penpad/src"],
+      "@penpad/preset-recommended": ["packages/preset-recommended/src"],
       "@penpad/plugin-logger": ["packages/plugin-logger/src"],
-      "react-simple-head": ["packages/react-simple-head"]
+      "@penpad/plugin-color": ["packages/plugin-color/src"],
+      "@penpad/plugin-code-panel": ["packages/plugin-code-panel/src"],
+      "@penpad/plugin-responsive-view": ["packages/plugin-responsive-view/src"],
     },
     "plugins": [
       { "name": "typescript-tslint-plugin" }

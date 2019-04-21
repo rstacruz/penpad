@@ -1,4 +1,5 @@
 declare const styles: {
+  readonly hasPenpadUI: string
   readonly topnav: string
   readonly root: string
   readonly isFullscreen: string

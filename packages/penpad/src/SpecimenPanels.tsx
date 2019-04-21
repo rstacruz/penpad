@@ -1,6 +1,4 @@
 import React from 'react'
-import ResponsiveResizePanel from './ResponsiveResizePanel'
-import SourceCodePanel from './SourceCodePanel'
 import SpecimenDescriptionPanel from './SpecimenDescriptionPanel'
 import { useAppContext } from './state'
 import { Specimen } from './types'
@@ -20,8 +18,6 @@ const SpecimenPanels = (props: Props) => {
       {specimen.description ? (
         <SpecimenDescriptionPanel {...{ specimen }} />
       ) : null}
-      <ResponsiveResizePanel />
-      <SourceCodePanel specimen={specimen} key={id} />
 
       {/* Render custom panels */}
       {state && state.blocks && state.blocks.panels ? (
