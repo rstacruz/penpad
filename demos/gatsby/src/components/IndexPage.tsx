@@ -32,12 +32,32 @@ const IndexPage = () => {
             Launch demo
           </Link>
 
-          <Link to='/penpad-embedded' className={CSS.lowButton}>
+          <Link to='/penpad/embedded' className={CSS.lowButton}>
             Try it in your browser
           </Link>
 
-          <a href='https://github.com/rstacruz/penpad'>GitHub</a>
+          <a
+            href='https://github.com/rstacruz/penpad'
+            className={CSS.lowButton}
+          >
+            GitHub
+          </a>
         </div>
+
+        <br />
+
+        <h3>Examples</h3>
+        <ul>
+          <li>
+            <Link to='/penpad'>Penpad example</Link>
+          </li>
+          <li>
+            <Link to='/penpad/embedded'>Embedded</Link>
+          </li>
+          <li>
+            <Link to='/penpad/plugins'>Plugins</Link>
+          </li>
+        </ul>
       </section>
     </Layout>
   )
