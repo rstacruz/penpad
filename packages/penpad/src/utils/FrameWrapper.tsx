@@ -1,6 +1,6 @@
 import React from 'react'
 import Frame from 'react-frame-component'
-import harvestHead from '../helpers/harvestHead'
+import HarvestHeadStyles from '../helpers/HarvestHeadStyles'
 
 /**
  * Wraps the `children` in an iframe.
@@ -13,7 +13,7 @@ import harvestHead from '../helpers/harvestHead'
 const FrameWrapper = ({ children, className, style }: Props) => {
   const head = (
     <>
-      {harvestHead()}
+      <HarvestHeadStyles />
       <style>{`
         html, body {
           min-height: 100%;

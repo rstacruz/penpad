@@ -4,7 +4,7 @@ import React from 'react'
  * Harvests stylesheets and returns them as React nodes.
  */
 
-export const harvestHead = () => {
+export const HarvestHeadStyles = () => {
   const styleEls = document.querySelectorAll<HTMLStyleElement>('style')
 
   // TODO: refactor so that it'd be impossible to have the same key
@@ -28,8 +28,23 @@ export const harvestHead = () => {
     return <link key={key} {...props} />
   })
 
-  return [...styles, ...links]
+  return (
+    <>
+      {styles}
+      {links}
+    </>
+  )
 }
+
+/**
+ * Converts DOM attributes (eg, `element.attributes`) into a properties object
+ * for React.
+ *
+ * @private
+ * @example
+ *     toProps(element.attributes)
+ *     // => { href: '/abc.css', rel: 'stylesheet' }
+ */
 
 const toProps = (attributes: NamedNodeMap) => {
   return Array.from(attributes).reduce((result, attr) => {
@@ -37,4 +52,8 @@ const toProps = (attributes: NamedNodeMap) => {
   }, {})
 }
 
-export default harvestHead
+/*
+ * Export
+ */
+
+export default HarvestHeadStyles
