@@ -64,6 +64,10 @@ const getActions = (setState: SetState) => {
     },
 
     addSpecimen(specimen: Specimen) {
+      if (!specimen.id) {
+        throw new Error(`addSpecimen: 'id' is required`)
+      }
+
       setState(state => ({
         ...state,
         specimens: {
@@ -71,6 +75,10 @@ const getActions = (setState: SetState) => {
           [specimen.id]: specimen
         }
       }))
+
+      return () => {
+        actions.removeSpecimen(specimen.id)
+      }
     },
 
     removeSpecimen(id: string) {
