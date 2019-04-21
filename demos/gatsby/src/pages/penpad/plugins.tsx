@@ -1,5 +1,6 @@
 import { LoggerPlugin, UseLogger } from '@penpad/plugin-logger'
 import { ColorPlugin, ColorSpecimen } from '@penpad/plugin-color'
+import { ResponsiveViewPlugin } from '@penpad/plugin-responsive-view'
 import { Penpad, Specimen } from '@rstacruz/penpad'
 import React from 'react'
 
@@ -8,6 +9,7 @@ const PenpadPage = () => {
     <Penpad>
       <LoggerPlugin />
       <ColorPlugin />
+      <ResponsiveViewPlugin />
 
       <ColorSpecimen
         id='Color/example'

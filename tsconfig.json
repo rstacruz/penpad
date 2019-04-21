@@ -14,7 +14,10 @@
     "paths": {
       "penpad": ["packages/penpad/src"],
       "@rstacruz/penpad": ["packages/penpad/src"],
+      "@rstacruz/penpad/src": ["packages/penpad/src"],
       "@penpad/plugin-logger": ["packages/plugin-logger/src"],
+      "@penpad/plugin-color": ["packages/plugin-color/src"],
+      "@penpad/plugin-responsive-view": ["packages/plugin-responsive-view/src"],
       "react-simple-head": ["packages/react-simple-head"]
     },
     "plugins": [

@@ -17,6 +17,7 @@ const Pages = {
   `
 }
 
+// @ts-ignore It's a Webpack thing
 const specimens = require.context('../../', true, /\.specimens\.(jsx?|tsx?)$/)
 
 const PenpadPage = () => {

@@ -53,3 +53,10 @@ yarn lerna exec --stream --concurrency 1 yarn prepare
 # Publish things even without changes (caution!)
 yarn lerna publish --force-publish="*"
 ```
+
+## New packages
+
+When creating packages, these need to be updated:
+
+- `/tsconfig.json` (compilerOptions.paths)
+- `/demos/gatsby/gatsby-node.js` (onCreateWebpackConfig, config.resolve.alias)
