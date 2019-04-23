@@ -8,6 +8,9 @@
     "preprepare": "rm -rf dist",
     "prepare": "rollup --config"
   },
+  "peerDependencies": {
+    "@penpad/core": "*"
+  },
   "publishConfig": {
     "access": "public"
   },
