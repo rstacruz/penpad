@@ -1,5 +1,5 @@
 import React from 'react'
-import { Specimen } from '../../../../packages/penpad/src/index'
+import { Specimen } from '@penpad/core'
 
 export default () => (
   <>

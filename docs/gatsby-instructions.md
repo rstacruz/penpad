@@ -1,7 +1,7 @@
 # Installing in Gatsby
 
 ```js
-import { Penpad, Specimen } from '@rstacruz/penpad'
+import { Penpad, Specimen } from '@penpad/core'
 ```
 
 Put the `Penpad` component anywhere in your website.

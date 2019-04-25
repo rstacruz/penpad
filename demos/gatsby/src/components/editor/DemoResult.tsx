@@ -2,7 +2,7 @@ import {
   Page,
   Penpad,
   Specimen
-} from '@rstacruz/penpad'
+} from '@penpad/core'
 import React, { useMemo, useState } from 'react'
 
 /**

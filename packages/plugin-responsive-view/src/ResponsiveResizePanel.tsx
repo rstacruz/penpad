@@ -1,5 +1,5 @@
-import { useAppContext } from '@rstacruz/penpad'
-import Panel from '@rstacruz/penpad/src/styles/panels.module.css'
+import { useAppContext } from '@penpad/core'
+import Panel from '@penpad/core/src/styles/panels.module.css'
 import React from 'react'
 import CSS from './ResponsiveResizePanel.module.css'
 

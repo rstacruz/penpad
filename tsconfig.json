@@ -13,8 +13,8 @@
     "baseUrl": "./",
     "paths": {
       "react-simple-head": ["packages/react-simple-head/src"],
-      "@rstacruz/penpad": ["packages/penpad/src"],
-      "@rstacruz/penpad/src": ["packages/penpad/src"],
+      "@penpad/core": ["packages/core/src"],
+      "@penpad/core/src": ["packages/core/src"],
       "@penpad/preset-recommended": ["packages/preset-recommended/src"],
       "@penpad/plugin-logger": ["packages/plugin-logger/src"],
       "@penpad/plugin-color": ["packages/plugin-color/src"],

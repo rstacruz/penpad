@@ -1,5 +1,5 @@
 {
-  "name": "@rstacruz/penpad",
+  "name": "@penpad/core",
   "version": "0.2.0-alpha.5",
   "main": "dist/index.es5.js",
   "module": "dist/index.js",
@@ -18,7 +18,7 @@
   "scripts": {
     "preprepare": "rm -rf dist",
     "prepare": "rollup --config",
-    "postprepare": "bash -c 'mv dist/packages/penpad/src/* ./dist; rm -rf dist/packages'",
+    "postprepare": "bash -c 'mv dist/packages/core/src/* ./dist; rm -rf dist/packages'",
     "watch": "rollup --config --watch"
   },
   "publishConfig": {

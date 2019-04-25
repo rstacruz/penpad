@@ -50,10 +50,15 @@ const buildConfig = options => {
   // Return `true` if it should be external
   const external = id => {
     // Things that should be embedded
-    if (options.notExternal && id.match(options.notExternal)) {
-      return false
-    }
-    return !id.match(/^(\0|\.|\/)/)
+    if (options.notExternal && id.match(options.notExternal)) return false
+
+    // Local imports (ie, `./) are definitely external
+    if (id.match(/^(\0|\.|\/)/)) return false
+
+    // Consider all CSS to be non-external so thay're bundled properly
+    if (id.match(/\.s?css$/)) return false
+
+    return true
   }
 
   const output = {
@@ -87,7 +92,7 @@ const buildConfig = options => {
 const UMD_GLOBALS = {
   react: 'React',
   'react-dom': 'ReactDOM',
-  '@rstacruz/penpad': 'Penpad',
+  '@penpad/core': 'Penpad',
 
   // These are mostly just to appease Rollup, we'll bundle them so they
   // shouldn't be accessed globally

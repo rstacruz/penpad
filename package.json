@@ -21,7 +21,7 @@
   "scripts": {
     "prettier:check": "prettier --list-different 'packages/*/src/**/*.{js,jsx,ts,tsx}'",
     "prettier:fix": "prettier --write 'packages/*/src/**/*.{js,jsx,ts,tsx}'",
-    "penpad:watch": "yarn workspace @rstacruz/penpad watch",
+    "penpad:watch": "yarn workspace @penpad/core watch",
     "tslint:check": "tslint --project .",
     "tslint:fix": "tslint --project . --fix",
     "tsc:check": "tsc --noEmit",
@@ -41,7 +41,7 @@
     "@types/classnames": "^2.2.7",
     "@types/codemirror": "^0.0.74",
     "@types/jest": "^24.0.11",
-    "@types/react": "^16.8.13",
+    "@types/react": "^16.8.14",
     "@types/react-helmet": "^5.0.8",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.7.1",
@@ -52,9 +52,9 @@
     "prettier": "^1.17.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-hooks-testing-library": "^0.4.1",
+    "react-hooks-testing-library": "^0.5.0",
     "react-testing-library": "^6.1.2",
-    "rollup": "^1.10.0",
+    "rollup": "^1.10.1",
     "ts-jest": "^24.0.2",
     "tslint": "^5.16.0",
     "tslint-config-prettier": "^1.18.0",
@@ -63,6 +63,7 @@
     "typescript-tslint-plugin": "^0.3.1"
   },
   "resolutions": {
-    "**/react-helmet": "^6.0.0-beta"
+    "**/react-helmet": "^6.0.0-beta",
+    "**/@types/react": "^16.8.14"
   }
 }

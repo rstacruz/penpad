@@ -1,4 +1,4 @@
-import { AddBlockPlugin } from '@rstacruz/penpad'
+import { AddBlockPlugin } from '@penpad/core'
 import React from 'react'
 import ResponsiveResizePanel from './ResponsiveResizePanel'
 

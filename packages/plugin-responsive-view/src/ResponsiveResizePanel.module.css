@@ -1,7 +1,7 @@
-/* @import '@rstacruz/penpad/src/variables.css'; */
+/* @import '@penpad/core/src/variables.css'; */
 
 .button {
-  /* composes: fontSizeMinus1 from '@rstacruz/penpad/src/utils.module.css'; */
+  /* composes: fontSizeMinus1 from '@penpad/core/src/utils.module.css'; */
   display: inline-block;
   margin: 0;
   border: 0;
