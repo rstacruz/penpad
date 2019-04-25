@@ -20,4 +20,4 @@ Put the `Penpad` component anywhere in your website.
 
 Check out the Gatsby demo site source.
 
-https://github.com/penpad/core/tree/master/demos/gatsby
+https://github.com/rstacruz/penpad/tree/master/demos/gatsby
