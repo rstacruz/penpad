@@ -99,7 +99,7 @@ const UMD_GLOBALS = {
   classnames: 'classnames',
   'jsx-to-string': 'jsxToString',
   'react-frame-component': 'Frame',
-  'react-simple-head': 'ReactSimpleHead'
+  'react-meta-elements': 'ReactMetaElements'
 }
 
 /*

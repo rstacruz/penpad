@@ -1,5 +1,5 @@
 import React from 'react'
-import { Title } from 'react-simple-head'
+import { Title } from 'react-meta-elements'
 import DocsNavigation from '../doc/DocsNavigation'
 import { useAppContext } from '../state'
 import { getActivePage } from '../state/selectors'

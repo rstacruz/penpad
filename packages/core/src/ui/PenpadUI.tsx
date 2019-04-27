@@ -1,6 +1,6 @@
 import cn from 'classnames'
 import React, { useEffect } from 'react'
-import { Meta, Title } from 'react-simple-head'
+import { Meta, Title } from 'react-meta-elements'
 import { useAppContext } from '../state'
 import '../styles/reset.module.css'
 import DocsBody from './DocsBody'

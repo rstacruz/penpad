@@ -1,11 +1,12 @@
-# react-simple-head
+# react-meta-elements
 
 Sets document title and meta tags using React elements (or hooks!). A lightweight alternative to React Helmet.
+
+This project was developed for [Penpad] but can be used anywhere.
 
 ## Usage
 
 This package exposes `Title` and `Meta` components.
-
 
 ```js
 import { Title, Meta } from 'react-head'
@@ -21,8 +22,8 @@ const MyComponent = () => {
 ```
 
 ## Prior art
-react-simple-head is not the first package to let you manage Title and Meta elements. There are other alternatives you can consider:
 
+react-simple-head is not the first package to let you manage Title and Meta elements. There are other alternatives you can consider:
 
 - [Helmet]: Helmet is a full-featured head tag manager. At time of writing, you need to use v6 (beta) to make it work in a project with React hooks, which is incompatible with the stable v5.
 
@@ -32,3 +33,4 @@ react-simple-head is not the first package to let you manage Title and Meta elem
 
 [helmet]: https://yarn.pm/react-helmet
 [react-head]: https://yarn.pm/react-head
+[penpad]: https://github.com/rstacruz/penpad

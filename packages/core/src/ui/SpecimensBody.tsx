@@ -1,5 +1,5 @@
 import React from 'react'
-import { Title } from 'react-simple-head'
+import { Title } from 'react-meta-elements'
 import ReactSpecimenView from '../ReactSpecimenView'
 import SpecimenNavigation from '../SpecimenNavigation'
 import SpecimenPanels from '../SpecimenPanels'
