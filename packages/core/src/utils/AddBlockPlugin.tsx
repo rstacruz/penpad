@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
-import { BasePanel, useAppContext } from '../index'
+import BasePanel from '../BasePanel'
+import { useAppContext } from '../state'
 import { Block } from '../types/Block'
 
 /**
