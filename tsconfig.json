@@ -12,7 +12,6 @@
     "jsx": "react",
     "baseUrl": "./",
     "paths": {
-      "react-meta-elements": ["packages/react-meta-elements/src"],
       "@penpad/core": ["packages/core/src"],
       "@penpad/core/src": ["packages/core/src"],
       "@penpad/preset-recommended": ["packages/preset-recommended/src"],

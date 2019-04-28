@@ -14,7 +14,7 @@
     "classnames": "^2.2.6",
     "react-element-to-jsx-string": "^14.0.2",
     "react-frame-component": "^4.1.0",
-    "react-meta-elements": "^0.3.0-alpha.1"
+    "react-meta-elements": "^1.0.0"
   },
   "scripts": {
     "preprepare": "rm -rf dist",

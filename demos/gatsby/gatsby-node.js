@@ -21,9 +21,6 @@ exports.onCreateWebpackConfig = ({ getConfig, stage }) => {
     ),
     '@penpad/plugin-code-panel$': require.resolve(
       '../../packages/plugin-code-panel/src/index.tsx'
-    ),
-    'react-meta-elements$': require.resolve(
-      '../../packages/react-meta-elements/src/index.ts'
     )
   }
 
