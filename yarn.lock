@@ -12121,6 +12121,11 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
+react-meta-elements@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-meta-elements/-/react-meta-elements-1.0.0.tgz#5da493b158f482f00c03c8ed326db367ffc4d880"
+  integrity sha512-+bSTNyhlr5vpDokclaWMxhcsyS9Og17/kmL0DL3P//VA5a8S3cfYxfOPmEjDlTa04CAwHvgApleIM5ZGWfeSaA==
+
 react-side-effect@^1.1.0:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-1.1.5.tgz#f26059e50ed9c626d91d661b9f3c8bb38cd0ff2d"
