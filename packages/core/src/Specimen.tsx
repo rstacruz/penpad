@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import toString from 'react-element-to-jsx-string'
 import ReactSpecimenView from './ReactSpecimenView'
 import { useAppContext } from './state'
+import getDisplayName from './utils/getDisplayName'
 
 /*
  * See:
@@ -11,24 +12,6 @@ import { useAppContext } from './state'
 const TO_STRING_OPTIONS = {
   showFunctions: true,
   displayName: getDisplayName
-}
-
-/**
- * Also see: https://github.com/algolia/react-element-to-jsx-string/blob/0b17eaf3decafac13f276e705d4c850418cd4bb7/src/parser/parseReactElement.js#L15
- */
-
-function getDisplayName(element: any) {
-  console.log('displayName', element)
-  if (element.type && typeof element.type === 'string') {
-    return element.type
-  }
-
-  if (element.type) {
-    const name = element.type.displayName || element.type.name
-    if (name) return name
-  }
-
-  return 'Component'
 }
 
 /**
