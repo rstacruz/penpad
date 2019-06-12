@@ -1,8 +1,9 @@
 import cn from 'classnames'
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Meta, Title } from 'react-meta-elements'
 import { useAppContext } from '../state'
 import '../styles/reset.module.css'
+import { useRootClass } from '../utils/useRootClass'
 import DocsBody from './DocsBody'
 import CSS from './PenpadUI.module.css'
 import SpecimensBody from './SpecimensBody'
@@ -32,15 +33,9 @@ const PenpadUI = () => {
   // The specimen object
   const specimen = (specimenId && specimens && specimens[specimenId]) || null
 
+  // Add classname to `<html>`
   if (!isEmbedded) {
-    useEffect(() => {
-      const className = CSS.hasPenpadUI
-      const { classList } = document.documentElement
-      classList.add(className)
-      return () => {
-        classList.remove(className)
-      }
-    }, [])
+    useRootClass(CSS.hasPenpadUI)
   }
 
   return (

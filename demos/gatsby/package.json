@@ -5,24 +5,24 @@
   "version": "1.0.0",
   "author": "Rico Sta. Cruz <rstacruz@users.noreply.github.com>",
   "dependencies": {
-    "@babel/standalone": "^7.4.3",
+    "@babel/standalone": "^7.4.5",
     "@mdx-js/tag": "^0.20.3",
-    "bulma": "^0.7.4",
-    "codemirror": "^5.45.0",
-    "gatsby": "^2.3.25",
-    "gatsby-plugin-manifest": "^2.0.29",
+    "bulma": "^0.7.5",
+    "codemirror": "^5.47.0",
+    "gatsby": "^2.9.0",
+    "gatsby-plugin-manifest": "^2.1.1",
     "gatsby-plugin-postcss": "^2.0.7",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-react-svg": "^2.1.1",
-    "gatsby-plugin-typescript": "^2.0.12",
-    "gatsby-source-filesystem": "^2.0.29",
+    "gatsby-plugin-typescript": "^2.0.15",
+    "gatsby-source-filesystem": "^2.0.39",
     "mdx.macro": "^0.2.8",
     "react": "^16.8.6",
     "react-codemirror2": "^5.1.0",
     "react-dom": "^16.8.6",
     "react-helmet": "^6.0.0-beta",
-    "sanitize.css": "^8.0.0",
-    "typeface-inter": "^3.5.0",
+    "sanitize.css": "^10.0.0",
+    "typeface-inter": "^3.7.0",
     "typeface-work-sans": "^0.0.72"
   },
   "keywords": [
@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@hot-loader/react-dom": "^16.8.6",
-    "prettier": "^1.17.0"
+    "prettier": "^1.18.2"
   },
   "repository": {
     "type": "git",
