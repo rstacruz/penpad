@@ -2,10 +2,11 @@
 
 ## Testing
 
-`yarn` will install deps. `yarn develop` will start a server.
+- No Docker: `yarn` will install deps. `yarn develop` will start a server.
+- With Docker: `make i s` will install deps and start a server in Docker.
 
 <details>
-<summary>···</summary>
+<summary>Example...</summary>
 
 ```js
 # Install dependencies
@@ -28,22 +29,22 @@ Check package.json's `scripts` for some other useful things for development.
 Everything is managed in a Yarn workspace.
 
 <details>
-<summary>···</summary>
+<summary>Details...</summary>
 
 - Most dev dependencies are in the workspace level. This avoids having to add all the necessary boilerplate in each sub-package (eg, Rollup, Jest, TypeScript).
 
 </details>
 
-## Makefile?
+## Makefile? Docker?
 
-The [Makefile](./Makefile) is just a tool to conveniently run a dev setup in Docker.
+The [Makefile](./Makefile) is just a tool to conveniently run a dev setup in Docker. To use Docker, you'll need to install `docker` and `docker-compose`.
 
 ## Package management
 
 Managed using [Lerna](https://github.com/lerna/lerna). Use `yarn lerna publish` to publish a new version.
 
 <details>
-<summary>···</summary>
+<summary>See commands...</summary>
 
 ```js
 # List packages with changes
@@ -83,12 +84,13 @@ When creating packages, these files will need to be updated. See [Internal voodo
 Most everything in this setup are 'standard issue' things, with a few exceptions.
 
 <details>
-<summary>···</summary>
+<summary>Details...</summary>
 
 ### Jest module resolution
 
 ```
-/jest.config.js  →  moduleNameMapper
+See:
+/jest.config.js → moduleNameMapper
 ```
 
 The moduleNameMapper that maps `@penpad/xxx` to `packages/xxx/src/index.tsx`. This allows Jest to work without having to compile things with Rollup.
@@ -96,7 +98,8 @@ The moduleNameMapper that maps `@penpad/xxx` to `packages/xxx/src/index.tsx`. Th
 ### TypeScript compiler paths
 
 ```
-/tsconfig.json  →  compilerOptions.paths
+See:
+/tsconfig.json → compilerOptions.paths
 ```
 
 Tells Rollup (building/bundling) and `tsc` (type checking) to look at source files ('src') instead of built files ('dist').
@@ -104,7 +107,8 @@ Tells Rollup (building/bundling) and `tsc` (type checking) to look at source fil
 ### Gatsby Webpack aliases
 
 ```
-/demos/gatsby/gatsby-node.js  →  onCreateWebpackConfig()  →  config.resolve.alias
+See:
+/demos/gatsby/gatsby-node.js → onCreateWebpackConfig() → config.resolve.alias
 ```
 
 Tells Gatsby to look at source files ('src') instead of built files ('dist'). Without this, we'll need to build Rollup files (`yarn prepare` inside packages) so that Gatsby will pick up the built files, which is slow and a waste of RAM for your development machine.
