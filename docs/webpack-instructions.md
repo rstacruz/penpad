@@ -5,7 +5,7 @@ You can load multiple files at once using [Webpack contexts] and Penpad's `Combi
 ```js
 import { CombineWebpackContext as Combine, Penpad } from '@penpad/core'
 
-const specimens = require.context('../../', true, /\.specimens\.(jsx?|tsx?)$/)
+const specimens = require.context('../../', true, /\.specimens?\.(jsx?|tsx?)$/)
 ```
 
 ```js

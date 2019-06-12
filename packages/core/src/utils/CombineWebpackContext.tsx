@@ -13,6 +13,18 @@ interface WebpackContext extends WebpackContextFn {
 /**
  * Loads all files from a Webpack context.
  * Assumes that all files export React components.
+ *
+ * @example
+ *     import {
+ *       CombineWebpackContext as Combine,
+ *       Penpad
+ *     } from '@penpad/core'
+ *
+ *     const specimens = require.context('../', true, /\.specimens?\.(jsx?|tsx?)$/)
+ *
+ *     <Penpad>
+ *       <Combine context={specimens} />
+ *     </Penpad>
  */
 
 const CombineWebpackContext = ({ context }: { context: WebpackContext }) => {
