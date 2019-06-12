@@ -8,7 +8,6 @@
   "repository": "https://github.com/rstacruz/penpad/tree/master/packages/core",
   "author": "Rico Sta. Cruz <rstacruz@users.noreply.github.com>",
   "files": [
-    "src",
     "dist"
   ],
   "dependencies": {
