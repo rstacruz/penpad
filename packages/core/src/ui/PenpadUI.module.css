@@ -1,9 +1,5 @@
 @import '../variables.css';
 
-:root {
-  --topnav-height: 40px;
-}
-
 html.hasPenpadUI,
 html.hasPenpadUI body {
   height: 100%;

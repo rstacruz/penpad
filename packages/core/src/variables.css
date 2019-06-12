@@ -14,6 +14,10 @@
   --pad: 16px;
 }
 
+:root {
+  --topnav-height: 40px;
+}
+
 @custom-media --viewport-7 (min-width: 768.02px);
 @custom-media --viewport-9 (min-width: 992.02px);
 @custom-media --viewport-12 (min-width: 1200.02px);

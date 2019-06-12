@@ -21,3 +21,8 @@ Put the `Penpad` component anywhere in your website.
 Check out the Gatsby demo site source.
 
 https://github.com/rstacruz/penpad/tree/master/demos/gatsby
+
+
+## Specimens in other files
+
+See [Webpack instructions](./webpack-instructions.md)
