@@ -40,6 +40,9 @@ prettier\:check:
 css_modules\:update: ## Update CSS modules [alias: c]
 	$(run) yarn css_modules:update
 
+fix: ## Fix whatever can be fixed
+	$(run) yarn fix
+
 # Aliases
 i: yarn
 s: start
@@ -49,5 +52,3 @@ tj: jest\:watch
 
 # Simular CI
 ci: yarn tsc\:check jest prettier\:check
-# Fix whatever can be fixed
-fix: css_modules\:update prettier\:fix
